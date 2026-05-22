@@ -6,7 +6,7 @@ import localFont from 'next/font/local'
 import Navbar1 from '@/components/navbar/Navbar1'
 
 const HeyFont = localFont({
-  src: "../fonts/Feeling Passionate Personal Use Only.ttf"
+  src: "../fonts/FeelingPassionate.ttf"
 })
 
 const Mortend = localFont({

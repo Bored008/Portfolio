@@ -7,7 +7,7 @@ const Mortend = localFont({
 })
 
 const HeyFont = localFont({
-  src: "../fonts/Feeling Passionate Personal Use Only.ttf"
+  src: "../fonts/FeelingPassionate.ttf"
 })
 
 const poppins = Poppins({
