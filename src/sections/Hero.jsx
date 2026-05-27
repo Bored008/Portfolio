@@ -20,7 +20,7 @@ const Hero = () => {
         <Navbar1 />
       </div>
       <div className='grid grid-col-1 grid-row-1'>
-        <img src="/myimage.png" alt='my photo' className='md:w-[1264px] md:h-[803px] h-[265px] w-[350px] md:mt-0 mt-15 z-10 border-white md:border-t-0 border-y-10 border-x-8 md:rounded-t-none rounded-[32]' />
+        <img src="/myimage.png" alt='my photo' className='md:w-[1264px] md:h-[803px] h-[265px] w-[350px] md:mt-0 mt-15 z-10 border-white md:border-t-0 border-b-8 border-t-2 border-x-5 md:rounded-t-none rounded-[32]' />
       </div>
       <div className=''>
         <div className={`${HeyFont.className} md:text-[86px] text-3xl text-white z-20 absolute md:top-130 md:left-[14%] top-65 left-15`}>Hey,👋</div>
