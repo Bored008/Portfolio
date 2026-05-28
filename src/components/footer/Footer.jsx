@@ -15,11 +15,11 @@ const Footer = () => {
                         <div className='font-semibold'>Stay Connected</div>
                         <div className='flex md:gap-[8px]'>
                             <a href="https://github.com/Bored008" target="_blank">
-                                <img src="/Github.svg" alt="Github" className='cursor-pointer' />
+                                <img src="/GitHub.svg" alt="Github" className='cursor-pointer' />
                             </a>
 
                             <a href="https://www.linkedin.com/in/himanshuakabored/" target="_blank">
-                                <img src="/LinkedIN.svg" alt="Linkedin" className='cursor-pointer' />
+                                <img src="/LinkedIn.svg" alt="Linkedin" className='cursor-pointer' />
                             </a>
 
                             <a href="https://t.me/BoReD_Xagain" target="_blank">
@@ -47,11 +47,11 @@ const Footer = () => {
                     <div className='font-semibold text-[16px]'>Stay Connected</div>
                     <div className='flex gap-[8px]'>
                         <a href="https://github.com/Bored008" target="_blank">
-                            <img src="/Github.svg" alt="Github" className='cursor-pointer' />
+                            <img src="/GitHub.svg" alt="Github" className='cursor-pointer' />
                         </a>
 
                         <a href="https://www.linkedin.com/in/himanshuakabored/" target="_blank">
-                            <img src="/LinkedIN.svg" alt="Linkedin" className='cursor-pointer' />
+                            <img src="/LinkedIn.svg" alt="Linkedin" className='cursor-pointer' />
                         </a>
 
                         <a href="https://t.me/BoReD_Xagain" target="_blank">

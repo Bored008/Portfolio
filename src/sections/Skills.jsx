@@ -55,13 +55,13 @@ const Skills = () => {
                         </div>
                     </div>
                     <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
-                        <img src='/Node js.svg' className='h-[32px]'/>
+                        <img src='/Node Js.svg' className='h-[32px]'/>
                         <div className='text-[27px]'>
                             Node.js
                         </div>
                     </div>
                     <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
-                        <img src='/Express js.svg' className='h-[32px]'/>
+                        <img src='/Express Js.svg' className='h-[32px]'/>
                         <div className='text-[27px]'>
                             Express
                         </div>

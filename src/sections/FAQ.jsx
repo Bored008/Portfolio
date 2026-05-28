@@ -57,7 +57,7 @@ const FAQ = () => {
            ${openIndex === index ? 'bg-white text-black':' text-white border border-white/50 backdrop-blur-md'}`}>
             <div className='flex justify-between items-center w-full'>
               <div className='md:text-[20px] font-bold mb-5'>{faq.question}</div>
-              <img src="/arrow.svg" alt="arrow" className={`md:w-[30px] transition-transform duration-300 ${openIndex===index ? 'rotate-180':'invert'}`} />
+              <img src="/Arrow.svg" alt="arrow" className={`md:w-[30px] transition-transform duration-300 ${openIndex===index ? 'rotate-180':'invert'}`} />
             </div>
             {openIndex === index && (
               <div className='animate-fade-in text-gray-700'>{faq.answer}</div>
