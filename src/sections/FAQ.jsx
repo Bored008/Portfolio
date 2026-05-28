@@ -53,7 +53,7 @@ const FAQ = () => {
       </div>
       <div className='flex flex-col md:w-1/2 gap-y-3'>
         {faqs.map((faq, index) => (
-          <div key={index} onClick={() => toggleQuestion(index)} className={`flex flex-col cursor-pointer backdrop-blur-md border border-white/50 md:px-[19px] mx-3 md:mx-0 md:py-[14px] px-2 pt-2 md:rounded-2xl rounded-xl  items-start
+          <div key={index} onClick={() => toggleQuestion(index)} className={`flex flex-col cursor-pointer backdrop-blur-md border border-white/50 md:px-[19px] mx-[30px] md:mx-0 md:py-[14px] px-2 pt-2 md:rounded-2xl rounded-xl  items-start
            ${openIndex === index ? 'bg-white text-black':' text-white border border-white/50 backdrop-blur-md'}`}>
             <div className='flex justify-between items-center w-full'>
               <div className='md:text-[20px] font-bold mb-5'>{faq.question}</div>

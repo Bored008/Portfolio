@@ -8,10 +8,10 @@ const Mortend = localFont({
 
 const Navbar1 = () => {
     return (
-        <div className='flex justify-between items-center px-4 md:px-60 md:mt-4 mt-1'>
+        <div className='flex justify-between items-center px-4 md:px-60 md:mt-4 mt-1 '>
             <div className={`${Mortend.className} text-white text-[16px] md:text-[32px]`}>BORUI</div>
             <div className='flex md:text-[16px] text-[12px] text-white md:gap-[44px] gap-[16px] bg-black md:py-[5px] md:px-[5px] py-[4px] px-[4px] md:rounded-full rounded items-center'>
-                <a href="" className=' flex bg-white text-black rounded md:py-[3px] md:px-[12px] px-[4px] py-[1px] items-center md:rounded-full rounded gap-[3px]'>
+                <a href="" className=' flex bg-white text-black rounded md:py-[3px] md:px-[12px] px-[4px] py-[1px] items-center md:rounded-full gap-[3px]'>
                     <House className='md:size-[15px] size-3' />
                     Home
                 </a>
