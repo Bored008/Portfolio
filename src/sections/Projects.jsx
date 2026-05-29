@@ -5,7 +5,7 @@ import { MoveRight, MoveUpRight } from "lucide-react"
 const Projects = () => {
     return (
         <div id='projects'>
-            <img src='/ProjectTag.svg' className='md:w-full object-cover object-center md:h-auto h-35' />
+            <img src='/ProjectTag.svg' className='w-full object-cover object-center md:h-auto h-35' />
             <div className='flex justify-end'>
                 <button className='flex items-center gap-[8px] md:text-xl text-[12px] border-white border rounded-lg px-[12px] md:py-[8px] py-[5px] bg-black z-1 md:mr-[90px] mr-[40px]'>Show All
                     <MoveUpRight className='w-[18] md:w-[40]' />

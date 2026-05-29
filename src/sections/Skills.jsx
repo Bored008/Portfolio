@@ -16,12 +16,12 @@ const Skills = () => {
 
             {/* for desktop screen */}
             <div className='w-full aspect-[1653/929] bg-[url("/bars.png")] max-w-none min-w-[10px] bg-no-repeat bg-center bg-[size:100%_auto] items-center flex flex-col hidden md:flex text-white'>
-                <div className={`${Gilroy.className} bg-[url("/skillboard.svg")] w-[386px] h-[178px] mt-7 bg-no-repeat bg-contain flex justify-center items-center bg-center`}>
+                <div className={`${Gilroy.className} bg-[url("/skillboard.svg")] w-[386px] h-[178px] bg-no-repeat bg-contain flex justify-center items-center bg-center`}>
                     <div className='text-7xl pt-17 text-black'>
                         Skills
                     </div>
                 </div>
-                <div className='flex gap-[64px] mt-[70px]'>
+                <div className='flex gap-[64px] mt-[52px]'>
                     <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
                         <img src='/Html 5.svg' className='h-[32px]'/>
                         <div className='text-[27px]'>
@@ -47,7 +47,7 @@ const Skills = () => {
                         </div>
                     </div>
                 </div>
-                <div className='flex gap-[64px] mt-[47px]'>
+                <div className='flex gap-[64px] mt-[36px]'>
                     <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
                         <img src='/Next.js.svg' className='h-[32px]'/>
                         <div className='text-[27px]'>
@@ -67,7 +67,7 @@ const Skills = () => {
                         </div>
                     </div>
                 </div>
-                <div className='flex gap-[64px] mt-[47px]'>
+                <div className='flex gap-[64px] mt-[36px]'>
                     <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
                         <img src='/Mongo Db.svg' className='h-[32px]'/>
                         <div className='text-[27px]'>
@@ -93,7 +93,7 @@ const Skills = () => {
                         </div>
                     </div>
                 </div>
-                <div className='flex gap-[64px] mt-[47px]'>
+                <div className='flex gap-[64px] mt-[36px]'>
                     <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
                         <img src='/Figma.svg' className='h-[32px]'/>
                         <div className='text-[27px]'>
@@ -113,7 +113,7 @@ const Skills = () => {
                         </div>
                     </div>
                 </div>
-                <div className='flex gap-[64px] mt-[47px]'>
+                <div className='flex gap-[64px] mt-[36px]'>
                     <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
                         <img src='/gsap.svg' className='h-[30px]'/>
                         <div className='text-[27px]'>

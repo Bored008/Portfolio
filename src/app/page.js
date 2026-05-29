@@ -10,7 +10,7 @@ import Footer from "@/components/footer/Footer";
 export default function Home() {
   return (
     <div className="bg-black min-h-screen w-full">
-      <div className="flex flex-col min-h-screen gap-y-20 md:gap-y-40 max-w-[1440px] mx-auto relative">
+      <div className="flex flex-col min-h-screen gap-y-20 md:gap-y-40 max-w-[420px] md:max-w-[1440px] mx-auto relative">
         {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full z-0 select-none opacity-80 hidden md:flex">
           <img
             src="/curveline.svg"
