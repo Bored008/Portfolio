@@ -12,7 +12,7 @@ const Gilroy = localFont({
 
 const Skills = () => {
     return (
-        <div className='mt:20 md:mt-40 z-1'>
+        <div className='mt:20 md:mt-40 z-1' id='skills'>
 
             {/* for desktop screen */}
             <div className='w-full aspect-[1653/929] bg-[url("/bars.png")] max-w-none min-w-[10px] bg-no-repeat bg-center bg-[size:100%_auto] items-center flex flex-col hidden md:flex text-white'>

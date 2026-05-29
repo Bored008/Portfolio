@@ -2,7 +2,7 @@ import React from 'react'
 
 const Education = () => {
     return (
-        <div className='text-white'>
+        <div className='text-white' id='education'>
             <div className='flex justify-center'>
                 <img src='/Educationbanner.svg' className='md:w-1/3 w-1/2' />
             </div>

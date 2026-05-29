@@ -15,7 +15,7 @@ const Mortend = localFont({
 
 const Hero = () => {
   return (
-    <div className='flex justify-center'>
+    <div className='flex justify-center' id='home'>
       <div className='absolute top-0 left-0 w-full z-50'>
         <Navbar1 />
       </div>
