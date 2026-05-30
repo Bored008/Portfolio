@@ -11,18 +11,11 @@ const Projects = () => {
                     <MoveUpRight className='w-[18] md:w-[40]' />
                 </button>
             </div>
-            <div className='flex overflow-x-auto snap-x snap-mandatory md:mx-[117px] md:mt-[32px] gap-[32px] '>
+            <div className='flex md:mx-[90px] md:mt-[32px] gap-[32px] '>
                 <div className='snap-0 snap-center md:w-[381] border border-white md:rounded-[19px] '>
-                    <img src="Docdesign.svg" alt="Docdesign" className='m-[14px]' />
+                    <img src="Docdesign.svg" alt="Docdesign" className='m-[14px] md:w-[353px]' />
                     <div>DocDesign</div>
-                </div>
-                <div className='snap-0 snap-center md:w-[381] border border-white md:rounded-[19px] '>
-                    <img src="Docdesign.svg" alt="Docdesign" className='m-[14px]' />
-                    <div>DocDesign</div>
-                </div>
-                <div className='snap-0 snap-center md:w-[381] border border-white md:rounded-[19px] '>
-                    <img src="Docdesign.svg" alt="Docdesign" className='m-[14px]' />
-                    <div>DocDesign</div>
+                    <div>A Website that can convert the image, document into easy editable image wether it is a front page of project or resume details u want to edit for free .</div>
                 </div>
                 <div className='snap-0 snap-center md:w-[381] border border-white md:rounded-[19px] '>
                     <img src="Docdesign.svg" alt="Docdesign" className='m-[14px]' />
