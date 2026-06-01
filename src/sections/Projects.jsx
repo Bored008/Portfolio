@@ -32,7 +32,7 @@ const Projects = () => {
                         <div className='md:text-[24px] mt-3 font-semibold'>DocDesign</div>
                         <a href='https://github.com/Bored008/DocDesign' target="_blank" className='flex gap-2 text-white/80 border rounded-full p-1 pl-3 bg-black'>
                             <div>Visit me</div>
-                            <img src='githubpr.svg' alt='githubicon' className='w-[24px]' />
+                            <img src='Githubpr.svg' alt='githubicon' className='w-[24px]' />
                         </a>
                     </div>
                     <div className='md:text-[16px]'>A Website that can convert the image, document into easy editable image wether it is a front page of project or resume details u want to edit for free.</div>
@@ -145,7 +145,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className='shrink-0 w-[48%] h-fit backdrop-blur-md border border-white/50 md:rounded-[19px] p-[12px] flex items-center text-white md:gap-5 '>
-                    <img src="jewellary.svg" alt="Bmw" className=' md:w-full' />
+                    <img src="Jewellary.svg" alt="Jewellary" className=' md:w-full' />
                     <div>
                         <div className='flex justify-between'>
                             <div className='md:text-[24px] font-semibold'>A Jewellary Web Design</div>
