@@ -44,7 +44,7 @@ const FAQ = () => {
     }
   }
   return (
-    <div className='md:flex md:gap-[120px] md:px-[126px] z-1' id='faq'>
+    <div className='text-white md:flex md:gap-[120px] md:px-[126px] z-1' id='faq'>
       <div className='flex flex-col md:w-1/2 justify-start'>
         <div className='flex flex-col items-center md:items-start'>
           <div className={`${Gilroy.className} md:text-[64px] text-4xl md:mb-4 md:w-2/3`}>Questions for me ?</div>

@@ -18,7 +18,7 @@ const Projects = () => {
     const designScrollContainerRef = useRef(null);
 
     return (
-        <div id='projects' className='z-1 '>
+        <div id='projects' className='z-1 text-white'>
 
             {/* Project */}
             <img src='/ProjectTag.svg' className='w-full object-cover object-center md:h-auto h-35' />
