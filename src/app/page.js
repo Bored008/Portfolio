@@ -6,18 +6,20 @@ import Projects from "@/sections/Projects"
 import Education from "@/sections/Education";
 import FAQ from "@/sections/FAQ";
 import Footer from "@/components/footer/Footer";
+import localFont from "next/font/local";
+
 
 export default function Home() {
   return (
     <div className="bg-black min-h-screen w-full">
       <div className="flex flex-col min-h-screen gap-y-20 md:gap-y-40 max-w-[420px] md:max-w-[1440px] mx-auto relative">
-        {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full z-0 select-none opacity-80 hidden md:flex">
+        <div className="absolute top-90 left-1/2 -translate-x-1/2 w-full z-0 select-none opacity-80 hidden md:flex">
           <img
             src="/curveline.svg"
             alt="Background curve"
             className="absolute max-w-none min-w-[1440px] w-full object-top"
           />
-        </div> */}
+        </div>
         <Hero />
         <About className="" />
         <Skills />
