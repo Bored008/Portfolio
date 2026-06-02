@@ -127,10 +127,68 @@ const Projects = () => {
             </div>
             <div ref={designScrollContainerRef} className='flex md:mx-[90px] md:mt-[24px] mt-[18px] gap-[18px] overflow-x-auto flex-nowrap [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]'>
                 <div className='shrink-0 w-[90%] md:w-[48%] h-fit backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] md:flex items-center text-white md:gap-5 '>
+                    <img src="Paw.png" alt="Paw" className='w-full rounded-[12px]' />
+                    <div>
+                        <div className='flex justify-between'>
+                            <div className='text-[24px] font-semibold'>Paw- Pet Adoption Page</div>
+                        </div>
+                        <div className='md:text-[16px]'>A modern pet adoption platform built to help people discover, connect with, and adopt pets with ease.</div>
+                        <div className='flex justify-between items-center'>
+                            <div className='flex flex-wrap mt-3 text-black gap-[8px]'>
+                                <div className='bg-white text-[12px] rounded-[4px] px-[6px] py-[3px]'>Figma</div>
+                                <div className='bg-white text-[12px] rounded-[4px] px-[6px] py-[3px]'>Framer</div>
+                            </div>
+                            <a href='https://www.figma.com/design/UloorFq3x9zOvJUMw85nus/Figma-work?node-id=381-1002&t=1Qya7mG7HlEGUrkN-1' target="_blank" className='flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 bg-black'>
+                                <div>Visit me</div>
+                                <img src='figmaproj.svg' alt='githubicon' className='w-[24px]' />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='shrink-0 w-[90%] md:w-[48%] h-fit backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] md:flex items-center text-white md:gap-5 '>
+                    <img src="Moviely.svg" alt="Paw" className='w-full rounded-[12px]' />
+                    <div>
+                        <div className='flex justify-between'>
+                            <div className='text-[24px] font-semibold'>Moviely Webdesign</div>
+                        </div>
+                        <div className='md:text-[16px]'>Designed a cinematic movie platform UI in Figma with a focus on content discovery, streamlined user journeys, and immersive visual experiences.</div>
+                        <div className='flex justify-between items-center'>
+                            <div className='flex flex-wrap mt-3 text-black gap-[8px]'>
+                                <div className='bg-white text-[12px] rounded-[4px] px-[6px] py-[3px]'>Figma</div>
+                                <div className='bg-white text-[12px] rounded-[4px] px-[6px] py-[3px]'>Framer</div>
+                            </div>
+                            <a href='https://www.figma.com/design/UloorFq3x9zOvJUMw85nus/Figma-work?node-id=349-2178&t=1Qya7mG7HlEGUrkN-1' target="_blank" className='flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 bg-black'>
+                                <div>Visit me</div>
+                                <img src='figmaproj.svg' alt='githubicon' className='w-[24px]' />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div className='shrink-0 w-[90%] md:w-[48%] h-fit backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] md:flex items-center text-white md:gap-5 '>
+                    <img src="Docdesign.svg" alt="Paw" className='w-full rounded-[12px]' />
+                    <div>
+                        <div className='flex justify-between'>
+                            <div className='text-[24px] font-semibold'>Docdesign</div>
+                        </div>
+                        <div className='md:text-[16px]'>Clean UI/UX for DocDesign, enabling users to easily edit static document images and export them as customizable documents.</div>
+                        <div className='flex justify-between items-center'>
+                            <div className='flex flex-wrap mt-3 text-black gap-[8px]'>
+                                <div className='bg-white text-[12px] rounded-[4px] px-[6px] py-[3px]'>Figma</div>
+                                <div className='bg-white text-[12px] rounded-[4px] px-[6px] py-[3px]'>Framer</div>
+                            </div>
+                            <a href='https://www.figma.com/design/UloorFq3x9zOvJUMw85nus/Figma-work?node-id=225-555&t=1Qya7mG7HlEGUrkN-1' target="_blank" className='flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 bg-black'>
+                                <div>Visit me</div>
+                                <img src='figmaproj.svg' alt='githubicon' className='w-[24px]' />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div className='shrink-0 w-[90%] md:w-[48%] h-fit backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] md:flex items-center text-white md:gap-5 '>
                     <img src="bmw.svg" alt="Bmw" className='w-full' />
                     <div>
                         <div className='flex justify-between'>
-                            <div className='text-[24px] font-semibold'>A Premium Car Web Design</div>
+                            <div className='text-[24px] font-semibold'>A Premium Car Design</div>
                         </div>
                         <div className='md:text-[16px]'> A Car selling website Hero section design that attracts the customer with the custom navbar and clear clean ui.</div>
                         <div className='flex justify-between items-center'>
@@ -147,7 +205,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className='shrink-0 w-[90%] md:w-[48%] h-fit backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] md:flex items-center text-white md:gap-5 '>
-                    <img src="Jewellary.svg" alt="Bmw" className='w-full' />
+                    <img src="Jewellary.svg" alt="Jewellary" className='w-full' />
                     <div>
                         <div className='flex justify-between'>
                             <div className='text-[24px] font-semibold'>A Jewellary Web Design</div>
@@ -159,6 +217,25 @@ const Projects = () => {
                                 <div className='bg-white text-[12px] rounded-[4px] px-[6px] py-[3px]'>Framer</div>
                             </div>
                             <a href='https://www.figma.com/design/UloorFq3x9zOvJUMw85nus/Figma-work?node-id=182-553&t=gb3cDCkQL20JmATY-1' target="_blank" className='flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 bg-black'>
+                                <div>Visit me</div>
+                                <img src='figmaproj.svg' alt='githubicon' className='w-[24px]' />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div className='shrink-0 w-[90%] md:w-[48%] h-fit backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] md:flex items-center text-white md:gap-5 '>
+                    <img src="watch.svg" alt="Watch" className='w-[68%] rounded-[12px]' />
+                    <div>
+                        <div className='flex justify-between'>
+                            <div className='text-[24px] font-semibold'>Luxuary Watch WebDesign</div>
+                        </div>
+                        <div className='md:text-[16px]'>Designed a premium luxury watch landing page in Figma, focused on elegant typography, immersive visuals, and a high-end shopping experience.</div>
+                        <div className='flex justify-between items-center'>
+                            <div className='flex flex-wrap mt-3 text-black gap-[8px]'>
+                                <div className='bg-white text-[12px] rounded-[4px] px-[6px] py-[3px]'>Figma</div>
+                                <div className='bg-white text-[12px] rounded-[4px] px-[6px] py-[3px]'>Framer</div>
+                            </div>
+                            <a href='https://www.figma.com/design/UloorFq3x9zOvJUMw85nus/Figma-work?node-id=95-7&t=1Qya7mG7HlEGUrkN-1' target="_blank" className='flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 bg-black'>
                                 <div>Visit me</div>
                                 <img src='figmaproj.svg' alt='githubicon' className='w-[24px]' />
                             </a>
