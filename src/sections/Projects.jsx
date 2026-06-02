@@ -224,7 +224,7 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className='shrink-0 w-[90%] md:w-[48%] h-fit backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] md:flex items-center text-white md:gap-5 '>
-                    <img src="watch.svg" alt="Watch" className='w-[68%] rounded-[12px]' />
+                    <img src="watch.svg" alt="Watch" className='w-[92%] rounded-[12px]' />
                     <div>
                         <div className='flex justify-between'>
                             <div className='text-[24px] font-semibold'>Luxuary Watch WebDesign</div>
