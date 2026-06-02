@@ -104,8 +104,8 @@ Portfolio/
 ## 🤝 Connect With Me
 
 - GitHub: https://github.com/Bored008
-- LinkedIn: [YOUR_LINKEDIN_PROFILE](https://www.linkedin.com/in/himanshuakabored/)
-- Portfolio: [YOUR_PORTFOLIO_LINK](https://portfolio-sandy-five-90.vercel.app/)
+- LinkedIn: https://www.linkedin.com/in/himanshuakabored/
+- Portfolio: https://portfolio-sandy-five-90.vercel.app/
 
 ---
 
