@@ -22,7 +22,7 @@ const Navbar1 = () => {
             </div>
             <div className=' text-white items-center gap-[6px] bg-black md:px-[14px] md:py-[12px] py-1 px-3 rounded hidden md:flex'>
                 <MessagesSquare className='md:size-[15px] size-3' />
-                <a href="" className='md:text-1 text-[12px]'>Lets Talk</a>
+                <a href="https://www.linkedin.com/in/himanshuakabored/" className='md:text-1 text-[12px]'>Lets Connect</a>
             </div>
         </div>
     )
