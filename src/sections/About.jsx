@@ -11,8 +11,8 @@ const About = () => {
             to help your business stand out.
           </div>
           <div className='flex mt-[12px] justify-center gap-[12px]'>
-            <button className='md:text-xl border-white border rounded-[12px] px-[19px] py-[12px] bg-black'>Hire me</button>
-            <button className='md:text-xl border-white border rounded-[12px] px-[19px] py-[12px] bg-black'>Download CV</button>
+            <a href='https://www.linkedin.com/in/himanshuakabored/' className='md:text-xl border-white border rounded-[12px] px-[19px] py-[12px] bg-black'>Hire me</a>
+            <a href='/Himanshu_D_Resume.pdf' download="Himanshu_D_Resume.pdf" className='md:text-xl border-white border rounded-[12px] px-[19px] py-[12px] bg-black'>Download CV</a>
           </div>
         </div>
       </div>
