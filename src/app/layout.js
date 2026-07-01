@@ -29,7 +29,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Portfolio - Himanshu Dahiya",
-  description: "My portfolio which shows the information about me , projects i have made and skills i have learned so far...",
+  description: "My portifolio which shows the capabilities in UI/UX and Web development and Skills I have learned so far....",
 };
 
 export default function RootLayout({ children }) {

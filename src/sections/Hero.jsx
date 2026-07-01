@@ -3,7 +3,7 @@ import Navbar from '@/components/navbar/Navbar'
 import React from 'react'
 import Image from 'next/image'
 import localFont from 'next/font/local'
-import Navbar1 from '@/components/navbar/Navbar1'
+import Navbar1 from '@/components/navbar/Navbar'
 
 const HeyFont = localFont({
   src: "../fonts/FeelingPassionate.ttf"
