@@ -20,7 +20,7 @@ const FAQ = () => {
         trigger:".page",
         start:"top+=150 bottom",
         end:"top+=250 bottom",
-        markers:true,
+        markers:false,
         scrub:2
       }
     })
@@ -33,7 +33,7 @@ const FAQ = () => {
         trigger:".card",
         start:"top+=150 bottom",
         end:"top+=500 bottom",
-        markers:true,
+        markers:false,
         scrub:2
       }
     })
