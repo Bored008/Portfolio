@@ -29,3 +29,7 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.text-stroke {
+  -webkit-text-stroke: 2px rgb(230, 230, 230);
+}

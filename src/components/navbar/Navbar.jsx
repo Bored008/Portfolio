@@ -9,6 +9,7 @@ const Mortend = localFont({
     src: "../../fonts/MortendBold.otf"
 })
 
+
 const navLinks = [
     { id: 'home', label: 'Home', icon: House },
     { id: 'skills', label: 'Skills', icon: Code },
@@ -49,7 +50,7 @@ const Navbar1 = () => {
 
     return (
         <div className='nav flex justify-between items-center px-4 md:px-60 md:mt-4 mt-1'>
-            <Link href="/" className={`bg-gradient-to-r from-yellow-400 to-blue-400 bg-clip-text bg-transparent ${Mortend.className} text-transparent text-[16px] md:text-[32px]`}>BORUI</Link>
+            <Link href="/" className={`bg-gradient-to-b from-[#EA8E4B] to-[#FAED44] bg-clip-text bg-transparent ${Mortend.className} text-transparent text-[16px] md:text-[32px]`}>BORUI</Link>
             <div className='fixed top-1 md:top-4 right-4 md:right-auto md:left-1/2 md:-translate-x-1/2 flex md:text-[16px] text-[12px] text-white md:gap-[24px] gap-[16px] bg-black md:py-[5px] md:px-[5px] py-[4px] px-[4px] md:rounded-full rounded items-center'>
                 {navLinks.map((link) => (
                     <a

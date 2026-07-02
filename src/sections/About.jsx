@@ -1,10 +1,32 @@
+"use client";
 import React from 'react'
 import Image from 'next/image'
+import localFont from 'next/font/local'
+import gsap from 'gsap';
+import { easeInOut, motion } from 'motion/react';
+
+const RockyBilly = localFont({
+  src:"../fonts/Rockybilly.ttf"
+})
 
 const About = () => {
+
   return (
-    <div className='flex flex-col h-96 items-center gap-4 mt-9 md:mt-0' id='about'>
-      <img src='/about.svg' alt='Web Designer & Developer' className='md:w-[659px] w-[380px]'/>
+    <div className='flex flex-col items-center gap-4 mt-9 md:mt-0 pt-6' id='about'>
+      <div className='relative overflow-visible'>
+        <div className='flex flex-col items-center'>
+          <div className='relative'>
+            <motion.div animate={{opacity:[1, 0, 1]}} transition={{duration:2, repeat:Infinity, ease:"easeInOut"}}
+              className={`${RockyBilly.className} text-transparent text-stroke absolute top-0 left-0 text-3xl md:text-7xl leading-[3.4]`}>Web Designer</motion.div>
+            <div className={`${RockyBilly.className} z-[20] bg-gradient-to-b from-[#EA8E4B] to-[#FAED44] bg-clip-text text-transparent text-3xl md:text-7xl leading-[3.7]`}>Web Designer</div>
+          </div>
+          <div className='relative -mt-10 md:-mt-20'>
+            <motion.div animate={{opacity:[1, 0, 1]}} transition={{duration:2, repeat:Infinity, ease:"easeInOut"}}
+              className={`${RockyBilly.className} text-transparent text-stroke absolute top-0 left-0 text-3xl md:text-7xl leading-[3.4]`}>& Developer</motion.div>
+            <div className={`${RockyBilly.className} bg-gradient-to-b from-[#EA8E4B] to-[#FAED44] bg-clip-text text-transparent text-3xl md:text-7xl leading-[3.7]`}>& Developer</div>
+          </div>
+        </div>
+      </div>
       <div>
         <div className='backdrop-blur-md border border-white/50 text-white  rounded-[24px] shadow-2xl mx-4 md:p-6 p-5 flex flex-col items-center md:gap-[12px] gap-[8px]'>
           <div className='flex flex-wrap md:w-150 md:text-2xl  text-center'>Premium web design, development, and services
