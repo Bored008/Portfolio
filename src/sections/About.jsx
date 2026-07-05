@@ -19,7 +19,7 @@ const About = () => {
         start:"top+=150 bottom",
         end:"top+=600 bottom",
         scrub:2,
-        markers:true
+        markers:false
       },});
     tl.from(".about >*",{
       z:-500,
