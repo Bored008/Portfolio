@@ -30,9 +30,9 @@ const About = () => {
   },[])
   return (
     <motion.div 
-    initial={{opacity:0,z:-500}}
-    whileInView={{opacity:1,z:1}}
-    viewport={{margin:"-20px",amount:0.5}}
+    // initial={{opacity:0,z:-500}}
+    // whileInView={{opacity:1,z:1}}
+    // viewport={{margin:"-20px",amount:0.5}}
     className='about flex flex-col items-center gap-4 mt-9 md:mt-0 pt-6' id='about'
     style={{perspective:"1000px"}}>
       <div className='relative overflow-visible'>
