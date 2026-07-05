@@ -1,18 +1,40 @@
 "use client";
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import localFont from 'next/font/local'
 import gsap from 'gsap';
 import { easeInOut, motion } from 'motion/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
 
 const RockyBilly = localFont({
   src:"../fonts/Rockybilly.ttf"
 })
 
 const About = () => {
-
+  useEffect(()=>{
+    const tl=gsap.timeline({scrollTrigger:{
+        trigger:".about",
+        start:"top+=150 bottom",
+        end:"top+=600 bottom",
+        scrub:2,
+        markers:true
+      },});
+    tl.from(".about >*",{
+      z:-500,
+      opacity:0,
+      duration:2,
+      stagger:0.5
+    })
+  },[])
   return (
-    <div className='flex flex-col items-center gap-4 mt-9 md:mt-0 pt-6' id='about'>
+    <motion.div 
+    initial={{opacity:0,z:-500}}
+    whileInView={{opacity:1,z:1}}
+    viewport={{margin:"-20px",amount:0.5}}
+    className='about flex flex-col items-center gap-4 mt-9 md:mt-0 pt-6' id='about'
+    style={{perspective:"1000px"}}>
       <div className='relative overflow-visible'>
         <div className='flex flex-col items-center'>
           <div className='relative'>
@@ -29,16 +51,18 @@ const About = () => {
       </div>
       <div>
         <div className='backdrop-blur-md border border-white/50 text-white  rounded-[24px] shadow-2xl mx-4 md:p-6 p-5 flex flex-col items-center md:gap-[12px] gap-[8px]'>
-          <div className='flex flex-wrap md:w-150 md:text-2xl  text-center'>Premium web design, development, and services
+          <div className='flex flex-wrap md:w-150 md:text-xl font-normal text-neutral-300 text-center'
+          style={{fontFamily:"var(--font-geist-sans)"}}
+          >Premium web design, development, and services
             to help your business stand out.
           </div>
           <div className='flex mt-[12px] justify-center gap-[12px]'>
-            <a href='https://www.linkedin.com/in/himanshuakabored/' className='md:text-xl border-white border rounded-[12px] px-[19px] py-[12px] bg-black'>Hire me</a>
-            <a href='/Himanshu_D_Resume.pdf' download="Himanshu_D_Resume.pdf" className='md:text-xl border-white border rounded-[12px] px-[19px] py-[12px] bg-black'>Download CV</a>
+            <a href='https://www.linkedin.com/in/himanshuakabored/' className='md:text-md border-white border rounded-[12px] px-[12px] py-[8px] bg-black'>Hire me</a>
+            <a href='/Himanshu_D_Resume.pdf' download="Himanshu_D_Resume.pdf" className='md:text-md border-white border rounded-[12px] px-[12px] py-[8px] bg-black'>Download CV</a>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

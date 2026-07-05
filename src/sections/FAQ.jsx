@@ -3,6 +3,7 @@ import localFont from 'next/font/local'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
+import { motion } from 'framer-motion';
 
 const Gilroy = localFont({
   src: "../fonts/Gilroy-Black.ttf"
@@ -26,7 +27,7 @@ const FAQ = () => {
     })
 
     tl.from(".card >*",{
-      y:-10,
+      x:10,
       opacity:0,
       stagger:0.3,
       scrollTrigger:{
@@ -85,7 +86,9 @@ const FAQ = () => {
       </div>
       <div className='card flex flex-col md:w-1/2 gap-y-3'>
         {faqs.map((faq, index) => (
-          <div key={index} onClick={() => toggleQuestion(index)} className={`flex flex-col cursor-pointer backdrop-blur-md border border-white/50 md:px-[19px] mx-[30px] md:mx-0 md:py-[14px] px-4 p-2 md:rounded-2xl rounded-xl
+          <motion.div 
+          layout
+          key={index} onClick={() => toggleQuestion(index)} className={`flex flex-col cursor-pointer backdrop-blur-md border border-white/50 md:px-[19px] mx-[30px] md:mx-0 md:py-[14px] px-4 p-2 md:rounded-2xl rounded-xl
            ${openIndex === index ? 'bg-white text-black':' text-white border border-white/50 backdrop-blur-md'}`}>
             <div className='flex justify-between w-full'>
               <div className='md:text-[20px] font-bold '>{faq.question}</div>
@@ -94,7 +97,7 @@ const FAQ = () => {
             {openIndex === index && (
               <div className='animate-fade-in mt-1 md:mt-2 text-gray-500'>{faq.answer}</div>
             )}
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

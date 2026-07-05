@@ -5,6 +5,9 @@ import Image from 'next/image'
 import localFont from 'next/font/local'
 import Navbar1 from '@/components/navbar/Navbar'
 import gsap from 'gsap'
+import ScrambleTextPlugin from 'gsap/ScrambleTextPlugin'
+
+gsap.registerPlugin(ScrambleTextPlugin);
 
 const HeyFont = localFont({
   src: "../fonts/FeelingPassionate.ttf"
@@ -17,7 +20,16 @@ const Mortend = localFont({
 const Hero = () => {
   useEffect(()=>{
   const tl = gsap.timeline();
-  tl.from(".name *",{x:20,duration:1,stagger:0.5,delay:0.4,opacity:0});
+  tl.from(".name *:not(.scrambleName)",{x:20,duration:1,stagger:0.5,delay:0.4,opacity:0});
+  gsap.to(".scrambleName",{
+    scrambleText:{
+      text:"HIMANSHU",
+      chars:"!@#$%&*",
+      speed:0.5,
+      revealDelay:0.5
+    },
+    duration:2.5
+  })
   },[]);
 
   return (
@@ -31,7 +43,7 @@ const Hero = () => {
       <div className='name'>
         <div className={`${HeyFont.className} md:text-[86px] text-3xl text-white z-20 absolute md:top-130 md:left-[14%] top-65 left-15`}>Hey,</div>
         <div className={`${Mortend.className} md:text-[126px] text-3xl text-white z-20 absolute md:top-158 md:left-[14%] top-84 left-5`}>I AM</div>
-        <div className={`${Mortend.className} md:text-[126px] text-4xl bg-yellow-500 md:bg-transparent text-white z-20 absolute md:top-185 md:left-[14%] top-90 left-29`}>HIMANSHU</div>
+        <div className={`${Mortend.className} scrambleName md:text-[126px] text-4xl bg-yellow-500 md:bg-transparent text-white z-20 absolute md:top-185 md:left-[14%] top-90 left-29`}>HIMANSHU</div>
         <img src="/Boredlogo.svg" alt='boredlogo' className='img md:w-[248px] md:h-[116px] w-[80px] md:bg-yellow-500 bg-transparent absolute md:top-168 md:left-260 z-19 top-82 left-80' />
       </div>
     </div>
