@@ -90,12 +90,12 @@ const FAQ = () => {
           layout
           key={index} onClick={() => toggleQuestion(index)} className={`flex flex-col cursor-pointer backdrop-blur-md border border-white/50 md:px-[19px] mx-[30px] md:mx-0 md:py-[14px] px-4 p-2 md:rounded-2xl rounded-xl
            ${openIndex === index ? 'bg-white text-black':' text-white border border-white/50 backdrop-blur-md'}`}>
-            <div className='flex justify-between w-full'>
+            <motion.div layout className='flex justify-between w-full'>
               <div className='md:text-[20px] font-bold '>{faq.question}</div>
               <img src="/Arrow.svg" alt="arrow" className={`md:w-[30px] w-[25px] transition-transform duration-300 ${openIndex===index ? 'rotate-0':'rotate-180 invert'}`} />
-            </div>
+            </motion.div>
             {openIndex === index && (
-              <div className='animate-fade-in mt-1 md:mt-2 text-gray-500'>{faq.answer}</div>
+              <motion.div className='animate-fade-in mt-1 md:mt-2 text-gray-500'>{faq.answer}</motion.div>
             )}
           </motion.div>
         ))}

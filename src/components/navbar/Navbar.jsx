@@ -4,6 +4,7 @@ import { House, MessagesSquare, Menu, Code, FolderGit2, HelpCircle } from "lucid
 import { motion, AnimatePresence } from "motion/react"
 import Link from 'next/link'
 import gsap from 'gsap'
+import AnimatedButton from '../effects/AnimatedButton'
 
 const Mortend = localFont({
     src: "../../fonts/MortendBold.otf"
@@ -89,14 +90,12 @@ const Navbar1 = () => {
                 ))}
                 <a href="https://www.linkedin.com/in/himanshuakabored/" className='md:mr-3 mr-2 sm:hidden text-white relative z-10'>Contact me</a>
             </div>
-            <motion.div 
-            style={{background:'black'}}
-            whileHover={{background:'white', color:'black'}}
-            transition={{duration:0.8, delay:0.05, ease:'easeInOut'}}
-            className=' text-white items-center gap-[6px] md:px-[14px] md:py-[12px] py-1 px-3 rounded hidden md:flex'>
-                <MessagesSquare className='md:size-[15px] size-3' />
-                <a href="https://www.linkedin.com/in/himanshuakabored/" className='md:text-1 text-[12px]'>Lets Connect</a>
-            </motion.div>
+            <AnimatedButton href="https://www.linkedin.com/in/himanshuakabored/" className='bg-black text-white py-[8px] px-[12px] hidden md:flex'>
+                <div className='hidden md:flex items-center gap-[12px] '>
+                    <MessagesSquare className='md:size-[18px] size-3' />
+                    <span className='md:text-[16px] text-[12px]'>Lets Connect</span>
+                </div>
+            </AnimatedButton>
         </div>
     )
 }

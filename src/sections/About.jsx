@@ -6,6 +6,7 @@ import gsap from 'gsap';
 import { easeInOut, motion } from 'motion/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
+import AnimatedButton from '@/components/effects/AnimatedButton';
 
 
 const RockyBilly = localFont({
@@ -36,18 +37,27 @@ const About = () => {
     className='about flex flex-col items-center gap-4 mt-9 md:mt-0 pt-6' id='about'
     style={{perspective:"1000px"}}>
       <div className='relative overflow-visible'>
-        <div className='flex flex-col items-center'>
+        <motion.div 
+        drag
+        dragConstraints={{
+          top:0,
+          bottom:0,
+          left:0,
+          right:0
+        }}
+        dragElastic={0.5}
+        className='flex flex-col items-center'>
           <div className='relative'>
             <motion.div animate={{opacity:[1, 0, 1]}} transition={{duration:2, repeat:Infinity, ease:"easeInOut"}}
               className={`${RockyBilly.className} text-transparent text-stroke absolute top-0 left-0 text-3xl md:text-7xl leading-[3.4]`}>Web Designer</motion.div>
-            <div className={`${RockyBilly.className} z-[20] bg-gradient-to-b from-[#EA8E4B] to-[#FAED44] bg-clip-text text-transparent text-3xl md:text-7xl leading-[3.7]`}>Web Designer</div>
+            <div className={`${RockyBilly.className} overflow-visible z-[20] bg-gradient-to-b from-[#EA8E4B] to-[#FAED44] bg-clip-text text-transparent text-3xl md:text-7xl leading-[3.7]`}>Web Designer</div>
           </div>
           <div className='relative -mt-10 md:-mt-20'>
             <motion.div animate={{opacity:[1, 0, 1]}} transition={{duration:2, repeat:Infinity, ease:"easeInOut"}}
               className={`${RockyBilly.className} text-transparent text-stroke absolute top-0 left-0 text-3xl md:text-7xl leading-[3.4]`}>& Developer</motion.div>
             <div className={`${RockyBilly.className} bg-gradient-to-b from-[#EA8E4B] to-[#FAED44] bg-clip-text text-transparent text-3xl md:text-7xl leading-[3.7]`}>& Developer</div>
           </div>
-        </div>
+        </motion.div>
       </div>
       <div>
         <div className='backdrop-blur-md border border-white/50 text-white  rounded-[24px] shadow-2xl mx-4 md:p-6 p-5 flex flex-col items-center md:gap-[12px] gap-[8px]'>
@@ -57,8 +67,8 @@ const About = () => {
             to help your business stand out.
           </div>
           <div className='flex mt-[12px] justify-center gap-[12px]'>
-            <a href='https://www.linkedin.com/in/himanshuakabored/' className='md:text-md border-white border rounded-[12px] px-[12px] py-[8px] bg-black'>Hire me</a>
-            <a href='/Himanshu_D_Resume.pdf' download="Himanshu_D_Resume.pdf" className='md:text-md border-white border rounded-[12px] px-[12px] py-[8px] bg-black'>Download CV</a>
+            <AnimatedButton className={`md:text-md border-white border rounded-[12px] px-[12px] py-[8px] bg-black cursor-pointer`} href='https://www.linkedin.com/in/himanshuakabored/' text='Hire Me'/>
+            <AnimatedButton className={`md:text-md border-white border rounded-[12px] px-[12px] py-[8px] bg-black cursor-pointer`} href='/Himanshu_D_Resume.pdf' download="Himanshu_D_Resume.pdf" text='Download CV'/>
           </div>
         </div>
       </div>

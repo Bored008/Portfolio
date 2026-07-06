@@ -10,6 +10,34 @@ const Gilroy = localFont({
     src: "../fonts/Gilroy-Black.ttf"
 })
 
+const skillsData = [
+    { name: 'HTML', icon: '/Html 5.svg', desktopHeight: 'h-[32px]', mobileHeight: 'h-[21px]' },
+    { name: 'CSS', icon: '/CSS3.svg', desktopHeight: 'h-[32px]', mobileHeight: 'h-[21px]' },
+    { name: 'JavaScript', icon: '/JavaScript.svg', desktopHeight: 'h-[32px]', mobileHeight: 'h-[21px]' },
+    { name: 'React', icon: '/React.svg', desktopHeight: 'h-[32px]', mobileHeight: 'h-[21px]' },
+    { name: 'Next.js', icon: '/Next.js.svg', desktopHeight: 'h-[32px]', mobileHeight: 'h-[21px]' },
+    { name: 'Node.js', icon: '/Node Js.svg', desktopHeight: 'h-[32px]', mobileHeight: 'h-[21px]' },
+    { name: 'Express', icon: '/Express Js.svg', desktopHeight: 'h-[32px]', mobileHeight: 'h-[21px]' },
+    { name: 'MongoDB', icon: '/Mongo Db.svg', desktopHeight: 'h-[32px]', mobileHeight: 'h-[21px]' },
+    { name: 'Tailwind CSS', icon: '/Tailwind CSS.svg', desktopHeight: 'h-[32px]', mobileHeight: 'h-[21px]' },
+    { name: 'Git', icon: '/Git.svg', desktopHeight: 'h-[30px]', mobileHeight: 'h-[21px]' },
+    { name: 'Java', icon: '/Java.svg', desktopHeight: 'h-[32px]', mobileHeight: 'h-[21px]' },
+    { name: 'Figma', icon: '/Figma.svg', desktopHeight: 'h-[32px]', mobileHeight: 'h-[21px]' },
+    { name: 'Framer', icon: '/Framer.svg', desktopHeight: 'h-[32px]', mobileHeight: 'h-[21px]' },
+    { name: 'Vercel', icon: '/Vercel.svg', desktopHeight: 'h-[32px]', mobileHeight: 'h-[21px]' },
+    { name: 'GSAP', icon: '/gsap.svg', desktopHeight: 'h-[30px]', mobileHeight: 'h-[21px]' },
+    { name: 'Motion', icon: '/Motion.svg', desktopHeight: 'h-[20px]', mobileHeight: 'h-[15px]' },
+];
+
+const desktopRows = [
+    skillsData.slice(0, 4),   // Row 1: 4 items
+    skillsData.slice(4, 7),   // Row 2: 3 items
+    skillsData.slice(7, 11),  // Row 3: 4 items
+    skillsData.slice(11, 14), // Row 4: 3 items
+    skillsData.slice(14, 16)  // Row 5: 2 items
+];
+
+
 const Skills = () => {
     return (
         <div className='z-1' id='skills'>
@@ -21,111 +49,16 @@ const Skills = () => {
                         Skills
                     </div>
                 </div>
-                <div className='flex gap-[64px] mt-[52px]'>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
-                        <img src='/Html 5.svg' className='h-[32px]'/>
-                        <div className='text-[27px]'>
-                            HTML
+                
+                <div className='flex gap-[64px] gap-y-[36px] mt-[52px] flex-wrap justify-center px-[64px] max-w-[1200px]'>
+                    {skillsData.map((skill, index) => (
+                        <div key={index} className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
+                            <img src={skill.icon} className={skill.desktopHeight} alt={skill.name} />
+                            <div className='text-[24px]'>
+                                {skill.name}
+                            </div>
                         </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
-                        <img src='/CSS3.svg' className='h-[32px]'/>
-                        <div className='text-[27px]'>
-                            CSS
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
-                        <img src='/JavaScript.svg' className='h-[32px]'/>
-                        <div className='text-[27px]'>
-                            JavaScript
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
-                        <img src='/React.svg' className='h-[32px]'/>
-                        <div className='text-[27px]'>
-                            React
-                        </div>
-                    </div>
-                </div>
-                <div className='flex gap-[64px] mt-[36px]'>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
-                        <img src='/Next.js.svg' className='h-[32px]'/>
-                        <div className='text-[27px]'>
-                            Next.js
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
-                        <img src='/Node Js.svg' className='h-[32px]'/>
-                        <div className='text-[27px]'>
-                            Node.js
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
-                        <img src='/Express Js.svg' className='h-[32px]'/>
-                        <div className='text-[27px]'>
-                            Express
-                        </div>
-                    </div>
-                </div>
-                <div className='flex gap-[64px] mt-[36px]'>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
-                        <img src='/Mongo Db.svg' className='h-[32px]'/>
-                        <div className='text-[27px]'>
-                            MongoDB
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
-                        <img src='/Tailwind CSS.svg' className='h-[32px]'/>
-                        <div className='text-[27px]'>
-                            Tailwind CSS
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
-                        <img src='/Git.svg' className='h-[30px]'/>
-                        <div className='text-[27px]'>
-                            Git
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
-                        <img src='/Java.svg' className='h-[32px]'/>
-                        <div className='text-[27px]'>
-                            Java
-                        </div>
-                    </div>
-                </div>
-                <div className='flex gap-[64px] mt-[36px]'>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
-                        <img src='/Figma.svg' className='h-[32px]'/>
-                        <div className='text-[27px]'>
-                            Figma
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
-                        <img src='/Framer.svg' className='h-[32px]'/>
-                        <div className='text-[27px]'>
-                            Framer
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
-                        <img src='/Vercel.svg' className='h-[32px]'/>
-                        <div className='text-[27px]'>
-                            Vercel
-                        </div>
-                    </div>
-                </div>
-                <div className='flex gap-[64px] mt-[36px]'>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
-                        <img src='/gsap.svg' className='h-[30px]'/>
-                        <div className='text-[27px]'>
-                            GSAP
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black'>
-                        <img src='/Motion.svg' className='h-[20px]'/>
-                        <div className='text-[27px]'>
-                            Motion
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
 
@@ -136,103 +69,16 @@ const Skills = () => {
                         Skills
                     </div>
                 </div>
+                
                 <div className='flex gap-[24px] gap-y-[18px] mt-[20px] text-white flex-wrap justify-center'>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[12px] rounded-[12px] bg-black'>
-                        <img src='/Html 5.svg' className='h-[21px]'/>
-                        <div className='text-[17px]'>
-                            HTML
+                    {skillsData.map((skill, index) => (
+                        <div key={index} className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[12px] rounded-[12px] bg-black'>
+                            <img src={skill.icon} className={skill.mobileHeight} alt={skill.name} />
+                            <div className='text-[17px]'>
+                                {skill.name}
+                            </div>
                         </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[12px] rounded-[12px] bg-black'>
-                        <img src='/CSS3.svg' className='h-[21px]'/>
-                        <div className='text-[17px]'>
-                            CSS
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[12px] rounded-[12px] bg-black'>
-                        <img src='/JavaScript.svg' className='h-[21px]'/>
-                        <div className='text-[17px]'>
-                            JavaScript
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[12px] rounded-[12px] bg-black'>
-                        <img src='/React.svg' className='h-[21px]'/>
-                        <div className='text-[17px]'>
-                            React
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[12px] rounded-[12px] bg-black'>
-                        <img src='/Next.js.svg' className='h-[21px]'/>
-                        <div className='text-[17px]'>
-                            Next.js
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[12px] rounded-[12px] bg-black'>
-                        <img src='/Node Js.svg' className='h-[21px]'/>
-                        <div className='text-[17px]'>
-                            Node.js
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[12px] rounded-[12px] bg-black'>
-                        <img src='/Express Js.svg' className='h-[21px]'/>
-                        <div className='text-[17px]'>
-                            Expressjs
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[12px] rounded-[12px] bg-black'>
-                        <img src='/Mongo Db.svg' className='h-[21px]'/>
-                        <div className='text-[17px]'>
-                            MongoDB
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[12px] rounded-[12px] bg-black'>
-                        <img src='/Tailwind CSS.svg' className='h-[21px]'/>
-                        <div className='text-[17px]'>
-                            TailwindCSS
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[12px] rounded-[12px] bg-black'>
-                        <img src='/Git.svg' className='h-[21px]'/>
-                        <div className='text-[17px]'>
-                            Git
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[12px] rounded-[12px] bg-black'>
-                        <img src='/Java.svg' className='h-[21px]'/>
-                        <div className='text-[17px]'>
-                            Java
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[12px] rounded-[12px] bg-black'>
-                        <img src='/Figma.svg' className='h-[21px]'/>
-                        <div className='text-[17px]'>
-                            Figma
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[12px] rounded-[12px] bg-black'>
-                        <img src='/Framer.svg' className='h-[21px]'/>
-                        <div className='text-[17px]'>
-                            Framer
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[12px] rounded-[12px] bg-black'>
-                        <img src='/Vercel.svg' className='h-[21px]'/>
-                        <div className='text-[17px]'>
-                            Vercel
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[12px] rounded-[12px] bg-black'>
-                        <img src='/gsap.svg' className='h-[21px]'/>
-                        <div className='text-[17px]'>
-                            Gsap
-                        </div>
-                    </div>
-                    <div className='gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[12px] rounded-[12px] bg-black'>
-                        <img src='/Motion.svg' className='h-[15px]'/>
-                        <div className='text-[17px]'>
-                            Motion
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </div>
