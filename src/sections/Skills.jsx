@@ -124,7 +124,7 @@ const Skills = () => {
     <div className="z-1" id="skills">
       {/* for desktop screen */}
 
-      <div className='w-full aspect-[1653/929] bg-[url("/bars.png")] max-w-none min-w-[10px] bg-no-repeat bg-center bg-[size:100%_auto] items-center flex flex-col hidden md:flex text-white'>
+      <div className='w-full aspect-[1653/929] bg-[url("/bars.png")] max-w-none min-w-[10px] bg-no-repeat bg-center items-center flex flex-col hidden md:flex text-white'>
         <div
           className={`${Gilroy.className} bg-[url("/skillboard.svg")] w-[386px] h-[178px] bg-no-repeat bg-contain flex justify-center items-center bg-center`}
         >
@@ -164,17 +164,21 @@ const Skills = () => {
 
         <div className="flex gap-[24px] gap-y-[18px] mt-[20px] text-white flex-wrap justify-center">
           {skillsData.map((skill, index) => (
-            <div
+            <AnimatedButton
               key={index}
-              className="gap-[8px] flex items-center justify-center border-2 border-white py-[8px] px-[12px] rounded-[12px] bg-black"
+              className=" border-2 border-white py-[8px] px-[12px] rounded-[12px] bg-black overflow-visible"
             >
-              <img
-                src={skill.icon}
-                className={skill.mobileHeight}
-                alt={skill.name}
-              />
-              <div className="text-[17px]">{skill.name}</div>
-            </div>
+              <div className="flex gap-[8px] flex items-center justify-center">
+                <div className="flex overflow-visible group-hover:scale-[2] group-hover:-translate-y-2.5 transition-transform duration-200">
+                  <img
+                    src={skill.icon}
+                    className={`group-hover:invert transition-all duration-200 ${skill.mobileHeight}`}
+                    alt={skill.name}
+                  />
+                </div>
+                <div className="text-[17px]">{skill.name}</div>
+              </div>
+            </AnimatedButton>
           ))}
         </div>
       </div>

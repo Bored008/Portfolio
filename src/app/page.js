@@ -20,6 +20,13 @@ export default function Home() {
             className="absolute max-w-none min-w-[1440px] w-full object-top"
           />
         </div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full z-0 select-none opacity-80 flex md:hidden">
+          <img
+            src="/curvelinemobile.svg"
+            alt="Background curve"
+            className="absolute max-w-none min-w-[420px] w-[200%] object-top inset-0 translate-x-[-25%]"
+          />
+        </div>
         <Hero />
         <About className="" />
         <Skills />
