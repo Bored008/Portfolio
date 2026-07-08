@@ -9,12 +9,14 @@ export default function SmoothScroll({ children }) {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.ticker.add((time) => {
-      ScrollTrigger.update();
-    });
+    const updateGsap=()=>{
+        ScrollTrigger.update();
+    };
+
+    gsap.ticker.add(updateGsap);
     
     return () => {
-      gsap.ticker.remove(ScrollTrigger.update);
+      gsap.ticker.remove(updateGsap);
     };
   }, []);
 
