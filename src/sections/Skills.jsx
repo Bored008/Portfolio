@@ -148,10 +148,10 @@ const Skills = () => {
       stagger: 0.2,
       ease: "easeInOut",
       scrollTrigger: {
-        markers: false,
+        markers: true,
         trigger: ".skillMobile",
-        start: "top bottom",
-        end: "top 45%",
+        start: "top 90%",
+        end: "top 35%",
         scrub: 1,
       },
     });
