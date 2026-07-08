@@ -148,7 +148,7 @@ const Skills = () => {
       stagger: 0.2,
       ease: "easeInOut",
       scrollTrigger: {
-        markers: true,
+        markers: false,
         trigger: ".skillMobile",
         start: "top 90%",
         end: "top 35%",
