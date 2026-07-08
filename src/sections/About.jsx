@@ -81,8 +81,8 @@ const About = () => {
           </div>
         </motion.div>
       </div>
-      <div className="z-20">
-        <div className="backdrop-blur-md border border-white/50 text-white  rounded-3xl shadow-2xl mx-4 md:p-6 p-5 flex flex-col items-center md:gap-[12px] gap-[8px]">
+      <div className="z-20 relative">
+        <div className=" backdrop-blur-[80px] bg-black/40 border border-white/50 text-white  rounded-3xl shadow-2xl mx-4 md:p-6 p-5 flex flex-col items-center md:gap-[12px] gap-[8px]">
           <div
             className="flex flex-wrap md:w-150 md:text-xl font-normal text-neutral-300 text-center"
             style={{ fontFamily: "var(--font-geist-sans)" }}
