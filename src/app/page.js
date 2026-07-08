@@ -28,7 +28,7 @@ export default function Home() {
           />
         </div>
         <Hero />
-        <About className="" />
+        <About />
         <Skills />
         <Projects />
         <Education />

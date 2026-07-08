@@ -138,9 +138,7 @@ const Skills = () => {
               className="border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black overflow-visible"
             >
               <div className="gap-[8px] flex items-center justify-center">
-                <div
-                  className="overflow-visible group-hover:scale-[2] group-hover:-translate-y-2.5 transition-transform duration-200"
-                >
+                <div className="overflow-visible group-hover:scale-[2] group-hover:-translate-y-2.5 transition-transform duration-200">
                   <img
                     src={skill.icon}
                     className={`group-hover:invert transition-all duration-200 ${skill.desktopHeight}`}
@@ -155,9 +153,9 @@ const Skills = () => {
       </div>
 
       {/* For mobile view */}
-      <div className="flex flex-col justify-center items-center sm:hidden">
+      <div className="w-full min-h-full bg-[url('/barsmobile.png')] bg-no-repeat bg-[size:601px_657px] bg-[position:-83px_-36px] flex flex-col justify-center items-center sm:hidden">
         <div
-          className={`${Gilroy.className} bg-[url("/skillboard.svg")] w-[150px] mt-7 bg-no-repeat bg-contain flex justify-center items-center bg-center`}
+          className={`${Gilroy.className} bg-[url('/skillboard.svg')] w-[150px] mt-7 bg-no-repeat bg-contain flex justify-center items-center bg-center`}
         >
           <div className="text-[32px] pt-8 text-black">Skills</div>
         </div>
