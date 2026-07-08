@@ -2,6 +2,7 @@ import localFont from "next/font/local"
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import { Analytics } from '@vercel/analytics/next';
+import SmoothScroll from "@/components/effects/SmoothScroll";
 
 const Mortend = localFont({
   src: "../fonts/MortendBold.otf"
@@ -40,7 +41,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body>
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
         <Analytics />
       </body>
     </html>
