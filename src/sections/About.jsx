@@ -60,7 +60,7 @@ const About = () => {
               Web Designer
             </motion.div>
             <div
-              className={`${RockyBilly.className} overflow-visible z-20 bg-linear-to-b from-[#EA8E4B] to-[#FAED44] bg-clip-text text-transparent text-3xl md:text-7xl leading-[3.7]`}
+              className={`${RockyBilly.className} overflow-visible z-10 bg-linear-to-b from-[#EA8E4B] to-[#FAED44] bg-clip-text text-transparent text-3xl md:text-7xl leading-[3.7]`}
             >
               Web Designer
             </div>
@@ -81,7 +81,7 @@ const About = () => {
           </div>
         </motion.div>
       </div>
-      <div>
+      <div className="z-20">
         <div className="backdrop-blur-md border border-white/50 text-white  rounded-3xl shadow-2xl mx-4 md:p-6 p-5 flex flex-col items-center md:gap-[12px] gap-[8px]">
           <div
             className="flex flex-wrap md:w-150 md:text-xl font-normal text-neutral-300 text-center"
