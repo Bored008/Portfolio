@@ -494,7 +494,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center mt-[16px] gap-[12px] ">
+      <div className="flex justify-center md:mt-[16px] gap-[12px] ">
         <img
           src="prev.svg"
           alt="prev button"

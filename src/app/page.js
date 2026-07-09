@@ -11,8 +11,8 @@ import localFont from "next/font/local";
 
 export default function Home() {
   return (
-    <div className="bg-black min-h-screen w-full">
-      <div className="flex flex-col min-h-screen gap-y-20 md:gap-y-30 max-w-[420px] md:max-w-[1440px] mx-auto relative">
+    <div className="bg-black min-h-screen w-full relative">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
         <div className="absolute top-90 left-1/2 -translate-x-1/2 w-full z-0 select-none opacity-80 hidden md:flex">
           <img
             src="/curveline.svg"
@@ -27,14 +27,16 @@ export default function Home() {
             className="absolute max-w-none min-w-[420px] w-[200%] object-top inset-0 translate-x-[-25%]"
           />
         </div>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Education />
-        <FAQ />
-        <Footer />
       </div>
+        <div className="flex flex-col min-h-screen gap-y-20 md:gap-y-30 max-w-[420px] md:max-w-[1440px] mx-auto relative z-10">
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <Education />
+          <FAQ />
+          <Footer />
+        </div>
     </div>
   );
 }
