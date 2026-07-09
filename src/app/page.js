@@ -17,7 +17,7 @@ export default function Home() {
           <img
             src="/curveline.svg"
             alt="Background curve"
-            className="absolute max-w-none min-w-[1440px] w-[80%] translate-x-[10%] object-top"
+            className="absolute left-1/2 -translate-x-1/2 max-w-none min-w-[1440px] w-[80%] object-top"
           />
         </div>
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full z-0 select-none opacity-80 flex md:hidden">
