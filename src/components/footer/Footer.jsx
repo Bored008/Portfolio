@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
+  useEffect(()=>{
+    const tl = gsap.timeline();
+    tl.from(".footer >*",{
+      y:100,
+      duration:1,
+      opacity:0,
+      stagger:0.3,
+      scrollTrigger:{
+        trigger:".footer",
+        markers:false,
+        start:"top 100%",
+        end:"top 50%",
+        scrub:1,
+      }
+    })
+  })
   return (
-    <div className="z-1 mt-auto w-full">
+    <div className="footer z-1 mt-auto w-full">
       {/* For Desktop */}
       <div className="bg-white md:px-[45px] md:pt-[45px] md:pb-[5px] md:mx-[126px] rounded-t-[35px] flex-col justify-center hidden md:flex">
         <div className='bg-[url("/footerdesign.svg")] md:h-[464px] rounded-[18px] bg-cover bg-no-repeat bg-center flex justify-center items-end  md:gap-[8px]'>

@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import React from "react";
 import localFont from "next/font/local";
 import {
@@ -13,6 +13,8 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Mortend = localFont({
   src: "../fonts/MortendBold.otf",
@@ -117,18 +119,97 @@ const designsData = [
 const Projects = () => {
   const projScrollContainerRef = useRef(null);
   const designScrollContainerRef = useRef(null);
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const tl=gsap.timeline();
+    const tl1=gsap.timeline();
+    tl.from(".left-half", {
+      x: -200,
+      y:100,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power3.out",
+      scrollTrigger: {
+        markers:false,
+        trigger: ".left-half",
+        start: "top 80%",
+        end:"bottom 90%",
+        scrub:1
+      }
+    });
+    tl.from(".right-half", {
+      x: 200,
+      y:-100,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power3.out",
+      scrollTrigger: {
+        markers:false,
+        trigger: ".right-half",
+        start: "top 80%",
+        end:"bottom 90%",
+        scrub:1
+      }
+    });
+    tl.from(".card",{
+      x:100,
+      opacity:0,
+      duration:2,
+      stagger:0.4,
+      ease:"power3.out",
+      scrollTrigger:{
+        markers:false,
+        trigger:".card",
+        start:"top 90%",
+        end:"bottom 100%",
+        scrub:1
+      }
+    })
+    tl1.from(".webdesign",{
+      y:100,
+      opacity:0,
+      duration:1,
+      ease:"power3.out",
+      scrollTrigger:{
+        markers:false,
+        trigger:".webdesign",
+        start:"top 90%",
+        end:"top 70%",
+        scrub:1
+      }
+    })
+    tl1.from(".card2",{
+      x:100,
+      opacity:0,
+      duration:2,
+      stagger:0.4,
+      ease:"power3.out",
+      scrollTrigger:{
+        markers:false,
+        trigger:".card2",
+        start:"top 90%",
+        end:"bottom 100%",
+        scrub:1
+      }
+    })
+  }, []);
 
   return (
     <div id="projects" className="z-1 text-white">
       {/* Project */}
-      <img
-        src="/ProjectTag.svg"
-        className="w-full object-cover object-center md:h-auto h-35 z-0"
-      />
-
+      <div className="relative w-full md:h-[250px] h-[140px] proj-title overflow-hidden">
+        <img
+          src="/ProjectTag.svg"
+          className="left-half absolute inset-0 w-full object-cover md:h-auto h-35 z-0 [clip-path:polygon(0_0,50%_0,50%_100%,0_100%)]"
+        />
+        <img
+          src="/ProjectTag.svg"
+          className="right-half absolute inset-0 w-full object-cover md:h-auto h-35 z-0 [clip-path:polygon(50%_0,100%_0,100%_100%,50%_100%)]"
+        />
+      </div>
       <div
         ref={projScrollContainerRef}
-        className="flex md:mx-[90px] mt-[24px] md:mt-[32px] gap-[18px] overflow-x-auto flex-nowrap [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+        className="card flex md:mx-[90px] mt-[24px] md:mt-[32px] gap-[18px] overflow-x-auto flex-nowrap [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
       >
         {projectsData.map((project, index) => (
           
@@ -189,7 +270,7 @@ const Projects = () => {
       </div>
 
       {/* Design */}
-      <div className="flex mt-[38px] justify-between items-center">
+      <div className="webdesign flex mt-[38px] justify-between items-center">
         <div
           className={`${Gilroy.className} md:text-[44px] text-[36px] md:ml-[40px] z-20`}
         >
@@ -199,7 +280,7 @@ const Projects = () => {
       
       <div
         ref={designScrollContainerRef}
-        className="flex md:mx-[90px] md:mt-[24px] mt-[18px] gap-[18px] overflow-x-auto flex-nowrap [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+        className="card2 flex md:mx-[90px] md:mt-[24px] mt-[18px] gap-[18px] overflow-x-auto flex-nowrap [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
       >
         {designsData.map((design, index) => (
           <div key={index} className="shrink-0 w-[90%] md:w-[48%] h-fit backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] md:flex items-center text-white md:gap-5 ">
