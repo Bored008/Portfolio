@@ -258,11 +258,13 @@ const Projects = () => {
         className="flex md:mx-[90px] md:mt-[24px] mt-[18px] gap-[18px] overflow-x-auto flex-nowrap [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
       >
         <div className="shrink-0 w-[90%] md:w-[48%] h-fit backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] md:flex items-center text-white md:gap-5 ">
-          <img
-            src="Paw.png"
-            alt="Paw"
-            className="border-2 border-white w-full rounded-[12px]"
-          />
+          <div className="w-full">
+            <img
+              src="Paw.png"
+              alt="Paw"
+              className="border-2 border-white rounded-[12px]"
+            />
+          </div>
           <div>
             <div className="flex justify-between">
               <div className="text-[24px] font-semibold">
@@ -299,18 +301,20 @@ const Projects = () => {
         </div>
 
         <div className="shrink-0 w-[90%] md:w-[48%] h-fit backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] md:flex items-center text-white md:gap-5 ">
-          <img
-            src="Moviely.svg"
-            alt="Moviely"
-            className="border-2 border-white w-full rounded-[12px]"
-          />
+          <div className="w-full">
+            <img
+              src="Moviely.svg"
+              alt="Moviely"
+              className="border-2 border-white rounded-[12px]"
+            />
+          </div>
           <div>
             <div className="flex justify-between">
               <div className="text-[24px] font-semibold">Moviely Webdesign</div>
             </div>
             <div className="md:text-[16px]">
               Designed a cinematic movie platform UI in Figma with a focus on
-              content discovery, streamlined user journeys, and immersive visual
+              content discovery, streamlined journeys, and visual
               experiences.
             </div>
             <div className="flex justify-between items-center">
@@ -338,11 +342,13 @@ const Projects = () => {
           </div>
         </div>
         <div className="shrink-0 w-[90%] md:w-[48%] h-fit backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] md:flex items-center text-white md:gap-5 ">
-          <img
-            src="Docdesign.svg"
-            alt="Paw"
-            className="w-full rounded-[12px]"
-          />
+          <div className="w-full">
+            <img
+              src="Docdesign.svg"
+              alt="Paw"
+              className="rounded-[12px]"
+            />
+          </div>
           <div>
             <div className="flex justify-between">
               <div className="text-[24px] font-semibold">Docdesign</div>
@@ -376,7 +382,7 @@ const Projects = () => {
           </div>
         </div>
         <div className="shrink-0 w-[90%] md:w-[48%] h-fit backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] md:flex items-center text-white md:gap-5 ">
-          <img src="bmw.svg" alt="Bmw" className="w-full" />
+          <div className="w-full"><img src="bmw.svg" alt="Bmw" /></div>
           <div>
             <div className="flex justify-between">
               <div className="text-[24px] font-semibold">
@@ -416,7 +422,9 @@ const Projects = () => {
           </div>
         </div>
         <div className="shrink-0 w-[90%] md:w-[48%] h-fit backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] md:flex items-center text-white md:gap-5 ">
-          <img src="Jewellary.svg" alt="Jewellary" className="w-full" />
+          <div className="w-full">
+            <img src="Jewellary.svg" alt="Jewellary" className="w-full" />
+          </div>
           <div>
             <div className="flex justify-between">
               <div className="text-[24px] font-semibold">
@@ -453,11 +461,13 @@ const Projects = () => {
           </div>
         </div>
         <div className="shrink-0 w-[90%] md:w-[48%] backdrop-blur-md md:h-fit border border-white/50 rounded-[19px] p-[12px] md:flex items-center text-white md:gap-5 ">
-          <img
-            src="Watch.svg"
-            alt="Watch"
-            className="md:w-[92%] w-full rounded-[12px]"
-          />
+          <div className="w-full overflow-hidden md:h-fit h-[180px]">
+            <img
+              src="Watch.svg"
+              alt="Watch"
+              className="rounded-[12px] border-white/80 border-[1px] rounded-[12px]"
+            />
+          </div>
           <div>
             <div className="flex justify-between">
               <div className="text-[24px] font-semibold">
@@ -494,7 +504,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center md:mt-[16px] gap-[12px] ">
+      <div className="flex justify-center md:mt-[16px] gap-[12px] mt-5">
         <img
           src="prev.svg"
           alt="prev button"
