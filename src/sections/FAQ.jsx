@@ -79,7 +79,7 @@ const FAQ = () => {
   return (
     <div className='page text-white md:flex md:gap-[120px] md:px-[126px] z-1' id='faq'>
       <div className='flex flex-col md:w-1/2 justify-start'>
-        <div className='heading flex flex-col items-center md:items-start'>
+        <div className='sticky top-0 heading flex flex-col items-center md:items-start'>
           <div className={`${Gilroy.className} md:text-[64px] text-4xl md:mb-4 md:w-2/3`}>Questions for me ?</div>
           <div className='md:text-[16px] mx-3 mb-5 text-center md:text-start md:mx-0 md:w-2/3'>Here are some common questions along with their answers to help clear up any confusion.</div>
         </div>
