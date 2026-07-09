@@ -61,6 +61,24 @@ const projectsData = [
 
 const designsData = [
   {
+    title: "Yanegi",
+    img: "Yanegi.png",
+    imgWrapperClass: "w-full",
+    imgClass: "border-2 border-white rounded-[12px]",
+    link: "https://www.figma.com/design/UloorFq3x9zOvJUMw85nus/Figma-work?node-id=512-1476&t=v7zrwzzp2MLQkQxD-1",
+    desc: "It is a socializing app where users can find everything happening around them — pickup games, open mics, parties and many more.",
+    tags: ["Figma"]
+  },
+  {
+    title: "FireChem",
+    img: "Firechem.png",
+    imgWrapperClass: "w-full",
+    imgClass: "border-2 border-white rounded-[12px]",
+    link: "https://www.figma.com/design/UloorFq3x9zOvJUMw85nus/Figma-work?node-id=503-3428&t=v7zrwzzp2MLQkQxD-1",
+    desc: "FireChem provides fire protection solutions for oil & gas, aviation, marine, defence, and industrial operations.",
+    tags: ["Figma"]
+  },
+  {
     title: "Paw- Pet Adoption Page",
     img: "Paw.png",
     imgWrapperClass: "w-full",
