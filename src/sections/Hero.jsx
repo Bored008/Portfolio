@@ -6,6 +6,7 @@ import localFont from 'next/font/local'
 import Navbar1 from '@/components/navbar/Navbar'
 import gsap from 'gsap'
 import ScrambleTextPlugin from 'gsap/ScrambleTextPlugin'
+import ShinyText from '@/components/effects/ShinyText'
 
 gsap.registerPlugin(ScrambleTextPlugin);
 
