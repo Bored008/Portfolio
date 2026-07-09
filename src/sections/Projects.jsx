@@ -8,6 +8,11 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const Mortend = localFont({
   src: "../fonts/MortendBold.otf",
@@ -126,6 +131,7 @@ const Projects = () => {
         className="flex md:mx-[90px] mt-[24px] md:mt-[32px] gap-[18px] overflow-x-auto flex-nowrap [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
       >
         {projectsData.map((project, index) => (
+          
           <div key={index} className="shrink-0 w-[90%] h-fit md:w-[30%] backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] flex flex-col text-white">
             <img
               src={project.img}
