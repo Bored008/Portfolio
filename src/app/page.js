@@ -24,7 +24,7 @@ export default function Home() {
           <img
             src="/curvelinemobile.svg"
             alt="Background curve"
-            className="absolute max-w-none min-w-[420px] w-[200%] object-top inset-0 translate-x-[-25%]"
+            className="absolute max-w-none min-w-[420px] w-[840px] object-top inset-0 translate-x-[-25%]"
           />
         </div>
       </div>
