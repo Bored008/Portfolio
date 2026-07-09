@@ -26,7 +26,7 @@ const Projects = () => {
       {/* Project */}
       <img
         src="/ProjectTag.svg"
-        className="sticky top-0 w-full object-cover object-center md:h-auto h-35"
+        className="sticky top-0 w-full object-cover object-center md:h-auto h-35 z-0"
       />
       {/* <div className='flex justify-end'>
                 <button className='flex items-center gap-[8px] md:text-xl text-[12px] border-white border rounded-lg px-[12px] md:py-[8px] py-[5px] bg-black z-1 md:mr-[90px] mr-[40px]'>Show All
@@ -217,11 +217,11 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center mt-[16px] gap-[12px] ">
+      <div className="flex justify-center mt-[16px] gap-[12px]">
         <img
           src="prev.svg"
           alt="prev button"
-          className="cursor-pointer"
+          className="cursor-pointer z-10"
           onClick={() => {
             projScrollContainerRef.current?.scrollBy({
               left: -400,
@@ -232,7 +232,7 @@ const Projects = () => {
         <img
           src="next.svg"
           alt="next button"
-          className="cursor-pointer"
+          className="cursor-pointer z-10"
           onClick={() => {
             projScrollContainerRef.current?.scrollBy({
               left: 400,
@@ -245,7 +245,7 @@ const Projects = () => {
       {/* Design */}
       <div className="flex mt-[38px] justify-between items-center">
         <div
-          className={`${Gilroy.className} md:text-[44px] text-[36px] md:ml-[40px]`}
+          className={`${Gilroy.className} md:text-[44px] text-[36px] md:ml-[40px] z-20`}
         >
           Web Designs
         </div>
