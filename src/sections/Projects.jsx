@@ -152,7 +152,7 @@ const Projects = () => {
       }
     });
     tl.from(".card",{
-      x:100,
+      y:50,
       opacity:0,
       duration:2,
       stagger:0.4,
