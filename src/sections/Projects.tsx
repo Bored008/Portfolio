@@ -130,7 +130,7 @@ const Projects: React.FC = () => {
                 className="flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 bg-black"
               >
                 <div>Visit me</div>
-                <img src="Githubpr.svg" alt="githubicon" className="w-[24px]" />
+                <img src="/Githubpr.svg" alt="githubicon" className="w-[24px]" />
               </a>
             </div>
             <div className="md:text-[16px]">
@@ -149,7 +149,7 @@ const Projects: React.FC = () => {
 
       <div className="flex justify-center mt-[16px] gap-[12px]">
         <img
-          src="prev.svg"
+          src="/prev.svg"
           alt="prev button"
           className="cursor-pointer z-10"
           onClick={() => {
@@ -160,7 +160,7 @@ const Projects: React.FC = () => {
           }}
         />
         <img
-          src="next.svg"
+          src="/next.svg"
           alt="next button"
           className="cursor-pointer z-10"
           onClick={() => {
@@ -219,7 +219,7 @@ const Projects: React.FC = () => {
                 >
                   <div>Visit me</div>
                   <img
-                    src="figmaproj.svg"
+                    src="/figmaproj.svg"
                     alt="figmaicon"
                     className="w-[24px]"
                   />
@@ -232,7 +232,7 @@ const Projects: React.FC = () => {
 
       <div className="flex justify-center md:mt-[16px] gap-[12px] mt-5">
         <img
-          src="prev.svg"
+          src="/prev.svg"
           alt="prev button"
           className="cursor-pointer"
           onClick={() => {
@@ -243,7 +243,7 @@ const Projects: React.FC = () => {
           }}
         />
         <img
-          src="next.svg"
+          src="/next.svg"
           alt="next button"
           className="cursor-pointer"
           onClick={() => {

@@ -41,7 +41,7 @@ const Education: React.FC = () => {
                 </motion.div>
             </div>
             <div>
-                <AnimatedButton className='flex backdrop-blur-md border border-white/50 md:p-[14px] p-[8px] rounded md:mx-[126px] mx-[30px] mt-4'>
+                <AnimatedButton className='flex backdrop-blur-md border border-white/50 md:p-[14px] p-[8px] rounded md:mx-[126px] mx-[30px] mt-4 group'>
                     <div className='group-hover:text-black'>
                         <div className='md:text-[32px] text-[18px]'>Bachelor in Technology - Electronics and Communication</div>
                         <div className='md:text-[24px] text-[14px]'>Dcrust, Murthal</div>

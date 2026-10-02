@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* For mobile version */}
-      <div className="bg-white mx-[26px] rounded-t-[35px] flex flex-col sm:hidden">
+      <div className="bg-white mx-[26px] rounded-t-[35px] flex flex-col md:hidden">
         <img
           src="/footerdesignmobile.svg"
           alt="footerdesign"

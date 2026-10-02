@@ -94,7 +94,7 @@ const Navbar1: React.FC = () => {
                         </span>
                     </a>
                 ))}
-                <a href="https://www.linkedin.com/in/himanshuakabored/" className='md:mr-3 mr-2 sm:hidden text-white relative z-10'>Contact me</a>
+                <a href="https://www.linkedin.com/in/himanshuakabored/" className='md:mr-3 mr-2 md:hidden text-white relative z-10'>Contact me</a>
             </div>
             <AnimatedButton href="https://www.linkedin.com/in/himanshuakabored/" className='bg-black text-white py-[8px] px-[12px] hidden md:flex'>
                 <div className='hidden md:flex items-center gap-[12px] '>
