@@ -2,8 +2,13 @@
 
 import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
+import localFont from "next/font/local";
 import { motion, AnimatePresence } from "motion/react";
 import { X, Download, CodeXml, Palette } from "lucide-react";
+
+const Gilroy = localFont({
+  src: "../fonts/Gilroy-Black.ttf",
+});
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -14,26 +19,20 @@ const resumeOptions = [
   {
     id: "developer",
     title: "Developer Resume",
-    role: "Full Stack & Frontend Engineering",
-    description: "React, Next.js, TypeScript, Node.js, REST APIs, Performance",
+    role: "Full Stack & Frontend Developer",
+    description: "Next.js, React, TypeScript, Node.js, and modern full-stack web applications.",
     tags: ["Next.js", "React", "TypeScript", "Node.js"],
     icon: CodeXml,
-    color: "from-amber-500/20 to-yellow-500/10",
-    borderColor: "hover:border-[#FAED44]/60",
-    accentColor: "text-[#FAED44]",
     fileUrl: "/Himanshu_Resume_Developer.pdf",
     fileName: "Himanshu_Dahiya_Developer_Resume.pdf",
   },
   {
     id: "designer",
     title: "Designer Resume",
-    role: "UI/UX & Product Design",
-    description: "Figma, Design Systems, Wireframing, User Flows, Prototyping",
-    tags: ["Figma", "UI/UX", "Design Systems", "Prototyping"],
+    role: "UI/UX & Product Designer",
+    description: "Figma, user research, wireframing, interactive prototyping, and design systems.",
+    tags: ["Figma", "UI/UX", "Wireframing", "Design Systems"],
     icon: Palette,
-    color: "from-orange-500/20 to-amber-500/10",
-    borderColor: "hover:border-[#EA8E4B]/60",
-    accentColor: "text-[#EA8E4B]",
     fileUrl: "/Himanshu_Resume_UIUXDesigner.pdf",
     fileName: "Himanshu_Dahiya_UIUX_Designer_Resume.pdf",
   },
@@ -92,43 +91,40 @@ const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/85 backdrop-blur-md cursor-pointer"
+            className="fixed inset-0 bg-black/80 backdrop-blur-md cursor-pointer"
           />
 
           {/* Modal Container */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.92, y: 16 }}
+            initial={{ opacity: 0, scale: 0.94, y: 15 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.92, y: 16 }}
-            transition={{ type: "spring", duration: 0.35, bounce: 0.15 }}
-            className="relative w-full max-w-xl rounded-3xl border border-white/20 bg-neutral-950 p-6 md:p-8 shadow-2xl backdrop-blur-2xl z-10 overflow-hidden"
+            exit={{ opacity: 0, scale: 0.94, y: 15 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            onClick={(e) => e.stopPropagation()}
+            className="relative w-full max-w-2xl backdrop-blur-[80px] bg-black/70 border border-white/50 text-white rounded-3xl shadow-2xl p-6 md:p-8 z-10 overflow-hidden mx-4"
           >
-            {/* Ambient Background Glows */}
-            <div className="absolute -top-20 -left-20 w-44 h-44 bg-[#EA8E4B]/15 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-20 -right-20 w-44 h-44 bg-[#FAED44]/15 rounded-full blur-3xl pointer-events-none" />
-
             {/* Close Button */}
             <button
               onClick={onClose}
               aria-label="Close modal"
-              className="absolute top-5 right-5 p-2 rounded-full text-neutral-400 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-colors cursor-pointer"
+              className="absolute top-5 right-5 p-2 rounded-full border border-white/50 bg-black text-white hover:bg-white hover:text-black transition-colors cursor-pointer z-20"
             >
               <X className="size-5" />
             </button>
 
             {/* Header */}
             <div className="text-center mb-6 md:mb-8">
-              <span className="text-xs uppercase tracking-widest font-semibold text-neutral-400 bg-white/5 border border-white/10 px-3 py-1 rounded-full inline-block mb-3">
-                Curriculum Vitae
-              </span>
               <h2
                 id="resume-modal-title"
-                className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#EA8E4B] via-[#FAED44] to-[#EA8E4B] bg-clip-text text-transparent"
+                className={`${Gilroy.className} text-2xl md:text-4xl text-white tracking-wide`}
               >
-                Choose Resume Track
+                Download CV
               </h2>
-              <p className="text-neutral-400 text-sm md:text-base mt-2 max-w-md mx-auto">
-                Select whether you would like to download my Designer or Developer resume.
+              <p
+                className="text-neutral-300 text-sm md:text-base mt-2 max-w-md mx-auto"
+                style={{ fontFamily: "var(--font-geist-sans)" }}
+              >
+                Select which version of my resume you would like to download.
               </p>
             </div>
 
@@ -137,7 +133,7 @@ const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
               {resumeOptions.map((option) => {
                 const Icon = option.icon;
                 return (
-                  <a
+                  <motion.a
                     key={option.id}
                     href={option.fileUrl}
                     download={option.fileName}
@@ -146,35 +142,53 @@ const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
                     onClick={() => {
                       setTimeout(onClose, 300);
                     }}
-                    className={`group relative flex flex-col justify-between p-5 rounded-2xl border border-white/10 bg-white/[0.03] ${option.borderColor} hover:bg-white/[0.07] transition-all duration-300 hover:shadow-lg cursor-pointer`}
+                    initial="rest"
+                    whileHover="hover"
+                    whileTap={{ scale: 0.98 }}
+                    className="relative overflow-hidden group flex flex-col justify-between backdrop-blur-md border border-white/50 rounded-2xl p-5 bg-black cursor-pointer transition-colors"
                   >
-                    <div>
-                      {/* Top Icon Badge */}
+                    {/* Sliding white curtain hover wipe matching portfolio AnimatedButton */}
+                    <motion.span
+                      className="absolute inset-0 bg-white origin-right pointer-events-none"
+                      variants={{
+                        rest: { scaleX: 0 },
+                        hover: { scaleX: 1 },
+                      }}
+                      transition={{ duration: 0.35, ease: "easeInOut" }}
+                    />
+
+                    {/* Content inside card */}
+                    <div className="relative z-10 group-hover:text-black transition-colors duration-200">
+                      {/* Top icon and download badge */}
                       <div className="flex items-center justify-between mb-4">
-                        <div
-                          className={`p-3 rounded-xl bg-gradient-to-br ${option.color} border border-white/10 ${option.accentColor}`}
-                        >
+                        <div className="p-2.5 rounded-xl border border-white/50 group-hover:border-black bg-black group-hover:bg-white text-white group-hover:text-black transition-colors duration-200">
                           <Icon className="size-6" />
                         </div>
-                        <span className="text-neutral-400 group-hover:text-white group-hover:translate-y-0.5 transition-all duration-300">
-                          <Download className="size-5" />
-                        </span>
+                        <div className="border border-white/50 group-hover:border-black rounded-full p-1.5 text-white group-hover:text-black transition-colors duration-200">
+                          <Download className="size-4" />
+                        </div>
                       </div>
 
                       {/* Title & Role */}
-                      <h3 className="text-lg font-semibold text-white group-hover:text-[#FAED44] transition-colors">
+                      <h3
+                        className={`${Gilroy.className} text-xl md:text-2xl text-white group-hover:text-black transition-colors duration-200`}
+                      >
                         {option.title}
                       </h3>
-                      <p className="text-xs text-neutral-400 font-medium mt-1">
+                      <p className="text-xs text-neutral-300 group-hover:text-neutral-800 font-medium mt-1 transition-colors duration-200">
                         {option.role}
                       </p>
 
-                      {/* Tags */}
-                      <div className="flex flex-wrap gap-1.5 mt-3">
+                      <p className="text-xs text-neutral-400 group-hover:text-neutral-700 mt-2 transition-colors duration-200 line-clamp-2">
+                        {option.description}
+                      </p>
+
+                      {/* Tech / Skill Tags matching portfolio style */}
+                      <div className="flex flex-wrap gap-1.5 mt-4">
                         {option.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="text-[10px] font-medium px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-neutral-300"
+                            className="bg-white text-black group-hover:bg-black group-hover:text-white text-[11px] font-medium rounded-[4px] px-2 py-0.5 transition-colors duration-200"
                           >
                             {tag}
                           </span>
@@ -182,12 +196,12 @@ const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
                       </div>
                     </div>
 
-                    {/* Bottom CTA Button */}
-                    <div className="mt-5 pt-3 border-t border-white/10 flex items-center justify-between text-xs font-semibold text-neutral-300 group-hover:text-white">
+                    {/* Bottom CTA Bar */}
+                    <div className="relative z-10 mt-5 pt-3 border-t border-white/20 group-hover:border-black/20 flex items-center justify-between text-xs font-semibold text-white group-hover:text-black transition-colors duration-200">
                       <span>Download PDF</span>
                       <Download className="size-3.5 group-hover:translate-y-0.5 transition-transform duration-200" />
                     </div>
-                  </a>
+                  </motion.a>
                 );
               })}
             </div>
@@ -200,4 +214,3 @@ const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
 };
 
 export default ResumeModal;
-
