@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
     <div className="footer z-1 mt-auto w-full">
       {/* For Desktop */}
       <div className="bg-white md:px-[45px] md:pt-[45px] md:pb-[5px] md:mx-[126px] rounded-t-[35px] flex-col justify-center hidden md:flex">
-        <div className='bg-[url("/footerdesign.svg")] md:h-[464px] rounded-[18px] bg-cover bg-no-repeat bg-center flex justify-center items-end  md:gap-[8px]'>
+        <div className='bg-[url("/footerdesign.webp")] md:h-[464px] rounded-[18px] bg-cover bg-no-repeat bg-center flex justify-center items-end  md:gap-[8px]'>
           <div className="bg-black text-white md:text-[16px] rounded-full md:px-[19px] md:py-[12px] md:mb-[29px] cursor-pointer">
             Get Started Now
           </div>
@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
       {/* For mobile version */}
       <div className="bg-white mx-[26px] rounded-t-[35px] flex flex-col md:hidden">
         <img
-          src="/footerdesignmobile.svg"
+          src="/footerdesignmobile.webp"
           alt="footerdesign"
           loading="lazy"
           decoding="async"

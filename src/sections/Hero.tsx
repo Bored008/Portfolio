@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
       </div>
       <div className='grid grid-col-1 grid-row-1'>
         <img
-          src="/myimage.png"
+          src="/myimage.webp"
           alt='my photo'
           loading="eager"
           decoding="async"

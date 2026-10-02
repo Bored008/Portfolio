@@ -89,7 +89,7 @@ const Skills: React.FC = () => {
       {/* for desktop screen */}
       <div className="relative" id="skills-desktop">
         <img
-          src="/bars.png"
+          src="/bars.webp"
           alt="Skills Bars"
           loading="lazy"
           decoding="async"
@@ -131,7 +131,7 @@ const Skills: React.FC = () => {
       </div>
 
       {/* For mobile view */}
-      <div className="w-full min-h-full bg-[url('/barsmobile.png')] bg-no-repeat bg-[size:601px_657px] bg-[position:-83px_-36px] flex flex-col justify-center items-center md:hidden">
+      <div className="w-full min-h-full bg-[url('/barsmobile.webp')] bg-no-repeat bg-[size:601px_657px] bg-[position:-83px_-36px] flex flex-col justify-center items-center md:hidden">
         <motion.div
           whileHover={{
             rotate: [0, 10, -8, 5, -3, 0]

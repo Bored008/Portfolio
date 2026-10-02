@@ -11,7 +11,7 @@ export interface DesignItem {
 export const designsData: DesignItem[] = [
   {
     title: "Yanegi",
-    img: "/Yanegi.png",
+    img: "/Yanegi.webp",
     imgWrapperClass: "w-full",
     imgClass: "border-2 border-white rounded-[12px]",
     link: "https://www.figma.com/design/UloorFq3x9zOvJUMw85nus/Figma-work?node-id=512-1476&t=v7zrwzzp2MLQkQxD-1",
@@ -20,7 +20,7 @@ export const designsData: DesignItem[] = [
   },
   {
     title: "FireChem",
-    img: "/Firechem.png",
+    img: "/Firechem.webp",
     imgWrapperClass: "w-full",
     imgClass: "border-2 border-white rounded-[12px]",
     link: "https://www.figma.com/design/UloorFq3x9zOvJUMw85nus/Figma-work?node-id=503-3428&t=v7zrwzzp2MLQkQxD-1",
@@ -29,7 +29,7 @@ export const designsData: DesignItem[] = [
   },
   {
     title: "Paw- Pet Adoption Page",
-    img: "/Paw.png",
+    img: "/Paw.webp",
     imgWrapperClass: "w-full",
     imgClass: "border-2 border-white rounded-[12px]",
     link: "https://www.figma.com/design/UloorFq3x9zOvJUMw85nus/Figma-work?node-id=381-1002&t=1Qya7mG7HlEGUrkN-1",
@@ -38,7 +38,7 @@ export const designsData: DesignItem[] = [
   },
   {
     title: "Moviely Webdesign",
-    img: "/Moviely.svg",
+    img: "/Moviely.webp",
     imgWrapperClass: "w-full",
     imgClass: "border-2 border-white rounded-[12px]",
     link: "https://www.figma.com/design/UloorFq3x9zOvJUMw85nus/Figma-work?node-id=349-2178&t=1Qya7mG7HlEGUrkN-1",
@@ -47,7 +47,7 @@ export const designsData: DesignItem[] = [
   },
   {
     title: "Docdesign",
-    img: "/Docdesign.svg",
+    img: "/Docdesign.webp",
     imgWrapperClass: "w-full",
     imgClass: "rounded-[12px]",
     link: "https://www.figma.com/design/UloorFq3x9zOvJUMw85nus/Figma-work?node-id=225-555&t=1Qya7mG7HlEGUrkN-1",
@@ -56,7 +56,7 @@ export const designsData: DesignItem[] = [
   },
   {
     title: "A Premium Car Design",
-    img: "/bmw.svg",
+    img: "/bmw.webp",
     imgWrapperClass: "w-full",
     imgClass: "",
     link: "https://www.figma.com/design/UloorFq3x9zOvJUMw85nus/Figma-work?node-id=197-555&t=9UhtvM2kPSxfU65i-1",
@@ -65,7 +65,7 @@ export const designsData: DesignItem[] = [
   },
   {
     title: "A Jewellary Web Design",
-    img: "/Jewellary.svg",
+    img: "/Jewellary.webp",
     imgWrapperClass: "w-full",
     imgClass: "w-full",
     link: "https://www.figma.com/design/UloorFq3x9zOvJUMw85nus/Figma-work?node-id=182-553&t=gb3cDCkQL20JmATY-1",
@@ -74,7 +74,7 @@ export const designsData: DesignItem[] = [
   },
   {
     title: "Luxuary Watch WebDesign",
-    img: "/Watch.svg",
+    img: "/Watch.webp",
     imgWrapperClass: "w-full overflow-hidden md:h-fit h-[180px]",
     imgClass: "rounded-[12px] border-white/80 border-[1px]",
     link: "https://www.figma.com/design/UloorFq3x9zOvJUMw85nus/Figma-work?node-id=95-7&t=1Qya7mG7HlEGUrkN-1",
