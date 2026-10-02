@@ -1,128 +1,18 @@
 import React, { useEffect } from "react";
-import Image from "next/image";
 import localFont from "next/font/local";
 import AnimatedButton from "@/components/effects/AnimatedButton";
-import { easeInOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import { skillsData, type SkillItem } from "@/data/skills";
 
-const Mortend = localFont({
-  src: "../fonts/MortendBold.otf",
-});
+gsap.registerPlugin(ScrollTrigger);
 
 const Gilroy = localFont({
   src: "../fonts/Gilroy-Black.ttf",
 });
 
-const skillsData = [
-  {
-    name: "HTML",
-    icon: "/Html 5.svg",
-    desktopHeight: "h-[32px]",
-    mobileHeight: "h-[21px]",
-  },
-  {
-    name: "CSS",
-    icon: "/CSS3.svg",
-    desktopHeight: "h-[32px]",
-    mobileHeight: "h-[21px]",
-  },
-  {
-    name: "JavaScript",
-    icon: "/JavaScript.svg",
-    desktopHeight: "h-[32px]",
-    mobileHeight: "h-[21px]",
-  },
-  {
-    name: "React",
-    icon: "/React.svg",
-    desktopHeight: "h-[32px]",
-    mobileHeight: "h-[21px]",
-  },
-  {
-    name: "Next.js",
-    icon: "/Next.js.svg",
-    desktopHeight: "h-[32px]",
-    mobileHeight: "h-[21px]",
-  },
-  {
-    name: "Node.js",
-    icon: "/Node Js.svg",
-    desktopHeight: "h-[32px]",
-    mobileHeight: "h-[21px]",
-  },
-  {
-    name: "Express",
-    icon: "/Express Js.svg",
-    desktopHeight: "h-[32px]",
-    mobileHeight: "h-[21px]",
-  },
-  {
-    name: "MongoDB",
-    icon: "/Mongo Db.svg",
-    desktopHeight: "h-[32px]",
-    mobileHeight: "h-[21px]",
-  },
-  {
-    name: "Tailwind CSS",
-    icon: "/Tailwind CSS.svg",
-    desktopHeight: "h-[32px]",
-    mobileHeight: "h-[21px]",
-  },
-  {
-    name: "Git",
-    icon: "/Git.svg",
-    desktopHeight: "h-[30px]",
-    mobileHeight: "h-[21px]",
-  },
-  {
-    name: "Java",
-    icon: "/Java.svg",
-    desktopHeight: "h-[32px]",
-    mobileHeight: "h-[21px]",
-  },
-  {
-    name: "Figma",
-    icon: "/Figma.svg",
-    desktopHeight: "h-[32px]",
-    mobileHeight: "h-[21px]",
-  },
-  {
-    name: "Framer",
-    icon: "/Framer.svg",
-    desktopHeight: "h-[32px]",
-    mobileHeight: "h-[21px]",
-  },
-  {
-    name: "Vercel",
-    icon: "/Vercel.svg",
-    desktopHeight: "h-[32px]",
-    mobileHeight: "h-[21px]",
-  },
-  {
-    name: "GSAP",
-    icon: "/gsap.svg",
-    desktopHeight: "h-[30px]",
-    mobileHeight: "h-[21px]",
-  },
-  {
-    name: "Motion",
-    icon: "/Motion.svg",
-    desktopHeight: "h-[20px]",
-    mobileHeight: "h-[15px]",
-  },
-];
-
-const desktopRows = [
-  skillsData.slice(0, 4), // Row 1: 4 items
-  skillsData.slice(4, 7), // Row 2: 3 items
-  skillsData.slice(7, 11), // Row 3: 4 items
-  skillsData.slice(11, 14), // Row 4: 3 items
-  skillsData.slice(14, 16), // Row 5: 2 items
-];
-
-const Skills = () => {
+const Skills: React.FC = () => {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.from(".skill >*", {
@@ -192,30 +82,30 @@ const Skills = () => {
         },
       },
     );
-  });
+  }, []);
+
   return (
     <div className="z-1" id="skills">
       {/* for desktop screen */}
-
-      <div className="relative" id="skills">
+      <div className="relative" id="skills-desktop">
         <img
           src="/bars.png"
-          alt=""
+          alt="Skills Bars"
           className="bar-bg absolute inset-0 w-full h-full object-cover hidden md:block"
         />
         <div className="relative z-10 w-full aspect-[1653/929] items-center flex flex-col hidden md:flex text-white">
           <motion.div
-          whileHover={{
-            rotate:[0,10,-8,5,-3,0]
-          }}
-          transition={{duration:1.5, ease:"easeInOut"}}
+            whileHover={{
+              rotate: [0, 10, -8, 5, -3, 0]
+            }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
             className={`${Gilroy.className} skillboard bg-[url("/skillboard.svg")] w-[386px] h-[178px] bg-no-repeat bg-contain flex justify-center items-center bg-center`}
           >
             <div className="text-7xl pt-17 text-black">Skills</div>
           </motion.div>
 
           <div className="skill flex gap-[64px] gap-y-[36px] mt-[52px] flex-wrap justify-center px-[64px] max-w-[1200px]">
-            {skillsData.map((skill, index) => (
+            {skillsData.map((skill: SkillItem, index: number) => (
               <AnimatedButton
                 key={index}
                 className="border-2 border-white py-[8px] px-[25px] rounded-[12px] bg-black overflow-visible"
@@ -239,17 +129,17 @@ const Skills = () => {
       {/* For mobile view */}
       <div className="w-full min-h-full bg-[url('/barsmobile.png')] bg-no-repeat bg-[size:601px_657px] bg-[position:-83px_-36px] flex flex-col justify-center items-center sm:hidden">
         <motion.div
-        whileHover={{
-            rotate:[0,10,-8,5,-3,0]
+          whileHover={{
+            rotate: [0, 10, -8, 5, -3, 0]
           }}
-          transition={{duration:1.5, ease:"easeInOut"}}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
           className={`${Gilroy.className} skillboardmobile bg-[url('/skillboard.svg')] w-[150px] mt-7 bg-no-repeat bg-contain flex justify-center items-center bg-center`}
         >
           <div className="text-[32px] pt-8 text-black">Skills</div>
         </motion.div>
 
         <div className="skillMobile flex gap-[24px] gap-y-[18px] mt-[20px] text-white flex-wrap justify-center">
-          {skillsData.map((skill, index) => (
+          {skillsData.map((skill: SkillItem, index: number) => (
             <AnimatedButton
               key={index}
               className=" border-2 border-white py-[8px] px-[12px] rounded-[12px] bg-black overflow-visible"

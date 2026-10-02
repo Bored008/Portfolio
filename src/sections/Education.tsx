@@ -1,40 +1,43 @@
-import React, { useEffect } from 'react'
-import AnimatedButton from '@/components/effects/AnimatedButton'
-import { easeIn, motion, scale } from 'framer-motion'
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
+import React, { useEffect } from 'react';
+import AnimatedButton from '@/components/effects/AnimatedButton';
+import { motion } from 'framer-motion';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger)
-const Education = () => {
-    useEffect(()=>{
-        const tl = gsap.timeline()
-        tl.from("#education >*" , {
-            y:100,
-            opacity:0,
-            duration:0.8,
-            stagger:0.3,
-            scrollTrigger:{
-                trigger:"#education",
-                start:"top 80%",
-                end:"top 20%",
-                scrub:1
+gsap.registerPlugin(ScrollTrigger);
+
+const Education: React.FC = () => {
+    useEffect(() => {
+        const tl = gsap.timeline();
+        tl.from("#education >*", {
+            y: 100,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.3,
+            scrollTrigger: {
+                trigger: "#education",
+                start: "top 80%",
+                end: "top 20%",
+                scrub: 1
             }
-        })
-    },[])
+        });
+    }, []);
+
     return (
         <div className='text-white' id='education'>
             <div className='flex justify-center'>
                 <motion.div
-                whileHover={{
-                    scale:1.1,
-                    y:-10,
-                    transition:{
-                        duration:0.3,
-                        ease:"easeInOut"
-                    }
-                }}
-                className='flex justify-center'>
-                    <img src='/Educationbanner.svg' className='md:w-full w-1/2' />
+                    whileHover={{
+                        scale: 1.1,
+                        y: -10,
+                        transition: {
+                            duration: 0.3,
+                            ease: "easeInOut"
+                        }
+                    }}
+                    className='flex justify-center'
+                >
+                    <img src='/Educationbanner.svg' alt="Education Banner" className='md:w-full w-1/2' />
                 </motion.div>
             </div>
             <div>
@@ -54,7 +57,7 @@ const Education = () => {
                 </AnimatedButton>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Education
+export default Education;

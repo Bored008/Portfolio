@@ -1,18 +1,18 @@
 "use client";
 import React, { useEffect } from "react";
-import Image from "next/image";
 import localFont from "next/font/local";
 import gsap from "gsap";
-import { easeInOut, motion } from "motion/react";
+import { motion } from "motion/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 import AnimatedButton from "@/components/effects/AnimatedButton";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const RockyBilly = localFont({
   src: "../fonts/Rockybilly.ttf",
 });
 
-const About = () => {
+const About: React.FC = () => {
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -30,11 +30,9 @@ const About = () => {
       stagger: 0.5,
     });
   }, []);
+
   return (
     <motion.div
-      // initial={{opacity:0,z:-500}}
-      // whileInView={{opacity:1,z:1}}
-      // viewport={{margin:"-20px",amount:0.5}}
       className="about flex flex-col items-center gap-4 mt-9 md:mt-0 pt-6"
       id="about"
       style={{ perspective: "1000px" }}

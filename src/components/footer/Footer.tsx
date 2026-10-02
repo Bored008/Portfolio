@@ -1,25 +1,27 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 gsap.registerPlugin(ScrollTrigger);
 
-const Footer = () => {
-  useEffect(()=>{
+const Footer: React.FC = () => {
+  useEffect(() => {
     const tl = gsap.timeline();
-    tl.from(".footer >*",{
-      y:100,
-      duration:1,
-      opacity:0,
-      stagger:0.3,
-      scrollTrigger:{
-        trigger:".footer",
-        markers:false,
-        start:"top 100%",
-        end:"top 50%",
-        scrub:1,
-      }
-    })
-  })
+    tl.from(".footer >*", {
+      y: 100,
+      duration: 1,
+      opacity: 0,
+      stagger: 0.3,
+      scrollTrigger: {
+        trigger: ".footer",
+        markers: false,
+        start: "top 100%",
+        end: "top 50%",
+        scrub: 1,
+      },
+    });
+  }, []);
+
   return (
     <div className="footer z-1 mt-auto w-full">
       {/* For Desktop */}
@@ -40,7 +42,7 @@ const Footer = () => {
           <div>
             <div className="font-semibold">Stay Connected</div>
             <div className="flex md:gap-[8px]">
-              <a href="https://github.com/Bored008" target="_blank">
+              <a href="https://github.com/Bored008" target="_blank" rel="noopener noreferrer">
                 <img
                   src="/GitHub.svg"
                   alt="Github"
@@ -51,6 +53,7 @@ const Footer = () => {
               <a
                 href="https://www.linkedin.com/in/himanshuakabored/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img
                   src="/LinkedIn.svg"
@@ -59,16 +62,16 @@ const Footer = () => {
                 />
               </a>
 
-              <a href="https://t.me/BoReD_Xagain" target="_blank">
+              <a href="https://t.me/BoReD_Xagain" target="_blank" rel="noopener noreferrer">
                 <img
                   src="/Telegram.svg"
-                  alt="Linkedin"
+                  alt="Telegram"
                   className="cursor-pointer"
                 />
               </a>
 
-              <a href="https://x.com/Bored_OO8" target="_blank">
-                <img src="/X.svg" alt="Linkedin" className="cursor-pointer" />
+              <a href="https://x.com/Bored_OO8" target="_blank" rel="noopener noreferrer">
+                <img src="/X.svg" alt="X" className="cursor-pointer" />
               </a>
             </div>
           </div>
@@ -98,13 +101,14 @@ const Footer = () => {
         <div className="flex flex-col text-black my-[12px] items-center">
           <div className="font-semibold text-[16px]">Stay Connected</div>
           <div className="flex gap-[8px]">
-            <a href="https://github.com/Bored008" target="_blank">
+            <a href="https://github.com/Bored008" target="_blank" rel="noopener noreferrer">
               <img src="/GitHub.svg" alt="Github" className="cursor-pointer" />
             </a>
 
             <a
               href="https://www.linkedin.com/in/himanshuakabored/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 src="/LinkedIn.svg"
@@ -113,16 +117,16 @@ const Footer = () => {
               />
             </a>
 
-            <a href="https://t.me/BoReD_Xagain" target="_blank">
+            <a href="https://t.me/BoReD_Xagain" target="_blank" rel="noopener noreferrer">
               <img
                 src="/Telegram.svg"
-                alt="Linkedin"
+                alt="Telegram"
                 className="cursor-pointer"
               />
             </a>
 
-            <a href="https://x.com/Bored_OO8" target="_blank">
-              <img src="/X.svg" alt="Linkedin" className="cursor-pointer" />
+            <a href="https://x.com/Bored_OO8" target="_blank" rel="noopener noreferrer">
+              <img src="/X.svg" alt="X" className="cursor-pointer" />
             </a>
           </div>
         </div>

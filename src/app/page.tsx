@@ -1,13 +1,11 @@
-"use client"
+"use client";
 import Hero from "@/sections/Hero";
-import About from "@/sections/About"
-import Skills from "@/sections/Skills"
-import Projects from "@/sections/Projects"
+import About from "@/sections/About";
+import Skills from "@/sections/Skills";
+import Projects from "@/sections/Projects";
 import Education from "@/sections/Education";
 import FAQ from "@/sections/FAQ";
 import Footer from "@/components/footer/Footer";
-import localFont from "next/font/local";
-
 
 export default function Home() {
   return (
@@ -28,15 +26,15 @@ export default function Home() {
           />
         </div>
       </div>
-        <div className="flex flex-col min-h-screen gap-y-20 md:gap-y-30 max-w-[420px] md:max-w-[1440px] mx-auto relative z-10">
-          <Hero />
-          <About />
-          <Skills />
-          <Projects />
-          <Education />
-          <FAQ />
-          <Footer />
-        </div>
+      <div className="flex flex-col min-h-screen gap-y-20 md:gap-y-30 max-w-[420px] md:max-w-[1440px] mx-auto relative z-10">
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Education />
+        <FAQ />
+        <Footer />
+      </div>
     </div>
   );
 }

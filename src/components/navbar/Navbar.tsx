@@ -1,37 +1,43 @@
-import React, { useState, useEffect } from 'react'
-import localFont from 'next/font/local'
-import { House, MessagesSquare, Menu, Code, FolderGit2, HelpCircle } from "lucide-react"
-import { motion, AnimatePresence } from "motion/react"
-import Link from 'next/link'
-import gsap from 'gsap'
-import AnimatedButton from '../effects/AnimatedButton'
+import React, { useState, useEffect } from 'react';
+import localFont from 'next/font/local';
+import { House, MessagesSquare, Code, FolderGit2, HelpCircle, type LucideIcon } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
+import Link from 'next/link';
+import gsap from 'gsap';
+import AnimatedButton from '../effects/AnimatedButton';
 
 const Mortend = localFont({
     src: "../../fonts/MortendBold.otf"
-})
+});
 
+interface NavLinkItem {
+    id: string;
+    label: string;
+    icon: LucideIcon;
+    className?: string;
+}
 
-const navLinks = [
+const navLinks: NavLinkItem[] = [
     { id: 'home', label: 'Home', icon: House },
     { id: 'skills', label: 'Skills', icon: Code },
     { id: 'projects', label: 'Projects', icon: FolderGit2 },
     { id: 'faq', label: 'FAQ', icon: HelpCircle, className: 'md:mr-3 mr-2 hidden md:flex' }
 ];
 
-const Navbar1 = () => {
-    const [activeSection, setActiveSection] = useState('home');
+const Navbar1: React.FC = () => {
+    const [activeSection, setActiveSection] = useState<string>('home');
 
     useEffect(() => {
-        const tl = gsap.timeline()
-        tl.from(".nav > *",{y:-10,opacity:0,duration:1,stagger:0.5,delay:0.4})
+        const tl = gsap.timeline();
+        tl.from(".nav > *", { y: -10, opacity: 0, duration: 1, stagger: 0.5, delay: 0.4 });
 
-        const observerOptions = {
+        const observerOptions: IntersectionObserverInit = {
             root: null,
             rootMargin: '-20% 0px -60% 0px',
             threshold: 0
         };
 
-        const observerCallback = (entries) => {
+        const observerCallback: IntersectionObserverCallback = (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     setActiveSection(entry.target.id);
@@ -97,7 +103,7 @@ const Navbar1 = () => {
                 </div>
             </AnimatedButton>
         </div>
-    )
-}
+    );
+};
 
-export default Navbar1
+export default Navbar1;
