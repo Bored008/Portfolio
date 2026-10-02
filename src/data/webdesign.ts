@@ -59,7 +59,7 @@ export const designsData: DesignItem[] = [
     tags: ["Figma", "Framer"]
   },
   {
-    title: "Luxury Watch Web Design",
+    title: "Luxury Watch Design",
     img: "/Watch.webp",
     link: "https://www.figma.com/design/UloorFq3x9zOvJUMw85nus/Figma-work?node-id=95-7&t=1Qya7mG7HlEGUrkN-1",
     desc: "Designed a premium luxury watch landing page in Figma, focused on elegant typography, immersive visuals, and a high-end shopping experience.",

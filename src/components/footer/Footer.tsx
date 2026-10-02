@@ -10,17 +10,16 @@ const Footer: React.FC = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline();
-      tl.from(".footer-content > *", {
-        y: 100,
-        duration: 1,
+      gsap.from(".footer-card", {
+        y: 50,
         opacity: 0,
-        stagger: 0.3,
+        duration: 1,
+        ease: "power2.out",
         scrollTrigger: {
           trigger: footerRef.current,
           markers: false,
-          start: "top 100%",
-          end: "top 50%",
+          start: "top 95%",
+          end: "top 75%",
           scrub: 1,
         },
       });
@@ -30,14 +29,14 @@ const Footer: React.FC = () => {
   }, []);
 
   return (
-    <div ref={footerRef} className="footer footer-content z-1 mt-auto w-full">
+    <div ref={footerRef} className="footer z-1 mt-auto w-full">
       {/* For Desktop */}
-      <div className="bg-white md:px-[45px] md:pt-[45px] md:pb-[5px] md:mx-[126px] rounded-t-[35px] flex-col justify-center hidden md:flex">
-        <div className='bg-[url("/footerdesign.webp")] md:h-[464px] rounded-[18px] bg-cover bg-no-repeat bg-center flex justify-center items-end  md:gap-[8px]'>
-          <div className="bg-black text-white md:text-[16px] rounded-full md:px-[19px] md:py-[12px] md:mb-[29px] cursor-pointer">
+      <div className="footer-card bg-white md:px-[40px] md:pt-[36px] md:pb-[14px] md:mx-[126px] rounded-t-[35px] flex-col justify-center hidden md:flex">
+        <div className='bg-[url("/footerdesign.webp")] md:h-[370px] lg:h-[420px] rounded-[18px] bg-cover bg-no-repeat bg-center flex justify-center items-end md:gap-[8px]'>
+          <div className="bg-black text-white md:text-[16px] rounded-full md:px-[19px] md:py-[12px] md:mb-[24px] cursor-pointer hover:bg-neutral-800 transition-colors">
             Get Started Now
           </div>
-          <div className="bg-transparent text-black md:text-[16px] border border-black rounded-full md:px-[19px] cursor-pointer md:py-[12px] md:mb-[29px]">
+          <div className="bg-transparent text-black md:text-[16px] border border-black rounded-full md:px-[19px] cursor-pointer md:py-[12px] md:mb-[24px] hover:bg-black hover:text-white transition-colors">
             Know More
           </div>
         </div>
@@ -93,7 +92,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* For mobile version */}
-      <div className="bg-white mx-[26px] rounded-t-[35px] flex flex-col md:hidden">
+      <div className="footer-card bg-white mx-[26px] rounded-t-[35px] flex flex-col md:hidden pb-4">
         <img
           src="/footerdesignmobile.webp"
           alt="footerdesign"

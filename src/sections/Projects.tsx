@@ -139,17 +139,17 @@ const Projects: React.FC = () => {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 bg-black"
+                  className="flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 bg-black hover:bg-white hover:text-black transition-colors"
                 >
                   <div>Visit me</div>
                   <img src="/Githubpr.svg" alt="githubicon" loading="lazy" decoding="async" className="w-[24px]" />
                 </a>
               </div>
-              <div className="md:text-[16px] mt-2">
+              <div className="md:text-[15px] text-[14px] mt-2 text-neutral-300">
                 {project.desc}
               </div>
             </div>
-            <div className="flex flex-wrap mt-4 text-black gap-[8px]">
+            <div className="flex flex-wrap mt-3 text-black gap-[8px]">
               {project.tags.map((tag: string, i: number) => (
                 <div key={i} className="bg-white text-[12px] rounded-[4px] px-[6px] py-[3px]">
                   {tag}
@@ -201,12 +201,12 @@ const Projects: React.FC = () => {
         {designsData.map((design: DesignItem, index: number) => (
           <div
             key={index}
-            className="shrink-0 w-[90%] md:w-[48%] md:min-w-[420px] max-w-[560px] backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] flex flex-col md:flex-row md:items-stretch text-white md:gap-5"
+            className="shrink-0 w-[90%] md:w-[48%] md:min-w-[420px] max-w-[560px] backdrop-blur-md border border-white/50 rounded-[19px] py-[6px] px-[12px] flex flex-col md:flex-row md:items-center text-white md:gap-4"
           >
             <div
               className={
                 design.imgWrapperClass ||
-                "w-full md:w-1/2 shrink-0 relative overflow-hidden rounded-[12px] border-2 border-white aspect-[16/10] md:aspect-auto md:self-stretch min-h-[140px]"
+                "w-full md:w-1/2 shrink-0 relative overflow-hidden rounded-[12px] border-1 border-white aspect-[16/10]"
               }
             >
               <img
@@ -220,16 +220,16 @@ const Projects: React.FC = () => {
                 }
               />
             </div>
-            <div className="w-full md:w-1/2 flex flex-col justify-between mt-3 md:mt-0">
+            <div className="w-full md:w-1/2 flex flex-col justify-center mt-3 md:mt-0 gap-2.5">
               <div>
                 <div className="text-[20px] md:text-[22px] font-semibold leading-snug">
                   {design.title}
                 </div>
-                <div className="text-[13px] md:text-[14px] mt-1.5 text-neutral-200 leading-relaxed">
+                <div className="text-[13px] md:text-[14px] mt-1 text-neutral-200 leading-relaxed">
                   {design.desc}
                 </div>
               </div>
-              <div className="flex justify-between items-center mt-3 pt-1">
+              <div className="flex justify-between items-center pt-1">
                 <div className="flex flex-wrap text-black gap-[8px]">
                   {design.tags.map((tag: string, i: number) => (
                     <div

@@ -1,26 +1,12 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import Hero from "@/sections/Hero";
-
-const About = dynamic(() => import("@/sections/About"), {
-  loading: () => <div className="min-h-[300px]" />,
-});
-const Skills = dynamic(() => import("@/sections/Skills"), {
-  loading: () => <div className="min-h-[400px]" />,
-});
-const Projects = dynamic(() => import("@/sections/Projects"), {
-  loading: () => <div className="min-h-[500px]" />,
-});
-const Education = dynamic(() => import("@/sections/Education"), {
-  loading: () => <div className="min-h-[300px]" />,
-});
-const FAQ = dynamic(() => import("@/sections/FAQ"), {
-  loading: () => <div className="min-h-[300px]" />,
-});
-const Footer = dynamic(() => import("@/components/footer/Footer"), {
-  loading: () => <div className="min-h-[200px]" />,
-});
+import About from "@/sections/About";
+import Skills from "@/sections/Skills";
+import Projects from "@/sections/Projects";
+import Education from "@/sections/Education";
+import FAQ from "@/sections/FAQ";
+import Footer from "@/components/footer/Footer";
 
 export default function Home() {
   return (
@@ -45,7 +31,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="flex flex-col min-h-screen gap-y-20 md:gap-y-30 max-w-[420px] md:max-w-[1440px] mx-auto relative z-10">
+      <div className="flex flex-col min-h-screen gap-y-14 md:gap-y-20 max-w-[420px] md:max-w-[1440px] mx-auto relative z-10">
         <Hero />
         <About />
         <Skills />

@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
     >
       <body>
         <SmoothScroll>

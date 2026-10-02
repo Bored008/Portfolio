@@ -40,11 +40,14 @@
 - **TypeScript Conversion**: Full codebase converted from JavaScript (`.jsx`/`.js`) to strict TypeScript (`.tsx`/`.ts`).
 - **Asset Optimization**:
   - Replaced >28MB of uncompressed PNGs and Figma SVG wrappers (which embedded raw base64 rasters) with modern `.webp` via Sharp, dropping asset payload by >96%.
-  - Added code-splitting with `next/dynamic` for below-the-fold sections (`Skills`, `Projects`, `Footer`).
-  - Native image attributes: `loading="lazy"` + `decoding="async"` on all below-the-fold images.
-- **Card Sizing & Aspect Ratios**:
-  - **Projects Carousel**: Standardized all project images to `aspect-[16/9.5] object-cover object-top`, cropped `Docdesign.webp` to the hero section (`2450×1400`), and aligned all cards to equal height using `flex flex-col justify-between`.
-  - **Web Designs Carousel**: Converted `Moviely` and `Watch` to full landscape mockups (`1440×823` and `1440×985`). Standardized cards to a 50/50 side-by-side desktop layout with `aspect-[16/10]` and `border-2 border-white rounded-[12px]`.
+- **Smooth Scroll & Footer Fixes**:
+  - Imported `lenis/dist/lenis.css`, removed `h-full` from `html` and `scroll-behavior: smooth` from `globals.css` to fix Lenis document height calculation and wheel scrolling freezing near the footer.
+  - Connected `useLenis` with `ScrollTrigger.update` and refined footer ScrollTrigger scrub bounds so the footer remains completely visible and scrollable.
+  - Converted section imports in `page.tsx` to direct imports to eliminate skeleton height mismatches.
+- **Card Spacing & Spacing Optimizations**:
+  - **Projects Carousel**: Tightened spacing between project description and tech tags.
+  - **Web Designs Carousel**: Replaced `justify-between` with clean vertical grouping (`gap-2.5` / `gap-3`) to eliminate excessive empty space between paragraph text and the Figma tag box / Visit button.
+  - Tightened vertical gaps between main sections.
 
 ---
 
