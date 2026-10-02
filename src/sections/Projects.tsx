@@ -194,27 +194,27 @@ const Projects: React.FC = () => {
         className="card2 flex md:mx-[90px] md:mt-[24px] mt-[18px] gap-[18px] overflow-x-auto flex-nowrap [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
       >
         {designsData.map((design: DesignItem, index: number) => (
-          <div key={index} className="shrink-0 w-[90%] md:w-[48%] h-fit backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] md:flex items-center text-white md:gap-5 ">
-            <div className={design.imgWrapperClass}>
+          <div key={index} className="shrink-0 w-[90%] md:w-[48%] backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] flex flex-col md:flex-row md:items-stretch text-white md:gap-5">
+            <div className={design.imgWrapperClass || "w-full md:w-1/2 shrink-0 flex items-center"}>
               <img
                 src={design.img}
                 alt={design.title}
                 loading="lazy"
                 decoding="async"
-                className={design.imgClass}
+                className={design.imgClass || "border-2 border-white rounded-[12px] w-full aspect-[16/10] object-cover object-top"}
               />
             </div>
-            <div>
-              <div className="flex justify-between">
+            <div className="w-full md:w-1/2 flex flex-col justify-between mt-3 md:mt-0">
+              <div>
                 <div className="text-[24px] font-semibold">
                   {design.title}
                 </div>
+                <div className="md:text-[16px] mt-2 text-neutral-200">
+                  {design.desc}
+                </div>
               </div>
-              <div className="md:text-[16px]">
-                {design.desc}
-              </div>
-              <div className="flex justify-between items-center">
-                <div className="flex flex-wrap mt-3 text-black gap-[8px]">
+              <div className="flex justify-between items-center mt-4">
+                <div className="flex flex-wrap text-black gap-[8px]">
                   {design.tags.map((tag: string, i: number) => (
                     <div key={i} className="bg-white text-[12px] rounded-[4px] px-[6px] py-[3px]">
                       {tag}
@@ -225,7 +225,7 @@ const Projects: React.FC = () => {
                   href={design.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 bg-black"
+                  className="flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 bg-black shrink-0"
                 >
                   <div>Visit me</div>
                   <img
