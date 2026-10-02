@@ -19,7 +19,7 @@
 - `src/app/page.tsx`: Single-page layout assembling all primary sections.
 - `src/sections/`:
   - `Hero.tsx`: Headline animations (`FeelingPassionate` + `MortendBold` fonts), GSAP scramble text, Hero portrait (`/myimage.webp`, eager/high-priority).
-  - `About.tsx`: 3D card tilt effect, bio, CV download (`Himanshu_D_Resume.pdf`).
+  - `About.tsx`: 3D card tilt effect, bio, dual CV download modal (`ResumeModal.tsx` for Designer and Developer resumes).
   - `Skills.tsx`: Responsive skill boards for desktop and mobile (`/bars.webp`, `/barsmobile.webp`).
   - `Projects.tsx`: Horizontal carousels for both "Projects" and "Web Designs" with prev/next scroll buttons.
   - `Education.tsx`: Education banner and credentials cards.

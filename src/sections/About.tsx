@@ -1,10 +1,11 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import localFont from "next/font/local";
 import gsap from "gsap";
 import { motion } from "motion/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AnimatedButton from "@/components/effects/AnimatedButton";
+import ResumeModal from "@/components/ResumeModal";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +14,8 @@ const RockyBilly = localFont({
 });
 
 const About: React.FC = () => {
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
+
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -96,13 +99,16 @@ const About: React.FC = () => {
             />
             <AnimatedButton
               className={`md:text-md border-white border rounded-[12px] px-[12px] py-[8px] bg-black cursor-pointer`}
-              href="/Himanshu_D_Resume.pdf"
-              download="Himanshu_D_Resume.pdf"
+              onClick={() => setIsResumeModalOpen(true)}
               text="Download CV"
             />
           </div>
         </div>
       </div>
+      <ResumeModal
+        isOpen={isResumeModalOpen}
+        onClose={() => setIsResumeModalOpen(false)}
+      />
     </motion.div>
   );
 };
