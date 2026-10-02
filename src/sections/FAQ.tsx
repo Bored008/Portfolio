@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+"use client";
+import React, { useEffect, useRef, useState } from 'react';
 import localFont from 'next/font/local';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -16,36 +17,41 @@ interface FAQItemData {
 }
 
 const FAQ: React.FC = () => {
-  useEffect(() => {
-    const tl = gsap.timeline();
-    tl.from(".heading", {
-      x: -20,
-      opacity: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: ".page",
-        start: "top+=150 bottom",
-        end: "top+=250 bottom",
-        markers: false,
-        scrub: 2
-      }
-    });
-
-    tl.from(".card >*", {
-      x: 10,
-      opacity: 0,
-      stagger: 0.3,
-      scrollTrigger: {
-        trigger: ".card",
-        start: "top+=150 bottom",
-        end: "top+=500 bottom",
-        markers: false,
-        scrub: 2
-      }
-    });
-  }, []);
-
+  const faqRef = useRef<HTMLDivElement>(null);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline();
+      tl.from(".faq-heading", {
+        x: -20,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: faqRef.current,
+          start: "top+=150 bottom",
+          end: "top+=250 bottom",
+          markers: false,
+          scrub: 2
+        }
+      });
+
+      tl.from(".faq-card-container > *", {
+        x: 10,
+        opacity: 0,
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: ".faq-card-container",
+          start: "top+=150 bottom",
+          end: "top+=500 bottom",
+          markers: false,
+          scrub: 2
+        }
+      });
+    }, faqRef);
+
+    return () => ctx.revert();
+  }, []);
 
   const faqs: FAQItemData[] = [
     {
@@ -83,14 +89,14 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div className='page text-white md:flex md:gap-[120px] md:px-[126px] z-1' id='faq'>
+    <div ref={faqRef} className='page text-white md:flex md:gap-[120px] md:px-[126px] z-1' id='faq'>
       <div className='flex flex-col md:w-1/2 justify-start'>
-        <div className='sticky top-0 heading flex flex-col items-center md:items-start'>
+        <div className='sticky top-0 faq-heading flex flex-col items-center md:items-start'>
           <div className={`${Gilroy.className} md:text-[64px] text-4xl md:mb-4 md:w-2/3`}>Questions for me ?</div>
           <div className='md:text-[16px] mx-3 mb-5 text-center md:text-start md:mx-0 md:w-2/3'>Here are some common questions along with their answers to help clear up any confusion.</div>
         </div>
       </div>
-      <div className='card flex flex-col md:w-1/2 gap-y-3'>
+      <div className='faq-card-container flex flex-col md:w-1/2 gap-y-3'>
         {faqs.map((faq, index) => (
           <motion.div 
             layout

@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect } from "react";
 import localFont from "next/font/local";
 import AnimatedButton from "@/components/effects/AnimatedButton";

@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect } from 'react';
 import AnimatedButton from '@/components/effects/AnimatedButton';
 import { motion } from 'framer-motion';
