@@ -1,11 +1,26 @@
 "use client";
+
+import dynamic from "next/dynamic";
 import Hero from "@/sections/Hero";
-import About from "@/sections/About";
-import Skills from "@/sections/Skills";
-import Projects from "@/sections/Projects";
-import Education from "@/sections/Education";
-import FAQ from "@/sections/FAQ";
-import Footer from "@/components/footer/Footer";
+
+const About = dynamic(() => import("@/sections/About"), {
+  loading: () => <div className="min-h-[300px]" />,
+});
+const Skills = dynamic(() => import("@/sections/Skills"), {
+  loading: () => <div className="min-h-[400px]" />,
+});
+const Projects = dynamic(() => import("@/sections/Projects"), {
+  loading: () => <div className="min-h-[500px]" />,
+});
+const Education = dynamic(() => import("@/sections/Education"), {
+  loading: () => <div className="min-h-[300px]" />,
+});
+const FAQ = dynamic(() => import("@/sections/FAQ"), {
+  loading: () => <div className="min-h-[300px]" />,
+});
+const Footer = dynamic(() => import("@/components/footer/Footer"), {
+  loading: () => <div className="min-h-[200px]" />,
+});
 
 export default function Home() {
   return (
@@ -15,6 +30,8 @@ export default function Home() {
           <img
             src="/curveline.svg"
             alt="Background curve"
+            loading="lazy"
+            decoding="async"
             className="absolute left-1/2 -translate-x-1/2 max-w-none min-w-[1440px] w-[80%] object-top"
           />
         </div>
@@ -22,6 +39,8 @@ export default function Home() {
           <img
             src="/curvelinemobile.svg"
             alt="Background curve"
+            loading="lazy"
+            decoding="async"
             className="absolute max-w-none min-w-[420px] w-[840px] object-top inset-0 translate-x-[-25%]"
           />
         </div>

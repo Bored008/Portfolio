@@ -39,6 +39,9 @@ const Hero: React.FC = () => {
         <img
           src="/myimage.png"
           alt='my photo'
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
           className='md:w-[1264px] md:h-[803px] h-[265px] w-[350px] md:mt-0 mt-15 z-10 border-white md:border-t-0 border-b-8 border-t-2 border-x-5 md:rounded-t-none rounded-[32px]'
         />
       </div>
@@ -46,7 +49,7 @@ const Hero: React.FC = () => {
         <div className={`${HeyFont.className} md:text-[86px] text-3xl text-white z-20 absolute md:top-110 md:left-[14%] top-59 left-15`}>Hey,</div>
         <div className={`${Mortend.className} md:text-[126px] text-3xl text-white z-20 absolute md:top-138 md:left-[14%] top-70 left-15`}>I AM</div>
         <div className={`${Mortend.className} scrambleName md:text-[126px] text-[40px] px-4 bg-transparent text-white z-20 absolute md:top-165 md:left-[14%] top-80 left-12`}>HIMANSHU</div>
-        <img src="/Boredlogo.svg" alt='boredlogo' className='img md:w-[248px] md:h-[116px] w-[90px] bg-transparent absolute md:top-148 md:left-260 z-19 top-75 left-78' />
+        <img src="/Boredlogo.svg" alt='boredlogo' loading="eager" decoding="async" className='img md:w-[248px] md:h-[116px] w-[90px] bg-transparent absolute md:top-148 md:left-260 z-19 top-75 left-78' />
       </div>
     </div>
   );

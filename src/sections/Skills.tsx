@@ -91,6 +91,8 @@ const Skills: React.FC = () => {
         <img
           src="/bars.png"
           alt="Skills Bars"
+          loading="lazy"
+          decoding="async"
           className="bar-bg absolute inset-0 w-full h-full object-cover hidden md:block"
         />
         <div className="relative z-10 w-full aspect-[1653/929] items-center flex flex-col hidden md:flex text-white">
@@ -114,6 +116,8 @@ const Skills: React.FC = () => {
                   <div className="overflow-visible group-hover:scale-[2] group-hover:-translate-y-2.5 transition-transform duration-200">
                     <img
                       src={skill.icon}
+                      loading="lazy"
+                      decoding="async"
                       className={`group-hover:invert transition-all duration-200 ${skill.desktopHeight}`}
                       alt={skill.name}
                     />
@@ -148,6 +152,8 @@ const Skills: React.FC = () => {
                 <div className="flex overflow-visible group-hover:scale-[2] group-hover:-translate-y-2.5 transition-transform duration-200">
                   <img
                     src={skill.icon}
+                    loading="lazy"
+                    decoding="async"
                     className={`group-hover:invert transition-all duration-200 ${skill.mobileHeight}`}
                     alt={skill.name}
                   />

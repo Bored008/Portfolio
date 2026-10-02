@@ -37,7 +37,7 @@ const Education: React.FC = () => {
                     }}
                     className='flex justify-center'
                 >
-                    <img src='/Educationbanner.svg' alt="Education Banner" className='md:w-full w-1/2' />
+                    <img src='/Educationbanner.svg' alt="Education Banner" loading="lazy" decoding="async" className='md:w-full w-1/2' />
                 </motion.div>
             </div>
             <div>

@@ -46,6 +46,8 @@ const Footer: React.FC = () => {
                 <img
                   src="/GitHub.svg"
                   alt="Github"
+                  loading="lazy"
+                  decoding="async"
                   className="cursor-pointer"
                 />
               </a>
@@ -58,6 +60,8 @@ const Footer: React.FC = () => {
                 <img
                   src="/LinkedIn.svg"
                   alt="Linkedin"
+                  loading="lazy"
+                  decoding="async"
                   className="cursor-pointer"
                 />
               </a>
@@ -66,12 +70,14 @@ const Footer: React.FC = () => {
                 <img
                   src="/Telegram.svg"
                   alt="Telegram"
+                  loading="lazy"
+                  decoding="async"
                   className="cursor-pointer"
                 />
               </a>
 
               <a href="https://x.com/Bored_OO8" target="_blank" rel="noopener noreferrer">
-                <img src="/X.svg" alt="X" className="cursor-pointer" />
+                <img src="/X.svg" alt="X" loading="lazy" decoding="async" className="cursor-pointer" />
               </a>
             </div>
           </div>
@@ -84,6 +90,8 @@ const Footer: React.FC = () => {
         <img
           src="/footerdesignmobile.svg"
           alt="footerdesign"
+          loading="lazy"
+          decoding="async"
           className="h-full rounded-t-[24px] rounded-b-[8px] p-[12px]"
         />
         <div className="text-[16px] text-black text-center mx-5">
@@ -102,7 +110,7 @@ const Footer: React.FC = () => {
           <div className="font-semibold text-[16px]">Stay Connected</div>
           <div className="flex gap-[8px]">
             <a href="https://github.com/Bored008" target="_blank" rel="noopener noreferrer">
-              <img src="/GitHub.svg" alt="Github" className="cursor-pointer" />
+              <img src="/GitHub.svg" alt="Github" loading="lazy" decoding="async" className="cursor-pointer" />
             </a>
 
             <a
@@ -113,6 +121,8 @@ const Footer: React.FC = () => {
               <img
                 src="/LinkedIn.svg"
                 alt="Linkedin"
+                loading="lazy"
+                decoding="async"
                 className="cursor-pointer"
               />
             </a>
@@ -121,12 +131,14 @@ const Footer: React.FC = () => {
               <img
                 src="/Telegram.svg"
                 alt="Telegram"
+                loading="lazy"
+                decoding="async"
                 className="cursor-pointer"
               />
             </a>
 
             <a href="https://x.com/Bored_OO8" target="_blank" rel="noopener noreferrer">
-              <img src="/X.svg" alt="X" className="cursor-pointer" />
+              <img src="/X.svg" alt="X" loading="lazy" decoding="async" className="cursor-pointer" />
             </a>
           </div>
         </div>

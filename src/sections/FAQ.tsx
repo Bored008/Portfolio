@@ -101,7 +101,7 @@ const FAQ: React.FC = () => {
           >
             <motion.div layout className='flex justify-between w-full'>
               <div className='md:text-[20px] font-bold '>{faq.question}</div>
-              <img src="/Arrow.svg" alt="arrow" className={`md:w-[30px] w-[25px] transition-transform duration-300 ${openIndex === index ? 'rotate-0' : 'rotate-180 invert'}`} />
+              <img src="/Arrow.svg" alt="arrow" loading="lazy" decoding="async" className={`md:w-[30px] w-[25px] transition-transform duration-300 ${openIndex === index ? 'rotate-0' : 'rotate-180 invert'}`} />
             </motion.div>
             {openIndex === index && (
               <motion.div className='animate-fade-in mt-1 md:mt-2 text-gray-500'>{faq.answer}</motion.div>

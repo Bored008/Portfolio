@@ -102,11 +102,15 @@ const Projects: React.FC = () => {
         <img
           src="/ProjectTag.svg"
           alt="Project Tag Left"
+          loading="lazy"
+          decoding="async"
           className="left-half absolute inset-0 w-full object-cover md:h-auto h-35 z-0 [clip-path:polygon(0_0,50%_0,50%_100%,0_100%)]"
         />
         <img
           src="/ProjectTag.svg"
           alt="Project Tag Right"
+          loading="lazy"
+          decoding="async"
           className="right-half absolute inset-0 w-full object-cover md:h-auto h-35 z-0 [clip-path:polygon(50%_0,100%_0,100%_100%,50%_100%)]"
         />
       </div>
@@ -119,6 +123,8 @@ const Projects: React.FC = () => {
             <img
               src={project.img}
               alt={project.title}
+              loading="lazy"
+              decoding="async"
               className={project.imgClass}
             />
             <div className="flex justify-between items-center">
@@ -130,7 +136,7 @@ const Projects: React.FC = () => {
                 className="flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 bg-black"
               >
                 <div>Visit me</div>
-                <img src="/Githubpr.svg" alt="githubicon" className="w-[24px]" />
+                <img src="/Githubpr.svg" alt="githubicon" loading="lazy" decoding="async" className="w-[24px]" />
               </a>
             </div>
             <div className="md:text-[16px]">
@@ -191,6 +197,8 @@ const Projects: React.FC = () => {
               <img
                 src={design.img}
                 alt={design.title}
+                loading="lazy"
+                decoding="async"
                 className={design.imgClass}
               />
             </div>
@@ -221,6 +229,8 @@ const Projects: React.FC = () => {
                   <img
                     src="/figmaproj.svg"
                     alt="figmaicon"
+                    loading="lazy"
+                    decoding="async"
                     className="w-[24px]"
                   />
                 </a>
@@ -234,6 +244,8 @@ const Projects: React.FC = () => {
         <img
           src="/prev.svg"
           alt="prev button"
+          loading="lazy"
+          decoding="async"
           className="cursor-pointer"
           onClick={() => {
             designScrollContainerRef.current?.scrollBy({
@@ -245,6 +257,8 @@ const Projects: React.FC = () => {
         <img
           src="/next.svg"
           alt="next button"
+          loading="lazy"
+          decoding="async"
           className="cursor-pointer"
           onClick={() => {
             designScrollContainerRef.current?.scrollBy({
