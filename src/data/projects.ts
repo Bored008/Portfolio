@@ -20,7 +20,7 @@ export const projectsData: ProjectItem[] = [
     title: "DocDesign",
     img: "/Docdesign.webp",
     link: "https://github.com/Bored008/DocDesign",
-    imgClass: " md:w-[353px]",
+    imgClass: "rounded-[12px] border-2 border-t-1 border-white md:w-[353px]",
     desc: "DocDesign is a web application that allows users to transform static document images into editable documents without recreating them. Whether it's a resume template, doc report, users can modify content, customize styling, and export the final document in multiple formats",
     tags: ["React.js", "Node.js", "Express.js", "MongoDB", "TailwindCSS", "Generative ai", "Figma"]
   },

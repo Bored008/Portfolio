@@ -119,30 +119,32 @@ const Projects: React.FC = () => {
         className="card flex md:mx-[90px] mt-[24px] md:mt-[32px] gap-[18px] overflow-x-auto flex-nowrap [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
       >
         {projectsData.map((project: ProjectItem, index: number) => (
-          <div key={index} className="shrink-0 w-[90%] h-fit md:w-[30%] backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] flex flex-col text-white">
-            <img
-              src={project.img}
-              alt={project.title}
-              loading="lazy"
-              decoding="async"
-              className={project.imgClass}
-            />
-            <div className="flex justify-between items-center">
-              <div className="text-[24px] mt-3 font-semibold">{project.title}</div>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 bg-black"
-              >
-                <div>Visit me</div>
-                <img src="/Githubpr.svg" alt="githubicon" loading="lazy" decoding="async" className="w-[24px]" />
-              </a>
+          <div key={index} className="shrink-0 w-[90%] md:w-[30%] backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] flex flex-col justify-between text-white">
+            <div>
+              <img
+                src={project.img}
+                alt={project.title}
+                loading="lazy"
+                decoding="async"
+                className={`w-full aspect-[16/9.5] object-cover object-top ${project.imgClass || ""}`}
+              />
+              <div className="flex justify-between items-center mt-3">
+                <div className="text-[24px] font-semibold">{project.title}</div>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 bg-black"
+                >
+                  <div>Visit me</div>
+                  <img src="/Githubpr.svg" alt="githubicon" loading="lazy" decoding="async" className="w-[24px]" />
+                </a>
+              </div>
+              <div className="md:text-[16px] mt-2">
+                {project.desc}
+              </div>
             </div>
-            <div className="md:text-[16px]">
-              {project.desc}
-            </div>
-            <div className="flex flex-wrap mt-2 text-black gap-[8px]">
+            <div className="flex flex-wrap mt-4 text-black gap-[8px]">
               {project.tags.map((tag: string, i: number) => (
                 <div key={i} className="bg-white text-[12px] rounded-[4px] px-[6px] py-[3px]">
                   {tag}
