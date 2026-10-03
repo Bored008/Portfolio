@@ -150,7 +150,7 @@ const Projects: React.FC = () => {
                         title="Live Website"
                       >
                         <span className="whitespace-nowrap text-[12px] md:text-[13px]">
-                          {hasBoth ? "Live" : "Live Website"}
+                          Live
                         </span>
                         <img
                           src="/webproj.svg"
@@ -170,7 +170,7 @@ const Projects: React.FC = () => {
                         title="Visit GitHub"
                       >
                         <span className="whitespace-nowrap text-[12px] md:text-[13px]">
-                          {hasBoth ? "GitHub" : "Visit GitHub"}
+                          GitHub
                         </span>
                         <img
                           src="/Githubpr.svg"
@@ -293,7 +293,7 @@ const Projects: React.FC = () => {
                   rel="noopener noreferrer"
                   className="flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 pr-1.5 bg-black shrink-0 hover:bg-white hover:text-black transition-colors ml-2"
                 >
-                  <div className="whitespace-nowrap">Visit me</div>
+                  <div className="whitespace-nowrap text-[12px] md:text-[13px]">Figma</div>
                   <img
                     src="/figmaproj.svg"
                     alt="figmaicon"
