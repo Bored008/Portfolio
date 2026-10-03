@@ -123,35 +123,81 @@ const Projects: React.FC = () => {
         ref={projScrollContainerRef}
         className="proj-carousel flex md:mx-[90px] mt-[24px] md:mt-[32px] gap-[18px] overflow-x-auto flex-nowrap [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
       >
-        {projectsData.map((project: ProjectItem, index: number) => (
-          <div key={index} className="shrink-0 w-[90%] md:w-[30%] h-[430px] md:h-[460px] backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] flex flex-col justify-between text-white">
-            <div className="shrink-0">
-              <img
-                src={project.img}
-                alt={project.title}
-                loading="lazy"
-                decoding="async"
-                className={`w-full aspect-[16/9.5] object-cover object-top ${project.imgClass || ""}`}
-              />
-              <div className="flex justify-between items-center mt-3">
-                <div className="text-[24px] font-semibold">{project.title}</div>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 bg-black hover:bg-white hover:text-black transition-colors shrink-0 ml-2"
-                >
-                  <div className="whitespace-nowrap">Visit me</div>
-                  <img
-                    src={project.icon || (project.link.includes("github.com") ? "/Githubpr.svg" : "/webproj.svg")}
-                    alt={project.link.includes("github.com") ? "githubicon" : "webicon"}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-[24px]"
-                  />
-                </a>
+        {projectsData.map((project: ProjectItem, index: number) => {
+          const githubUrl = project.githubLink || (project.link.includes("github.com") ? project.link : undefined);
+          const liveUrl = project.liveLink || (!project.link.includes("github.com") ? project.link : undefined);
+          const hasBoth = Boolean(githubUrl && liveUrl);
+
+          return (
+            <div key={index} className="shrink-0 w-[90%] md:w-[30%] h-[430px] md:h-[460px] backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] flex flex-col justify-between text-white">
+              <div className="shrink-0">
+                <img
+                  src={project.img}
+                  alt={project.title}
+                  loading="lazy"
+                  decoding="async"
+                  className={`w-full aspect-[16/9.5] object-cover object-top ${project.imgClass || ""}`}
+                />
+                <div className="flex justify-between items-center mt-3">
+                  <div className="text-[24px] font-semibold">{project.title}</div>
+                  <div className="flex items-center gap-1.5 shrink-0 ml-2">
+                    {liveUrl && (
+                      <a
+                        href={liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-white border border-white/80 rounded-full py-1 px-2.5 bg-black hover:bg-white hover:text-black transition-colors"
+                        title="Live Website"
+                      >
+                        <span className="whitespace-nowrap text-[12px] md:text-[13px]">
+                          {hasBoth ? (
+                            <>
+                              <span className="md:hidden">Live</span>
+                              <span className="hidden md:inline">Live Website</span>
+                            </>
+                          ) : (
+                            "Live Website"
+                          )}
+                        </span>
+                        <img
+                          src="/webproj.svg"
+                          alt="live website icon"
+                          loading="lazy"
+                          decoding="async"
+                          className="w-[18px] md:w-[20px]"
+                        />
+                      </a>
+                    )}
+                    {githubUrl && (
+                      <a
+                        href={githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-white border border-white/80 rounded-full py-1 px-2.5 bg-black hover:bg-white hover:text-black transition-colors"
+                        title="Visit GitHub"
+                      >
+                        <span className="whitespace-nowrap text-[12px] md:text-[13px]">
+                          {hasBoth ? (
+                            <>
+                              <span className="md:hidden">GitHub</span>
+                              <span className="hidden md:inline">Visit GitHub</span>
+                            </>
+                          ) : (
+                            "Visit GitHub"
+                          )}
+                        </span>
+                        <img
+                          src="/Githubpr.svg"
+                          alt="github icon"
+                          loading="lazy"
+                          decoding="async"
+                          className="w-[18px] md:w-[20px]"
+                        />
+                      </a>
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
             <div
               data-lenis-prevent
               onWheel={(e) => e.stopPropagation()}
@@ -166,8 +212,9 @@ const Projects: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
-        ))}
+            </div>
+          );
+        })}
       </div>
 
       <div className="flex justify-center mt-[16px] gap-[12px]">

@@ -2,6 +2,8 @@ export interface ProjectItem {
   title: string;
   img: string;
   link: string;
+  githubLink?: string;
+  liveLink?: string;
   imgClass?: string;
   desc: string;
   tags: string[];
@@ -12,7 +14,9 @@ export const projectsData: ProjectItem[] = [
   {
     title: "EBAT",
     img: "/EBAT.png",
-    link: "https://github.com/Bored008/EBAT",
+    link: "https://ebat-omega.vercel.app/",
+    githubLink: "https://github.com/Bored008/EBAT",
+    liveLink: "https://ebat-omega.vercel.app/",
     imgClass: "rounded-[12px] border-2 border-t-1 border-white md:w-[353px]",
     desc: "EBAT is a high-performance military-grade drone surveillance landing page built with Next.js 16 and Tailwind CSS v4. It features a precision dark mode aesthetic, adaptive cross-platform layouts, and modular component architecture. The project showcases tactical FPV and surveillance drones through interactive UI components, delivering an immersive and highly responsive digital experience for aerospace and defense portfolios.",
     tags: ["Next.js 16", "Tailwind CSS v4", "TypeScript"]
@@ -21,6 +25,7 @@ export const projectsData: ProjectItem[] = [
     title: "Yanegi",
     img: "/Yanegi.webp",
     link: "https://www.yanegi.com/",
+    liveLink: "https://www.yanegi.com/",
     imgClass: "rounded-[12px] border-2 border-t-1 border-white md:w-[353px]",
     desc: "Yanegi is a real-time socializing platform and live map of community activities happening right now, from pickup sports and open mics to rooftop hangouts. Built with an interactive Next.js interface and geolocation mapping without algorithmic feeds, it makes it easier to show up to local gatherings in real life.",
     tags: ["Next.js", "React.js", "TailwindCSS", "TypeScript", "Geolocation API"]
