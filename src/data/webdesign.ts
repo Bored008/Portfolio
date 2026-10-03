@@ -24,6 +24,13 @@ export const designsData: DesignItem[] = [
     tags: ["Figma"]
   },
   {
+    title: "PaperBuddy",
+    img: "/PaperBuddy.png",
+    link: "https://www.figma.com/design/UloorFq3x9zOvJUMw85nus/Figma-work?node-id=567-3377&t=qywJFBAmupGTFqwN-1",
+    desc: "Designed an educational management platform landing page in Figma and Framer, featuring clean modern typography, isometric tech illustrations, and structured product feature showcases tailored for school administration.",
+    tags: ["Figma", "Framer"]
+  },
+  {
     title: "FireChem",
     img: "/Firechem.webp",
     link: "https://www.figma.com/design/UloorFq3x9zOvJUMw85nus/Figma-work?node-id=503-3428&t=v7zrwzzp2MLQkQxD-1",

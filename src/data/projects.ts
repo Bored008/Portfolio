@@ -32,6 +32,15 @@ export const projectsData: ProjectItem[] = [
     tags: ["Next.js", "React.js", "TailwindCSS", "TypeScript", "Geolocation API"]
   },
   {
+    title: "PaperBuddy",
+    img: "/PaperBuddy.png",
+    link: "https://rich-mountain-355249.framer.app/",
+    liveLink: "https://rich-mountain-355249.framer.app/",
+    imgClass: "rounded-[12px] border-2 border-t-1 border-white md:w-[353px]",
+    desc: "PaperBuddy is an all-in-one connected educational management platform for admins, teachers, students, drivers, and office staff. It centralizes attendance, fee collection, exam workflows, and school transport tracking into a single, real-time synchronized system designed to reduce paperwork and elevate classroom teaching.",
+    tags: ["Framer", "React", "Web Design", "UI/UX"]
+  },
+  {
     title: "Paw",
     img: "/Paw.webp",
     link: "https://github.com/Bored008/Paw",
