@@ -12,6 +12,16 @@ export interface ProjectItem {
 
 export const projectsData: ProjectItem[] = [
   {
+    title: "SadakSaathi",
+    img: "/Sadaksaathi.webp",
+    link: "https://sadak-saathi-mocha.vercel.app/",
+    githubLink: "https://github.com/Bored008/SadakSaathi",
+    liveLink: "https://sadak-saathi-mocha.vercel.app/",
+    imgClass: "rounded-[12px] border-2 border-t-1 border-white md:w-[353px]",
+    desc: "SadakSaathi is a comprehensive road safety and navigation companion web application. It provides real-time route insights, hazard reporting, and emergency assistance integration through an intuitive, user-friendly interface tailored for commuters and drivers.",
+    tags: ["Next.js", "TailwindCSS", "Figma", "UI/UX"]
+  },
+  {
     title: "EBAT",
     img: "/EBAT.png",
     link: "https://ebat-omega.vercel.app/",
