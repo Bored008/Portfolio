@@ -150,14 +150,7 @@ const Projects: React.FC = () => {
                         title="Live Website"
                       >
                         <span className="whitespace-nowrap text-[12px] md:text-[13px]">
-                          {hasBoth ? (
-                            <>
-                              <span className="md:hidden">Live</span>
-                              <span className="hidden md:inline">Live Website</span>
-                            </>
-                          ) : (
-                            "Live Website"
-                          )}
+                          {hasBoth ? "Live" : "Live Website"}
                         </span>
                         <img
                           src="/webproj.svg"
@@ -177,14 +170,7 @@ const Projects: React.FC = () => {
                         title="Visit GitHub"
                       >
                         <span className="whitespace-nowrap text-[12px] md:text-[13px]">
-                          {hasBoth ? (
-                            <>
-                              <span className="md:hidden">GitHub</span>
-                              <span className="hidden md:inline">Visit GitHub</span>
-                            </>
-                          ) : (
-                            "Visit GitHub"
-                          )}
+                          {hasBoth ? "GitHub" : "Visit GitHub"}
                         </span>
                         <img
                           src="/Githubpr.svg"
