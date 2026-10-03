@@ -142,7 +142,13 @@ const Projects: React.FC = () => {
                   className="flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 bg-black hover:bg-white hover:text-black transition-colors shrink-0 ml-2"
                 >
                   <div className="whitespace-nowrap">Visit me</div>
-                  <img src="/Githubpr.svg" alt="githubicon" loading="lazy" decoding="async" className="w-[24px]" />
+                  <img
+                    src={project.icon || (project.link.includes("github.com") ? "/Githubpr.svg" : "/webproj.svg")}
+                    alt={project.link.includes("github.com") ? "githubicon" : "webicon"}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-[24px]"
+                  />
                 </a>
               </div>
             </div>
@@ -205,7 +211,7 @@ const Projects: React.FC = () => {
         {designsData.map((design: DesignItem, index: number) => (
           <div
             key={index}
-            className="shrink-0 w-[90%] md:w-[48%] md:min-w-[420px] max-w-[560px] h-[380px] md:h-[230px] backdrop-blur-md border border-white/50 rounded-[19px] py-[6px] px-[12px] flex flex-col md:flex-row md:items-stretch text-white md:gap-4"
+            className="shrink-0 w-[90%] md:w-[48%] md:min-w-[420px] max-w-[560px] h-[380px] md:h-[200px] backdrop-blur-md border border-white/50 rounded-[19px] py-[6px] px-[12px] flex flex-col md:flex-row md:items-stretch text-white md:gap-4"
           >
             <div
               className={
@@ -224,7 +230,7 @@ const Projects: React.FC = () => {
                 }
               />
             </div>
-            <div className="w-full md:w-1/2 flex flex-col justify-between mt-3 md:mt-0 py-2">
+            <div className="w-full md:w-1/2 flex flex-col gap-2 md:mt-0 py-2">
               <div className="shrink-0">
                 <div className="text-[20px] md:text-[22px] font-semibold leading-snug">
                   {design.title}
@@ -233,7 +239,7 @@ const Projects: React.FC = () => {
               <div
                 data-lenis-prevent
                 onWheel={(e) => e.stopPropagation()}
-                className="text-[13px] md:text-[14px] mt-1 text-neutral-200 leading-relaxed h-[75px] md:h-[85px] overflow-y-auto pr-2 overscroll-contain [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full"
+                className="text-[13px] md:text-[14px] text-neutral-200 leading-relaxed h-[75px] md:h-[85px] overflow-y-auto pr-2 overscroll-contain [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full"
               >
                 {design.desc}
               </div>
