@@ -45,7 +45,7 @@ export const projectsData: ProjectItem[] = [
     img: "/Paw.webp",
     link: "https://github.com/Bored008/Paw",
     imgClass: "rounded-[12px] border-2 border-t-1 border-white md:w-[353px]",
-    desc: "Paw is a web application that simplifies the pet adoption journey for both adopters and rescue organizations. It provides an interactive experience where users can explore available pets, learn about pet care, and connect directly with adoption centers.",
+    desc: "Paw is a web application that simplifies the pet adoption journey for both adopters and rescue organizations. It provides an interactive experience where users can explore available pets, learn about pet care, and connect directly with adoption centers through a clean, accessible, and emotionally engaging user interface designed to facilitate successful animal placements.",
     tags: ["React.js", "Node.js", "Express.js", "MongoDB", "TailwindCSS", "TypeScript", "Local Storage API"]
   },
   {
@@ -61,7 +61,7 @@ export const projectsData: ProjectItem[] = [
     img: "/Githubprofileanalyzer.webp",
     link: "https://github.com/Bored008/github-profile-analyzer",
     imgClass: "rounded-[12px] border-2 border-t-1 border-white md:w-[353px]",
-    desc: "GitHub Profile Analyzer is a developer-focused platform that transforms GitHub data into meaningful insights, allowing users to explore repositories, contributions, technology stacks, and coding activity through a clean and interactive interface.",
+    desc: "GitHub Profile Analyzer is a developer-focused platform that transforms GitHub data into meaningful insights, allowing users to explore repositories, contributions, technology stacks, and coding activity through a clean and interactive interface. It visualizes data using dynamic charts and comprehensive analytics for immediate readability and technical performance tracking.",
     tags: ["Next.js", "Node.js", "Express.js", "Neon PostgreSQL", "TailwindCSS", "Bun"]
   },
   {
