@@ -44,9 +44,12 @@
   - Imported `lenis/dist/lenis.css`, removed `h-full` from `html` and `scroll-behavior: smooth` from `globals.css` to fix Lenis document height calculation and wheel scrolling freezing near the footer.
   - Connected `useLenis` with `ScrollTrigger.update` and refined footer ScrollTrigger scrub bounds so the footer remains completely visible and scrollable.
   - Converted section imports in `page.tsx` to direct imports to eliminate skeleton height mismatches.
-- **Card Spacing & Spacing Optimizations**:
-  - **Projects Carousel**: Tightened spacing between project description and tech tags.
-  - **Web Designs Carousel**: Replaced `justify-between` with clean vertical grouping (`gap-2.5` / `gap-3`) to eliminate excessive empty space between paragraph text and the Figma tag box / Visit button.
+- **Card Spacing & Layout Standardizations**:
+  - **Global Card Standardization**: Project hero images standardize on `aspect-[16/9.5]` and `aspect-[16/10]` with `object-cover object-top` to maintain perfect alignment across cards.
+  - **Web Designs Carousel**: Converted desktop layout to 50/50 side-by-side (`md:flex-row`). Fixed mobile layout by replacing fixed `h-[380px]` with `h-auto` to prevent content overflow.
+  - **Descriptions Expanded**: Increased word count of project descriptions to naturally fill empty space in cards without artificially spacing elements.
+  - **Shortened Buttons**: Shortened long buttons ("Live Website" -> "Live", "Visit GitHub" -> "GitHub", "Visit me" -> "Figma") to prevent right-edge overflow on tight mobile/tablet breakpoints.
+- **Projects Added**: Integrated `SadakSaathi` into both Developer and Web Design projects arrays, auto-converted its uploaded mockup to WebP.
   - Tightened vertical gaps between main sections.
 
 ---
