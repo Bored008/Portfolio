@@ -10,6 +10,13 @@ export interface DesignItem {
 
 export const designsData: DesignItem[] = [
   {
+    title: "EBAT",
+    img: "/EBAT.png",
+    link: "https://www.figma.com/design/mvptBcMjmfiSxiSpc3AY8R/EBAT?node-id=304-1077&t=XFsU03olU8ctFwgr-1",
+    desc: "Designed a military-grade drone surveillance landing page in Figma, featuring a precision dark mode palette, high-impact typography, and a modular layout.",
+    tags: ["Figma"]
+  },
+  {
     title: "Yanegi",
     img: "/Yanegi.webp",
     link: "https://www.figma.com/design/UloorFq3x9zOvJUMw85nus/Figma-work?node-id=512-1476&t=v7zrwzzp2MLQkQxD-1",

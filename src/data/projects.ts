@@ -9,6 +9,14 @@ export interface ProjectItem {
 
 export const projectsData: ProjectItem[] = [
   {
+    title: "EBAT",
+    img: "/EBAT.png",
+    link: "https://github.com/Bored008/EBAT",
+    imgClass: "rounded-[12px] border-2 border-t-1 border-white md:w-[353px]",
+    desc: "EBAT is a high-performance military-grade drone surveillance landing page. It features a defense-grade aesthetic, adaptive cross-platform layouts, and modular component architecture.",
+    tags: ["Next.js 16", "Tailwind CSS v4", "TypeScript"]
+  },
+  {
     title: "Paw",
     img: "/Paw.webp",
     link: "https://github.com/Bored008/Paw",
