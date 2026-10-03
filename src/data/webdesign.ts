@@ -13,7 +13,7 @@ export const designsData: DesignItem[] = [
     title: "EBAT",
     img: "/EBAT.png",
     link: "https://www.figma.com/design/mvptBcMjmfiSxiSpc3AY8R/EBAT?node-id=304-1077&t=XFsU03olU8ctFwgr-1",
-    desc: "Designed a military-grade drone surveillance landing page in Figma, featuring a precision dark mode palette, high-impact typography, and a modular layout.",
+    desc: "Designed a military-grade drone (UAV) surveillance landing page in Figma, featuring a precision dark mode palette and high-impact typography. The layout is meticulously crafted with modular component architecture, focusing on immersive visual hierarchy, tactical product showcases, and a seamless user journey designed specifically for the defense and aerospace technology sector.",
     tags: ["Figma"]
   },
   {
