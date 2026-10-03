@@ -12,16 +12,6 @@ export interface ProjectItem {
 
 export const projectsData: ProjectItem[] = [
   {
-    title: "SadakSaathi",
-    img: "/Sadaksaathi.webp",
-    link: "https://sadak-saathi-mocha.vercel.app/",
-    githubLink: "https://github.com/Bored008/SadakSaathi",
-    liveLink: "https://sadak-saathi-mocha.vercel.app/",
-    imgClass: "rounded-[12px] border-2 border-t-1 border-white md:w-[353px]",
-    desc: "SadakSaathi is a comprehensive road safety and navigation companion web application. It provides real-time route insights, hazard reporting, and emergency assistance integration through an intuitive, user-friendly interface tailored for commuters and drivers.",
-    tags: ["Next.js", "TailwindCSS", "Figma", "UI/UX"]
-  },
-  {
     title: "EBAT",
     img: "/EBAT.png",
     link: "https://ebat-omega.vercel.app/",
@@ -57,6 +47,16 @@ export const projectsData: ProjectItem[] = [
     imgClass: "rounded-[12px] border-2 border-t-1 border-white md:w-[353px]",
     desc: "Paw is a web application that simplifies the pet adoption journey for both adopters and rescue organizations. It provides an interactive experience where users can explore available pets, learn about pet care, and connect directly with adoption centers through a clean, accessible, and emotionally engaging user interface designed to facilitate successful animal placements.",
     tags: ["React.js", "Node.js", "Express.js", "MongoDB", "TailwindCSS", "TypeScript", "Local Storage API"]
+  },
+  {
+    title: "SadakSaathi",
+    img: "/Sadaksaathi.webp",
+    link: "https://sadak-saathi-mocha.vercel.app/",
+    githubLink: "https://github.com/Bored008/SadakSaathi",
+    liveLink: "https://sadak-saathi-mocha.vercel.app/",
+    imgClass: "rounded-[12px] border-2 border-t-1 border-white md:w-[353px]",
+    desc: "SadakSaathi is a comprehensive road safety and navigation companion web application. It provides real-time route insights, hazard reporting, and emergency assistance integration through an intuitive, user-friendly interface tailored for commuters and drivers.",
+    tags: ["Next.js", "TailwindCSS", "Figma", "UI/UX"]
   },
   {
     title: "DocDesign",

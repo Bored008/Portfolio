@@ -10,13 +10,6 @@ export interface DesignItem {
 
 export const designsData: DesignItem[] = [
   {
-    title: "SadakSaathi App Design",
-    img: "/Sadaksaathi.webp",
-    link: "https://www.figma.com/design/HGQxHnhPDSehJAqsJ1xDVR/SadakSaathi?node-id=227-149&t=QSuTaYBU52ToOWdh-1",
-    desc: "Designed the UI/UX for SadakSaathi, a comprehensive road safety and navigation companion application. The Figma design focuses on a highly accessible interface, clear real-time mapping visuals, and intuitive hazard reporting tools to ensure driver safety and ease of use.",
-    tags: ["Figma"]
-  },
-  {
     title: "EBAT",
     img: "/EBAT.png",
     link: "https://www.figma.com/design/mvptBcMjmfiSxiSpc3AY8R/EBAT?node-id=304-1077&t=XFsU03olU8ctFwgr-1",
@@ -42,6 +35,13 @@ export const designsData: DesignItem[] = [
     img: "/Firechem.webp",
     link: "https://www.figma.com/design/UloorFq3x9zOvJUMw85nus/Figma-work?node-id=503-3428&t=v7zrwzzp2MLQkQxD-1",
     desc: "Designed a professional, high-trust corporate landing page in Figma for FireChem. The design features a bold industrial aesthetic, clear data visualization, and targeted user flows that emphasize their industry-leading fire protection solutions for oil, gas, aviation, marine, and defense sectors.",
+    tags: ["Figma"]
+  },
+  {
+    title: "SadakSaathi App Design",
+    img: "/Sadaksaathi.webp",
+    link: "https://www.figma.com/design/HGQxHnhPDSehJAqsJ1xDVR/SadakSaathi?node-id=227-149&t=QSuTaYBU52ToOWdh-1",
+    desc: "Designed the UI/UX for SadakSaathi, a comprehensive road safety and navigation companion application. The Figma design focuses on a highly accessible interface, clear real-time mapping visuals, and intuitive hazard reporting tools to ensure driver safety and ease of use.",
     tags: ["Figma"]
   },
   {
