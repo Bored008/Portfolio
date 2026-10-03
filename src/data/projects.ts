@@ -25,6 +25,7 @@ export const projectsData: ProjectItem[] = [
     title: "Yanegi",
     img: "/Yanegi.webp",
     link: "https://www.yanegi.com/",
+    githubLink: "https://github.com/Bored008/Yanegi",
     liveLink: "https://www.yanegi.com/",
     imgClass: "rounded-[12px] border-2 border-t-1 border-white md:w-[353px]",
     desc: "Yanegi is a real-time socializing platform and live map of community activities happening right now, from pickup sports and open mics to rooftop hangouts. Built with an interactive Next.js interface and geolocation mapping without algorithmic feeds, it makes it easier to show up to local gatherings in real life.",

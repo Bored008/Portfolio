@@ -146,7 +146,7 @@ const Projects: React.FC = () => {
                         href={liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1.5 text-white border border-white/80 rounded-full py-1 px-2.5 bg-black hover:bg-white hover:text-black transition-colors"
+                        className="flex items-center gap-1.5 text-white border border-white/80 rounded-full py-1 pl-2.5 pr-1 bg-black hover:bg-white hover:text-black transition-colors"
                         title="Live Website"
                       >
                         <span className="whitespace-nowrap text-[12px] md:text-[13px]">
@@ -173,7 +173,7 @@ const Projects: React.FC = () => {
                         href={githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1.5 text-white border border-white/80 rounded-full py-1 px-2.5 bg-black hover:bg-white hover:text-black transition-colors"
+                        className="flex items-center gap-1.5 text-white border border-white/80 rounded-full py-1 pl-2.5 pr-1 bg-black hover:bg-white hover:text-black transition-colors"
                         title="Visit GitHub"
                       >
                         <span className="whitespace-nowrap text-[12px] md:text-[13px]">
@@ -305,7 +305,7 @@ const Projects: React.FC = () => {
                   href={design.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 bg-black shrink-0 hover:bg-white hover:text-black transition-colors ml-2"
+                  className="flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 pr-1.5 bg-black shrink-0 hover:bg-white hover:text-black transition-colors ml-2"
                 >
                   <div className="whitespace-nowrap">Visit me</div>
                   <img
