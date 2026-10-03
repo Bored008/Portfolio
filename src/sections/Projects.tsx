@@ -124,8 +124,8 @@ const Projects: React.FC = () => {
         className="proj-carousel flex md:mx-[90px] mt-[24px] md:mt-[32px] gap-[18px] overflow-x-auto flex-nowrap [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
       >
         {projectsData.map((project: ProjectItem, index: number) => (
-          <div key={index} className="shrink-0 w-[90%] md:w-[30%] backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] flex flex-col justify-between text-white">
-            <div>
+          <div key={index} className="shrink-0 w-[90%] md:w-[30%] h-[420px] md:h-[450px] backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] flex flex-col text-white">
+            <div className="shrink-0">
               <img
                 src={project.img}
                 alt={project.title}
@@ -139,17 +139,17 @@ const Projects: React.FC = () => {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 bg-black hover:bg-white hover:text-black transition-colors"
+                  className="flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 bg-black hover:bg-white hover:text-black transition-colors shrink-0 ml-2"
                 >
-                  <div>Visit me</div>
+                  <div className="whitespace-nowrap">Visit me</div>
                   <img src="/Githubpr.svg" alt="githubicon" loading="lazy" decoding="async" className="w-[24px]" />
                 </a>
               </div>
-              <div className="md:text-[15px] text-[14px] mt-2 text-neutral-300">
-                {project.desc}
-              </div>
             </div>
-            <div className="flex flex-wrap mt-3 text-black gap-[8px]">
+            <div className="md:text-[15px] text-[14px] mt-2 text-neutral-300 flex-1 overflow-y-auto pr-2 [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full">
+              {project.desc}
+            </div>
+            <div className="flex flex-wrap mt-3 text-black gap-[8px] shrink-0">
               {project.tags.map((tag: string, i: number) => (
                 <div key={i} className="bg-white text-[12px] rounded-[4px] px-[6px] py-[3px]">
                   {tag}
@@ -201,12 +201,12 @@ const Projects: React.FC = () => {
         {designsData.map((design: DesignItem, index: number) => (
           <div
             key={index}
-            className="shrink-0 w-[90%] md:w-[48%] md:min-w-[420px] max-w-[560px] backdrop-blur-md border border-white/50 rounded-[19px] py-[6px] px-[12px] flex flex-col md:flex-row md:items-center text-white md:gap-4"
+            className="shrink-0 w-[90%] md:w-[48%] md:min-w-[420px] max-w-[560px] h-[380px] md:h-[230px] backdrop-blur-md border border-white/50 rounded-[19px] py-[6px] px-[12px] flex flex-col md:flex-row md:items-stretch text-white md:gap-4"
           >
             <div
               className={
                 design.imgWrapperClass ||
-                "w-full md:w-1/2 shrink-0 relative overflow-hidden rounded-[12px] border-1 border-white aspect-[16/10]"
+                "w-full md:w-1/2 shrink-0 relative overflow-hidden rounded-[12px] border-1 border-white aspect-[16/10] md:my-auto"
               }
             >
               <img
@@ -220,16 +220,16 @@ const Projects: React.FC = () => {
                 }
               />
             </div>
-            <div className="w-full md:w-1/2 flex flex-col justify-center mt-3 md:mt-0 gap-2.5">
-              <div>
+            <div className="w-full md:w-1/2 flex flex-col mt-3 md:mt-0 py-2">
+              <div className="shrink-0">
                 <div className="text-[20px] md:text-[22px] font-semibold leading-snug">
                   {design.title}
                 </div>
-                <div className="text-[13px] md:text-[14px] mt-1 text-neutral-200 leading-relaxed">
-                  {design.desc}
-                </div>
               </div>
-              <div className="flex justify-between items-center pt-1">
+              <div className="text-[13px] md:text-[14px] mt-1 text-neutral-200 leading-relaxed flex-1 overflow-y-auto pr-2 [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full">
+                {design.desc}
+              </div>
+              <div className="flex justify-between items-center pt-2 shrink-0">
                 <div className="flex flex-wrap text-black gap-[8px]">
                   {design.tags.map((tag: string, i: number) => (
                     <div
@@ -244,15 +244,15 @@ const Projects: React.FC = () => {
                   href={design.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 bg-black shrink-0 hover:bg-white hover:text-black transition-colors"
+                  className="flex gap-2 text-white border border-white/80 rounded-full p-1 pl-3 bg-black shrink-0 hover:bg-white hover:text-black transition-colors ml-2"
                 >
-                  <div>Visit me</div>
+                  <div className="whitespace-nowrap">Visit me</div>
                   <img
                     src="/figmaproj.svg"
                     alt="figmaicon"
                     loading="lazy"
                     decoding="async"
-                    className="w-[24px]"
+                    className="w-[20px]"
                   />
                 </a>
               </div>
