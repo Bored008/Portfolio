@@ -124,7 +124,7 @@ const Projects: React.FC = () => {
         className="proj-carousel flex md:mx-[90px] mt-[24px] md:mt-[32px] gap-[18px] overflow-x-auto flex-nowrap [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
       >
         {projectsData.map((project: ProjectItem, index: number) => (
-          <div key={index} className="shrink-0 w-[90%] md:w-[30%] h-[420px] md:h-[450px] backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] flex flex-col text-white">
+          <div key={index} className="shrink-0 w-[90%] md:w-[30%] h-[430px] md:h-[460px] backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] flex flex-col justify-between text-white">
             <div className="shrink-0">
               <img
                 src={project.img}
@@ -146,7 +146,11 @@ const Projects: React.FC = () => {
                 </a>
               </div>
             </div>
-            <div className="md:text-[15px] text-[14px] mt-2 text-neutral-300 flex-1 overflow-y-auto pr-2 [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full">
+            <div
+              data-lenis-prevent
+              onWheel={(e) => e.stopPropagation()}
+              className="md:text-[15px] text-[14px] mt-2 text-neutral-300 h-[85px] md:h-[95px] overflow-y-auto pr-2 overscroll-contain [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full"
+            >
               {project.desc}
             </div>
             <div className="flex flex-wrap mt-3 text-black gap-[8px] shrink-0">
@@ -220,13 +224,17 @@ const Projects: React.FC = () => {
                 }
               />
             </div>
-            <div className="w-full md:w-1/2 flex flex-col mt-3 md:mt-0 py-2">
+            <div className="w-full md:w-1/2 flex flex-col justify-between mt-3 md:mt-0 py-2">
               <div className="shrink-0">
                 <div className="text-[20px] md:text-[22px] font-semibold leading-snug">
                   {design.title}
                 </div>
               </div>
-              <div className="text-[13px] md:text-[14px] mt-1 text-neutral-200 leading-relaxed flex-1 overflow-y-auto pr-2 [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full">
+              <div
+                data-lenis-prevent
+                onWheel={(e) => e.stopPropagation()}
+                className="text-[13px] md:text-[14px] mt-1 text-neutral-200 leading-relaxed h-[75px] md:h-[85px] overflow-y-auto pr-2 overscroll-contain [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/20 [&::-webkit-scrollbar-thumb]:rounded-full"
+              >
                 {design.desc}
               </div>
               <div className="flex justify-between items-center pt-2 shrink-0">
