@@ -10,13 +10,6 @@ export interface DesignItem {
 
 export const designsData: DesignItem[] = [
   {
-    title: "ECHO",
-    img: "/Echo.webp",
-    link: "https://www.figma.com/design/DGigtbGq55CNjbTZI8BRTp/music?node-id=0-1&t=ldDSYnCwwyKnynxI-1",
-    desc: "Designed the UI/UX for ECHO, a modern music and audio platform. The Figma design focuses on intuitive discovery, sleek minimalist aesthetics, and an engaging user experience tailored for the new age of music.",
-    tags: ["Figma"]
-  },
-  {
     title: "EBAT",
     img: "/EBAT.png",
     link: "https://www.figma.com/design/mvptBcMjmfiSxiSpc3AY8R/EBAT?node-id=304-1077&t=XFsU03olU8ctFwgr-1",
@@ -36,6 +29,13 @@ export const designsData: DesignItem[] = [
     link: "https://www.figma.com/design/UloorFq3x9zOvJUMw85nus/Figma-work?node-id=567-3377&t=qywJFBAmupGTFqwN-1",
     desc: "Designed an educational management platform landing page in Figma and Framer, featuring clean modern typography, isometric tech illustrations, and structured product feature showcases tailored for school administration, teachers, and student data tracking.",
     tags: ["Figma", "Framer"]
+  },
+  {
+    title: "ECHO",
+    img: "/Echo.webp",
+    link: "https://www.figma.com/design/DGigtbGq55CNjbTZI8BRTp/music?node-id=0-1&t=ldDSYnCwwyKnynxI-1",
+    desc: "Designed the UI/UX for ECHO, a modern music and audio platform. The Figma design focuses on intuitive discovery, sleek minimalist aesthetics, and an engaging user experience tailored for the new age of music.",
+    tags: ["Figma"]
   },
   {
     title: "FireChem",

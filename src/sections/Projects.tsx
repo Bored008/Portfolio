@@ -244,7 +244,7 @@ const Projects: React.FC = () => {
         {designsData.map((design: DesignItem, index: number) => (
           <div
             key={index}
-            className="shrink-0 w-[90%] md:w-[48%] md:min-w-[420px] max-w-[560px] h-auto md:h-[200px] backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] pb-[2px] flex flex-col md:flex-row md:items-stretch text-white md:gap-4"
+            className="shrink-0 w-[90%] md:w-[48%] md:min-w-[420px] max-w-[560px] h-auto md:h-[200px] backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] py-[1px] flex flex-col md:flex-row md:items-stretch text-white md:gap-4"
           >
             <div
               className={
