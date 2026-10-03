@@ -10,6 +10,13 @@ export interface DesignItem {
 
 export const designsData: DesignItem[] = [
   {
+    title: "ECHO",
+    img: "/Echo.webp",
+    link: "https://www.figma.com/design/DGigtbGq55CNjbTZI8BRTp/music?node-id=0-1&t=ldDSYnCwwyKnynxI-1",
+    desc: "Designed the UI/UX for ECHO, a modern music and audio platform. The Figma design focuses on intuitive discovery, sleek minimalist aesthetics, and an engaging user experience tailored for the new age of music.",
+    tags: ["Figma"]
+  },
+  {
     title: "EBAT",
     img: "/EBAT.png",
     link: "https://www.figma.com/design/mvptBcMjmfiSxiSpc3AY8R/EBAT?node-id=304-1077&t=XFsU03olU8ctFwgr-1",

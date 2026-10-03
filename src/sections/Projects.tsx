@@ -233,7 +233,7 @@ const Projects: React.FC = () => {
         <div
           className={`${Gilroy.className} md:text-[44px] text-[36px] md:ml-[40px] z-20`}
         >
-          Web Designs
+          Web and App Designs
         </div>
       </div>
       
