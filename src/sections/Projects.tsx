@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { projectsData, type ProjectItem } from "@/data/projects";
 import { designsData, type DesignItem } from "@/data/webdesign";
+import Link from "next/link";
 
 const Gilroy = localFont({
   src: "../fonts/Gilroy-Black.ttf",
@@ -119,6 +120,14 @@ const Projects: React.FC = () => {
           className="right-half absolute inset-0 w-full object-cover md:h-auto h-35 z-0 [clip-path:polygon(50%_0,100%_0,100%_100%,50%_100%)]"
         />
       </div>
+      <div className="flex justify-end md:mx-[90px] mx-[20px] mt-4 mb-2 z-20 relative">
+        <Link href="/projects" className="flex items-center justify-center gap-[4px] border border-white rounded-[8px] bg-black text-white px-[12px] py-[8px] font-['Geist'] text-[16px] transition-colors hover:bg-white/20">
+          View All
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[18px] h-[18px]">
+            <path d="M7 17L17 7M7 7h10v10" />
+          </svg>
+        </Link>
+      </div>
       <div
         ref={projScrollContainerRef}
         className="proj-carousel flex md:mx-[90px] mt-[24px] md:mt-[32px] gap-[18px] overflow-x-auto flex-nowrap [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
@@ -229,12 +238,18 @@ const Projects: React.FC = () => {
       </div>
 
       {/* Design */}
-      <div className="webdesign flex mt-[38px] justify-between items-center">
+      <div className="webdesign flex mt-[38px] justify-between items-center md:px-[90px] px-[20px]">
         <div
-          className={`${Gilroy.className} md:text-[44px] text-[36px] md:ml-[40px] z-20`}
+          className={`${Gilroy.className} md:text-[44px] text-[36px] z-20`}
         >
           Web and App Designs
         </div>
+        <Link href="/designs" className="flex items-center justify-center gap-[4px] border border-white rounded-[8px] bg-black text-white px-[12px] py-[8px] font-['Geist'] text-[16px] z-20 transition-colors hover:bg-white/20 shrink-0">
+          View All
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-[18px] h-[18px]">
+            <path d="M7 17L17 7M7 7h10v10" />
+          </svg>
+        </Link>
       </div>
       
       <div

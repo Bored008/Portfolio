@@ -10,6 +10,13 @@ export interface DesignItem {
 
 export const designsData: DesignItem[] = [
   {
+    title: "TraceX",
+    img: "/TraceX.png",
+    link: "https://www.figma.com/design/3cwKaEAOra3ZsG4xEiPsCz/Trace-X?node-id=0-1&t=jktKtXoBX74IeNUU-1",
+    desc: "Designed the UI/UX for TraceX, an SRE topology visualization and root cause analysis tool. The layout features an advanced dark-mode aesthetic with live data mapping nodes, intuitive telemetry flow legends, and precision causal diagnosis side-panels.",
+    tags: ["Figma"]
+  },
+  {
     title: "EBAT",
     img: "/EBAT.png",
     link: "https://www.figma.com/design/mvptBcMjmfiSxiSpc3AY8R/EBAT?node-id=304-1077&t=XFsU03olU8ctFwgr-1",

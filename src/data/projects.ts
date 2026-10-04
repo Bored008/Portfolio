@@ -12,12 +12,22 @@ export interface ProjectItem {
 
 export const projectsData: ProjectItem[] = [
   {
+    title: "TraceX",
+    img: "/TraceX.png",
+    link: "https://trace-x-jade.vercel.app/",
+    githubLink: "https://github.com/Bored008/TraceX",
+    liveLink: "https://trace-x-jade.vercel.app/",
+    imgClass: "rounded-[12px] border-2 border-t-1 border-white",
+    desc: "TraceX is a distributed root cause analyzer and SRE topology visualization tool. It features live server dependency mapping, automated causal diagnosis, and real-time telemetry flow monitoring to help engineering teams quickly identify and resolve infrastructure bottlenecks.",
+    tags: ["Next.js", "React Flow", "TailwindCSS", "TypeScript", "Figma"]
+  },
+  {
     title: "EBAT",
     img: "/EBAT.png",
     link: "https://ebat-omega.vercel.app/",
     githubLink: "https://github.com/Bored008/EBAT",
     liveLink: "https://ebat-omega.vercel.app/",
-    imgClass: "rounded-[12px] border-2 border-t-1 border-white md:w-[353px]",
+    imgClass: "rounded-[12px] border-2 border-t-1 border-white",
     desc: "EBAT is a high-performance military-grade drone surveillance landing page built with Next.js 16 and Tailwind CSS v4. It features a precision dark mode aesthetic, adaptive cross-platform layouts, and modular component architecture. The project showcases tactical FPV and surveillance drones through interactive UI components, delivering an immersive and highly responsive digital experience for aerospace and defense portfolios.",
     tags: ["Next.js 16", "Tailwind CSS v4", "TypeScript"]
   },
@@ -27,7 +37,7 @@ export const projectsData: ProjectItem[] = [
     link: "https://www.yanegi.com/",
     githubLink: "https://github.com/Bored008/Yanegi",
     liveLink: "https://www.yanegi.com/",
-    imgClass: "rounded-[12px] border-2 border-t-1 border-white md:w-[353px]",
+    imgClass: "rounded-[12px] border-2 border-t-1 border-white",
     desc: "Yanegi is a real-time socializing platform and live map of community activities happening right now, from pickup sports and open mics to rooftop hangouts. Built with an interactive Next.js interface and geolocation mapping without algorithmic feeds, it makes it easier to show up to local gatherings in real life.",
     tags: ["Next.js", "React.js", "TailwindCSS", "TypeScript", "Geolocation API"]
   },
@@ -36,7 +46,7 @@ export const projectsData: ProjectItem[] = [
     img: "/PaperBuddy.png",
     link: "https://rich-mountain-355249.framer.app/",
     liveLink: "https://rich-mountain-355249.framer.app/",
-    imgClass: "rounded-[12px] border-2 border-t-1 border-white md:w-[353px]",
+    imgClass: "rounded-[12px] border-2 border-t-1 border-white",
     desc: "PaperBuddy is an all-in-one connected educational management platform for admins, teachers, students, drivers, and office staff. It centralizes attendance, fee collection, exam workflows, and school transport tracking into a single, real-time synchronized system designed to reduce paperwork and elevate classroom teaching.",
     tags: ["Framer", "React", "Web Design", "UI/UX"]
   },
@@ -44,7 +54,7 @@ export const projectsData: ProjectItem[] = [
     title: "Paw",
     img: "/Paw.webp",
     link: "https://github.com/Bored008/Paw",
-    imgClass: "rounded-[12px] border-2 border-t-1 border-white md:w-[353px]",
+    imgClass: "rounded-[12px] border-2 border-t-1 border-white",
     desc: "Paw is a web application that simplifies the pet adoption journey for both adopters and rescue organizations. It provides an interactive experience where users can explore available pets, learn about pet care, and connect directly with adoption centers through a clean, accessible, and emotionally engaging user interface designed to facilitate successful animal placements.",
     tags: ["React.js", "Node.js", "Express.js", "MongoDB", "TailwindCSS", "TypeScript", "Local Storage API"]
   },
@@ -54,7 +64,7 @@ export const projectsData: ProjectItem[] = [
     link: "https://sadak-saathi-mocha.vercel.app/",
     githubLink: "https://github.com/Bored008/SadakSaathi",
     liveLink: "https://sadak-saathi-mocha.vercel.app/",
-    imgClass: "rounded-[12px] border-2 border-t-1 border-white md:w-[353px]",
+    imgClass: "rounded-[12px] border-2 border-t-1 border-white",
     desc: "SadakSaathi is a comprehensive road safety and navigation companion web application. It provides real-time route insights, hazard reporting, and emergency assistance integration through an intuitive, user-friendly interface tailored for commuters and drivers.",
     tags: ["Next.js", "TailwindCSS", "Figma", "UI/UX"]
   },
@@ -62,7 +72,7 @@ export const projectsData: ProjectItem[] = [
     title: "DocDesign",
     img: "/Docdesign.webp",
     link: "https://github.com/Bored008/DocDesign",
-    imgClass: "rounded-[12px] border-2 border-t-1 border-white md:w-[353px]",
+    imgClass: "rounded-[12px] border-2 border-t-1 border-white",
     desc: "DocDesign is a web application that allows users to transform static document images into editable documents without recreating them. Whether it's a resume template, doc report, users can modify content, customize styling, and export the final document in multiple formats",
     tags: ["React.js", "Node.js", "Express.js", "MongoDB", "TailwindCSS", "Generative ai", "Figma"]
   },
@@ -70,7 +80,7 @@ export const projectsData: ProjectItem[] = [
     title: "Github Analyzer",
     img: "/Githubprofileanalyzer.webp",
     link: "https://github.com/Bored008/github-profile-analyzer",
-    imgClass: "rounded-[12px] border-2 border-t-1 border-white md:w-[353px]",
+    imgClass: "rounded-[12px] border-2 border-t-1 border-white",
     desc: "GitHub Profile Analyzer is a developer-focused platform that transforms GitHub data into meaningful insights, allowing users to explore repositories, contributions, technology stacks, and coding activity through a clean and interactive interface. It visualizes data using dynamic charts and comprehensive analytics for immediate readability and technical performance tracking.",
     tags: ["Next.js", "Node.js", "Express.js", "Neon PostgreSQL", "TailwindCSS", "Bun"]
   },
@@ -78,7 +88,7 @@ export const projectsData: ProjectItem[] = [
     title: "AI Health",
     img: "/Aihealth.webp",
     link: "https://github.com/Bored008/AI-Health",
-    imgClass: "rounded-[12px] border-2 border-t-1 border-white md:w-[353px]",
+    imgClass: "rounded-[12px] border-2 border-t-1 border-white",
     desc: "AI Health is a secure web application that empowers users to analyze food images using their own personal AI quota. By leveraging Google's Gemini API via OAuth, users can get detailed nutrition breakdowns without relying on a shared developer key or paid subscription.",
     tags: ["Next.js", "Node.js", "Postgres Database", "TailwindCSS", "Google Gemini 2.0 Flash"]
   }
