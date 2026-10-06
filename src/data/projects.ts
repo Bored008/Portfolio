@@ -45,6 +45,7 @@ export const projectsData: ProjectItem[] = [
     title: "PaperBuddy",
     img: "/PaperBuddy.png",
     link: "https://rich-mountain-355249.framer.app/",
+    githubLink: "https://github.com/Bored008/PaperBuddy_Redesign",
     liveLink: "https://rich-mountain-355249.framer.app/",
     imgClass: "rounded-[12px] border-2 border-t-1 border-white",
     desc: "PaperBuddy is an all-in-one connected educational management platform for admins, teachers, students, drivers, and office staff. It centralizes attendance, fee collection, exam workflows, and school transport tracking into a single, real-time synchronized system designed to reduce paperwork and elevate classroom teaching.",
