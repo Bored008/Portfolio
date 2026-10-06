@@ -21,7 +21,7 @@ const navLinks: NavLinkItem[] = [
     { id: 'home', label: 'Home', icon: House },
     { id: 'skills', label: 'Skills', icon: Code },
     { id: 'projects', label: 'Projects', icon: FolderGit2 },
-    { id: 'faq', label: 'FAQ', icon: HelpCircle, className: 'md:mr-3 mr-2 hidden md:flex' }
+    { id: 'faq', label: 'FAQ', icon: HelpCircle }
 ];
 
 const Navbar1: React.FC = () => {
@@ -57,26 +57,30 @@ const Navbar1: React.FC = () => {
 
     return (
         <div className='nav flex justify-between items-center px-4 md:px-60 md:mt-4 mt-3'>
-            <Link href="/" className={`bg-gradient-to-b from-[#EA8E4B] to-[#FAED44] bg-clip-text bg-transparent ${Mortend.className} text-transparent text-[16px] md:text-[32px]`}>BORUI</Link>
-            <div className='fixed top-3 md:top-4 right-4 md:right-auto md:left-1/2 md:-translate-x-1/2 flex md:text-[16px] text-[12px] text-white md:gap-[24px] gap-[16px] bg-black md:py-[5px] md:px-[5px] py-[4px] px-[4px] md:rounded-full rounded items-center'>
+            <Link href="/" className={`md:bg-gradient-to-b md:from-[#EA8E4B] md:to-[#FAED44] md:bg-clip-text md:text-transparent text-white text-[32px] ${Mortend.className}`}>BORUI</Link>
+            
+            {/* Nav Pill */}
+            <div className='fixed bottom-6 md:top-4 md:bottom-auto left-1/2 -translate-x-1/2 flex items-center justify-between w-[calc(100%-32px)] md:w-auto md:justify-center bg-black border border-white/65 md:border-none md:py-[5px] md:px-[5px] py-[7px] pl-[8px] pr-[18px] rounded-[32px] md:rounded-full z-50 md:gap-[24px]'>
                 {navLinks.map((link) => (
                     <a
                         key={link.id}
                         href={`#${link.id}`}
                         onClick={() => setActiveSection(link.id)}
-                        className={`relative flex items-center gap-[3px] rounded md:rounded-full md:py-[3px] md:px-[12px] px-[4px] py-[1px] transition-colors duration-300 ${
-                            activeSection === link.id ? 'text-black' : 'text-white hover:text-gray-300'
+                        className={`relative flex items-center justify-center gap-[4px] rounded-[32px] transition-colors duration-300 ${
+                            activeSection === link.id 
+                                ? 'text-black py-[6px] px-[10px] md:py-[3px] md:px-[12px]' 
+                                : 'text-white hover:text-gray-300 py-[6px] px-[10px] md:py-[3px] md:px-[12px]'
                         } ${link.className || ''}`}
                     >
                         {activeSection === link.id && (
                             <motion.div
                                 layoutId="nav-pill"
                                 layoutDependency={activeSection}
-                                className="absolute top-0 left-0 w-full h-full bg-white rounded md:rounded-full z-0"
+                                className="absolute inset-0 bg-white rounded-[32px] z-0"
                                 transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                             />
                         )}
-                        <span className="relative z-10 flex items-center gap-[3px]">
+                        <span className="relative z-10 flex items-center gap-[4px] text-[12px] md:text-[16px]" style={{ fontFamily: 'var(--font-geist-sans)' }}>
                             <AnimatePresence mode="popLayout">
                                 {activeSection === link.id && link.icon && (
                                     <motion.div
@@ -86,16 +90,25 @@ const Navbar1: React.FC = () => {
                                         transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                                         className="overflow-hidden flex items-center"
                                     >
-                                        <link.icon className='md:size-[15px] size-3' />
+                                        <link.icon className='size-[15px] md:size-[15px]' />
                                     </motion.div>
                                 )}
                             </AnimatePresence>
-                            {link.label}
+                            <span className={`${activeSection !== link.id ? 'font-normal' : 'font-medium'}`}>
+                                {link.label}
+                            </span>
                         </span>
                     </a>
                 ))}
-                <a href="https://www.linkedin.com/in/himanshuakabored/" className='md:mr-3 mr-2 md:hidden text-white relative z-10'>Contact me</a>
             </div>
+
+            {/* Mobile Let's Talk Button */}
+            <Link href="https://www.linkedin.com/in/himanshuakabored/" className='md:hidden flex items-center justify-center gap-[6px] bg-black border border-white rounded-[32px] py-[9px] px-[14px]'>
+                <MessagesSquare className='w-[15px] h-[17px] text-white' />
+                <span className='font-medium text-[12px] text-white' style={{ fontFamily: 'var(--font-geist-sans)' }}>Let's Talk</span>
+            </Link>
+
+            {/* Desktop Connect Button */}
             <AnimatedButton href="https://www.linkedin.com/in/himanshuakabored/" className='bg-black text-white py-[8px] px-[12px] hidden md:flex'>
                 <div className='hidden md:flex items-center gap-[12px] '>
                     <MessagesSquare className='md:size-[18px] size-3' />
