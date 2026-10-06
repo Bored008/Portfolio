@@ -60,7 +60,7 @@ const Navbar1: React.FC = () => {
             <Link href="/" className={`md:bg-gradient-to-b md:from-[#EA8E4B] md:to-[#FAED44] md:bg-clip-text md:text-transparent text-white text-[32px] ${Mortend.className}`}>BORUI</Link>
             
             {/* Nav Pill */}
-            <div className='fixed bottom-6 md:top-4 md:bottom-auto left-1/2 -translate-x-1/2 flex items-center justify-between w-[calc(100%-32px)] md:w-auto md:justify-center bg-black border border-white/65 md:border-none md:py-[5px] md:px-[5px] py-[7px] pl-[8px] pr-[18px] rounded-[32px] md:rounded-full z-50 md:gap-[24px]'>
+            <div className={`fixed bottom-6 md:top-4 md:bottom-auto left-1/2 -translate-x-1/2 flex items-center justify-between w-[calc(100%-32px)] md:w-auto md:justify-center bg-black border border-white/65 md:border-none md:py-[5px] md:px-[5px] py-[7px] ${activeSection === 'home' ? 'pl-[8px]' : 'pl-[18px]'} ${activeSection === 'faq' ? 'pr-[8px]' : 'pr-[18px]'} rounded-[32px] md:rounded-full z-50 md:gap-[24px]`}>
                 {navLinks.map((link) => (
                     <a
                         key={link.id}
