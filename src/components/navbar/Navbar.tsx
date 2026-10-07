@@ -56,7 +56,7 @@ const Navbar1: React.FC = () => {
     }, []);
 
     return (
-        <div className='nav flex justify-between items-center px-4 md:px-60 md:mt-4 mt-3'>
+        <div className='nav flex justify-between items-center px-4 md:px-8 lg:px-20 xl:px-60 md:mt-4 mt-3'>
             <Link href="/" className={`md:bg-gradient-to-b md:from-[#EA8E4B] md:to-[#FAED44] md:bg-clip-text md:text-transparent text-white text-[32px] ${Mortend.className}`}>BORUI</Link>
             
             {/* Nav Pill */}
