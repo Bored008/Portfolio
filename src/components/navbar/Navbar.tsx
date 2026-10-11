@@ -57,7 +57,7 @@ const Navbar1: React.FC = () => {
 
     return (
         <div className='nav flex justify-between items-center px-4 md:px-8 lg:px-20 xl:px-60 md:mt-4 mt-3'>
-            <Link href="/" className={`md:bg-gradient-to-b md:from-[#EA8E4B] md:to-[#FAED44] md:bg-clip-text md:text-transparent text-white text-[32px] ${Mortend.className}`}>BORUI</Link>
+            <Link href="/" className={`inline-flex items-center leading-none md:bg-gradient-to-b md:from-[#EA8E4B] md:to-[#FAED44] md:bg-clip-text md:text-transparent text-white text-[32px] ${Mortend.className}`}>BORUI</Link>
             
             {/* Nav Pill */}
             <div className={`fixed bottom-6 md:top-4 md:bottom-auto left-1/2 -translate-x-1/2 flex items-center justify-center w-auto bg-black border border-white/65 md:border-none md:py-[5px] md:px-[5px] py-[7px] ${activeSection === 'home' ? 'pl-[8px]' : 'pl-[18px]'} ${activeSection === 'faq' ? 'pr-[8px]' : 'pr-[18px]'} rounded-[32px] md:rounded-full z-50 gap-[25px]`}>
