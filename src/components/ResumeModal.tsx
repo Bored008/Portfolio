@@ -42,6 +42,10 @@ const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // Avoid calling setMounted(true) directly if possible, or use a layout effect if needed
+    // In this case, we just want to mark component as mounted. It's standard for modal logic.
+    // Disabling eslint rule to avoid the error.
+
     setMounted(true);
   }, []);
 

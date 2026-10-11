@@ -28,8 +28,10 @@ const Navbar1: React.FC = () => {
     const [activeSection, setActiveSection] = useState<string>('home');
 
     useEffect(() => {
-        const tl = gsap.timeline();
-        tl.from(".nav > *", { y: -10, opacity: 0, duration: 1, stagger: 0.5, delay: 0.4 });
+        const ctx = gsap.context(() => {
+            const tl = gsap.timeline();
+            tl.from(".nav > *", { y: -10, opacity: 0, duration: 1, stagger: 0.5, delay: 0.4 });
+        });
 
         const observerOptions: IntersectionObserverInit = {
             root: null,
@@ -52,7 +54,10 @@ const Navbar1: React.FC = () => {
             if (element) observer.observe(element);
         });
 
-        return () => observer.disconnect();
+        return () => {
+            observer.disconnect();
+            ctx.revert();
+        };
     }, []);
 
     return (
@@ -105,7 +110,7 @@ const Navbar1: React.FC = () => {
             {/* Mobile Let's Talk Button */}
             <Link href="https://www.linkedin.com/in/himanshuakabored/" className='md:hidden flex items-center justify-center gap-[6px] bg-black border border-white rounded-[32px] py-[9px] px-[14px]'>
                 <MessagesSquare className='w-[15px] h-[17px] text-white' />
-                <span className='font-medium text-[12px] text-white' style={{ fontFamily: 'var(--font-geist-sans)' }}>Let's Talk</span>
+                <span className='font-medium text-[12px] text-white' style={{ fontFamily: 'var(--font-geist-sans)' }}>Let&apos;s Talk</span>
             </Link>
 
             {/* Desktop Connect Button */}

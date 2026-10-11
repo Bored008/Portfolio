@@ -17,21 +17,25 @@ const About: React.FC = () => {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".about",
-        start: "top+=150 bottom",
-        end: "top+=600 bottom",
-        scrub: 2,
-        markers: false,
-      },
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".about",
+          start: "top+=150 bottom",
+          end: "top+=600 bottom",
+          scrub: 2,
+          markers: false,
+        },
+      });
+      tl.from(".about >*", {
+        z: -500,
+        opacity: 0,
+        duration: 2,
+        stagger: 0.5,
+      });
     });
-    tl.from(".about >*", {
-      z: -500,
-      opacity: 0,
-      duration: 2,
-      stagger: 0.5,
-    });
+
+    return () => ctx.revert();
   }, []);
 
   return (

@@ -8,19 +8,23 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Education: React.FC = () => {
     useEffect(() => {
-        const tl = gsap.timeline();
-        tl.from("#education >*", {
-            y: 100,
-            opacity: 0,
-            duration: 0.8,
-            stagger: 0.3,
-            scrollTrigger: {
-                trigger: "#education",
-                start: "top 80%",
-                end: "top 20%",
-                scrub: 1
-            }
+        const ctx = gsap.context(() => {
+            const tl = gsap.timeline();
+            tl.from("#education >*", {
+                y: 100,
+                opacity: 0,
+                duration: 0.8,
+                stagger: 0.3,
+                scrollTrigger: {
+                    trigger: "#education",
+                    start: "top 80%",
+                    end: "top 20%",
+                    scrub: 1
+                }
+            });
         });
+
+        return () => ctx.revert();
     }, []);
 
     return (

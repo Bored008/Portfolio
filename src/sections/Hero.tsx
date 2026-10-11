@@ -17,17 +17,21 @@ const Mortend = localFont({
 
 const Hero: React.FC = () => {
   useEffect(() => {
-    const tl = gsap.timeline();
-    tl.from(".name *:not(.scrambleName)", { x: 20, duration: 1, stagger: 0.5, delay: 0.4, opacity: 0 });
-    gsap.to(".scrambleName", {
-      scrambleText: {
-        text: "HIMANSHU",
-        chars: "!@#$%&*",
-        speed: 0.5,
-        revealDelay: 0.5
-      },
-      duration: 2.5
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline();
+      tl.from(".name *:not(.scrambleName)", { x: 20, duration: 1, stagger: 0.5, delay: 0.4, opacity: 0 });
+      gsap.to(".scrambleName", {
+        scrambleText: {
+          text: "HIMANSHU",
+          chars: "!@#$%&*",
+          speed: 0.5,
+          revealDelay: 0.5
+        },
+        duration: 2.5
+      });
     });
+
+    return () => ctx.revert();
   }, []);
 
     return (
