@@ -15,74 +15,78 @@ const Gilroy = localFont({
 
 const Skills: React.FC = () => {
   useEffect(() => {
-    const tl = gsap.timeline();
-    tl.from(".skill >*", {
-      opacity: 0,
-      z: -150,
-      duration: 2,
-      stagger: 0.2,
-      ease: "easeInOut",
-      scrollTrigger: {
-        markers: false,
-        trigger: ".skill",
-        start: "top bottom",
-        end: "top 45%",
-        scrub: 1,
-      },
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline();
+      tl.from(".skill >*", {
+        opacity: 0,
+        z: -150,
+        duration: 2,
+        stagger: 0.2,
+        ease: "easeInOut",
+        scrollTrigger: {
+          markers: false,
+          trigger: ".skill",
+          start: "top bottom",
+          end: "top 45%",
+          scrub: 1,
+        },
+      });
+
+      const tl2 = gsap.timeline();
+      tl2.from(".skillMobile >*", {
+        opacity: 0,
+        z: -150,
+        duration: 2,
+        stagger: 0.2,
+        ease: "easeInOut",
+        scrollTrigger: {
+          markers: false,
+          trigger: ".skillMobile",
+          start: "top 90%",
+          end: "top 35%",
+          scrub: 1,
+        },
+      });
+
+      gsap.fromTo(
+        ".skillboard",
+        {
+          rotation: -20,
+          transformOrigin: "top center",
+        },
+        {
+          rotation: 0,
+          transformOrigin: "top center",
+          duration: 2,
+          ease: "elastic.out(1, 0.4)",
+          scrollTrigger: {
+            trigger: ".skillboard",
+            start: "top 80%",
+            toggleActions: "restart none restart none",
+          },
+        },
+      );
+      gsap.fromTo(
+        ".skillboardmobile",
+        {
+          rotation: -20,
+          transformOrigin: "top center",
+        },
+        {
+          rotation: 0,
+          transformOrigin: "top center",
+          duration: 2,
+          ease: "elastic.out(1, 0.4)",
+          scrollTrigger: {
+            trigger: ".skillboardmobile",
+            start: "top 80%",
+            toggleActions: "restart none restart none",
+          },
+        },
+      );
     });
 
-    const tl2 = gsap.timeline();
-    tl2.from(".skillMobile >*", {
-      opacity: 0,
-      z: -150,
-      duration: 2,
-      stagger: 0.2,
-      ease: "easeInOut",
-      scrollTrigger: {
-        markers: false,
-        trigger: ".skillMobile",
-        start: "top 90%",
-        end: "top 35%",
-        scrub: 1,
-      },
-    });
-
-    gsap.fromTo(
-      ".skillboard",
-      {
-        rotation: -20,
-        transformOrigin: "top center",
-      },
-      {
-        rotation: 0,
-        transformOrigin: "top center",
-        duration: 2,
-        ease: "elastic.out(1, 0.4)",
-        scrollTrigger: {
-          trigger: ".skillboard",
-          start: "top 80%",
-          toggleActions: "restart none restart none",
-        },
-      },
-    );
-    gsap.fromTo(
-      ".skillboardmobile",
-      {
-        rotation: -20,
-        transformOrigin: "top center",
-      },
-      {
-        rotation: 0,
-        transformOrigin: "top center",
-        duration: 2,
-        ease: "elastic.out(1, 0.4)",
-        scrollTrigger: {
-          trigger: ".skillboardmobile",
-          start: "top 80%",
-          toggleActions: "restart none restart none",
-        },
-      },
-    );
+    return () => ctx.revert();
   }, []);
 
   return (
