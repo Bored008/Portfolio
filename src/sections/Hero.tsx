@@ -46,8 +46,8 @@ const Hero: React.FC = () => {
                 />
             </div>
             <div className='name'>
-                <div className={`${HeyFont.className} xl:text-[86px] md:text-[60px] text-3xl text-white z-20 absolute xl:top-110 md:top-[280px] xl:left-[14%] md:left-[10%] top-59 left-15`}>Hey,</div>
-                <div className={`${Mortend.className} xl:text-[126px] md:text-[80px] text-3xl text-white z-20 absolute xl:top-138 md:top-[340px] xl:left-[14%] md:left-[10%] top-70 left-15`}>I AM</div>
+                <div className={`${HeyFont.className} xl:text-[86px] md:text-[60px] text-3xl px-4 text-white z-20 absolute xl:top-110 md:top-[280px] xl:left-[14%] md:left-[10%] top-59 left-15`}>Hey,</div>
+                <div className={`${Mortend.className} xl:text-[126px] md:text-[80px] text-3xl px-4 text-white z-20 absolute xl:top-138 md:top-[340px] xl:left-[14%] md:left-[10%] top-70 left-15`}>I AM</div>
                 <div className={`${Mortend.className} scrambleName xl:text-[126px] md:text-[80px] text-[40px] px-4 bg-transparent text-white z-20 absolute xl:top-165 md:top-[420px] xl:left-[14%] md:left-[10%] top-80 left-12`}>HIMANSHU</div>
                 <img src="/Boredlogo.svg" alt='boredlogo' loading="eager" decoding="async" className='img xl:w-[248px] xl:h-[116px] md:w-[150px] md:h-[70px] w-[90px] bg-transparent absolute xl:top-148 md:top-[400px] xl:left-260 md:left-[60%] z-19 top-75 left-78' />
             </div>
