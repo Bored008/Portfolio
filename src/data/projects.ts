@@ -92,5 +92,61 @@ export const projectsData: ProjectItem[] = [
     imgClass: "rounded-[12px] border-2 border-t-1 border-white",
     desc: "AI Health is a secure web application that empowers users to analyze food images using their own personal AI quota. By leveraging Google's Gemini API via OAuth, users can get detailed nutrition breakdowns without relying on a shared developer key or paid subscription.",
     tags: ["Next.js", "Node.js", "Postgres Database", "TailwindCSS", "Google Gemini 2.0 Flash"]
+  },
+  {
+    title: "Zyricon — Unified Full-Stack & GenAI Workspace",
+    img: "/projects/supabaseandgeminichatbot.png",
+    link: "https://supabaseandgeminichatbot.vercel.app",
+    githubLink: "https://github.com/Bored008/SupabaseAndGeminiChatBot",
+    liveLink: "https://supabaseandgeminichatbot.vercel.app",
+    imgClass: "rounded-[12px] border-2 border-t-1 border-white",
+    desc: "A production-grade Full-Stack web application combining Google OAuth 2.0, PostgreSQL Row Level Security (RLS), PostgreSQL RPC Procedures, and a serverless Supabase Deno Edge Function communicating directly with the Google Gemini 2.5 Flash REST API.",
+    tags: ["JavaScript", "React.js", "TypeScript", "TailwindCSS", "Supabase", "Google Gemini"]
+  },
+  {
+    title: "ORBIT Shipping Services",
+    img: "https://opengraph.githubassets.com/1/Bored008/ORBIT-SHIPPING-SERVICES",
+    link: "https://orbit-shipping-services.vercel.app",
+    githubLink: "https://github.com/Bored008/ORBIT-SHIPPING-SERVICES",
+    liveLink: "https://orbit-shipping-services.vercel.app",
+    imgClass: "rounded-[12px] border-2 border-t-1 border-white",
+    desc: "ORBIT Shipping Services is a next-generation digital logistics and freight management web platform. Designed with smooth page transitions, responsive service portals, and real-time tracking.",
+    tags: ["TypeScript", "Next.js", "React.js", "TailwindCSS", "Framer Motion", "GSAP"]
+  },
+  {
+    title: "Moviely",
+    img: "/projects/moviely.png",
+    link: "https://github.com/Bored008/Moviely",
+    githubLink: "https://github.com/Bored008/Moviely",
+    imgClass: "rounded-[12px] border-2 border-t-1 border-white",
+    desc: "Moviely is a movie discovery and recommendation platform built with Next.js and TypeScript, designed to explore films, trending releases, and watchlists.",
+    tags: ["TypeScript", "Next.js", "React.js", "TailwindCSS"]
+  },
+  {
+    title: "ECHO",
+    img: "/projects/echo.png",
+    link: "https://github.com/Bored008/ECHO",
+    githubLink: "https://github.com/Bored008/ECHO",
+    imgClass: "rounded-[12px] border-2 border-t-1 border-white",
+    desc: "ECHO is a modern music streaming and audio experience mobile application built with Kotlin and Android Jetpack, focused on high-fidelity playback and clean UI.",
+    tags: ["Kotlin", "Android", "Mobile Development"]
+  },
+  {
+    title: "UI UX Designs",
+    img: "/projects/ui-ux-designs.png",
+    link: "https://github.com/Bored008/UI-UX-Designs",
+    githubLink: "https://github.com/Bored008/UI-UX-Designs",
+    imgClass: "rounded-[12px] border-2 border-t-1 border-white",
+    desc: "A curated repository of user interface and user experience design systems, wireframes, and prototypes created across web and mobile platforms.",
+    tags: ["Figma", "UI/UX", "Design Systems"]
+  },
+  {
+    title: "YouTube Video Downloader Extension",
+    img: "https://opengraph.githubassets.com/1/Bored008/youtube-extension",
+    link: "https://github.com/Bored008/youtube-extension",
+    githubLink: "https://github.com/Bored008/youtube-extension",
+    imgClass: "rounded-[12px] border-2 border-t-1 border-white",
+    desc: "A Chrome Extension built to enable seamless video and audio downloads directly from browser tabs, featuring a Node.js/Express backend service.",
+    tags: ["JavaScript", "Chrome Extension", "Node.js", "Express.js"]
   }
 ];

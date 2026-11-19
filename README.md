@@ -1,5 +1,7 @@
 # 🚀 Personal Portfolio
 
+> 🤖 **Agent Quickstart:** If you are an AI assistant or coding agent working on this project, please read [PROJECT_CONTEXT.md](./PROJECT_CONTEXT.md) directly before exploring files. It contains the full architecture, conventions, and constraints.
+
 A modern, highly interactive, and responsive portfolio website showcasing my work as a Web Designer & Full-Stack Developer. Built with a focus on clean design, fluid animations, and excellent user experience.
 
 <div align="center">
@@ -14,7 +16,7 @@ A modern, highly interactive, and responsive portfolio website showcasing my wor
 
 ## 🌐 Live Demo
 
-🔗 **[Visit My Portfolio](https://portfolio-sandy-five-90.vercel.app/)**
+🔗 **[Visit My Portfolio](https://himanshudahiya.vercel.app/)**
 
 ## ✨ Features
 
@@ -115,7 +117,7 @@ Portfolio/
 
 - <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="GitHub" height="20" width="20" /> **GitHub:** [Bored008](https://github.com/Bored008)
 - <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn" height="20" width="20" /> **LinkedIn:** [Himanshu](https://www.linkedin.com/in/himanshuakabored/)
-- 🌐 **Portfolio:** [portfolio-sandy-five-90.vercel.app](https://portfolio-sandy-five-90.vercel.app/)
+- 🌐 **Portfolio:** [himanshudahiya.vercel.app](https://himanshudahiya.vercel.app/)
 
 ---
 

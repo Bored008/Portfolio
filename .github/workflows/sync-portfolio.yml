@@ -1,0 +1,49 @@
+name: Sync GitHub Projects to Portfolio
+
+on:
+  schedule:
+    # Runs every Monday at 03:30 UTC (9:00 AM IST)
+    - cron: '30 3 * * 1'
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Sync New GitHub Projects
+        run: node scripts/sync-github-projects.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Verify Next.js Build
+        run: npm run build
+
+      - name: Commit and Push Changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/projects.ts public/projects/ scripts/sync-config.json
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(automation): sync new projects from GitHub [skip ci]"
+            git push
+          else
+            echo "No new projects to commit."
+          fi

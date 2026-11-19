@@ -1,0 +1,20 @@
+{
+  "githubUsername": "Bored008",
+  "ignoredRepositories": [
+    "Portfolio",
+    "Bored008",
+    "DSA-StriverA2Z-",
+    "test-repo",
+    "simplereacttask",
+    "motion.dev-learnings",
+    "react-19",
+    "react-project-1",
+    "PAW-2",
+    "ECHO-2",
+    "form-validation",
+    "YoutubeVideo-Downloader-Extension"
+  ],
+  "imageOutputDir": "public/projects",
+  "prependNewProjects": false,
+  "autoGitPush": true
+}
