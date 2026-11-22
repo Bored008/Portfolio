@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import { Analytics } from '@vercel/analytics/next';
 import SmoothScroll from "@/components/effects/SmoothScroll";
+import { gilroy, mortend, rockyBilly, feelingPassionate } from "@/fonts";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
@@ -35,7 +36,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+      className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable} ${gilroy.variable} ${mortend.variable} ${rockyBilly.variable} ${feelingPassionate.variable} antialiased`}
     >
       <body>
         <SmoothScroll>

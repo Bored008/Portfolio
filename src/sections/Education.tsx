@@ -1,12 +1,15 @@
 "use client";
-import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef } from 'react';
+import Image from 'next/image';
+import { motion } from 'motion/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Education: React.FC = () => {
+    const educationRef = useRef<HTMLDivElement>(null);
+
     useEffect(() => {
         const ctx = gsap.context(() => {
             const tl = gsap.timeline();
@@ -16,19 +19,19 @@ const Education: React.FC = () => {
                 duration: 0.8,
                 stagger: 0.3,
                 scrollTrigger: {
-                    trigger: "#education",
+                    trigger: educationRef.current,
                     start: "top 80%",
                     end: "top 20%",
                     scrub: 1
                 }
             });
-        });
+        }, educationRef);
 
         return () => ctx.revert();
     }, []);
 
     return (
-        <div className='text-white' id='education'>
+        <div ref={educationRef} className='text-white' id='education'>
             <div className='flex justify-center'>
                 <motion.div
                     whileHover={{
@@ -41,7 +44,7 @@ const Education: React.FC = () => {
                     }}
                     className='flex justify-center'
                 >
-                    <img src='/Educationbanner.svg' alt="Education Banner" loading="lazy" decoding="async" className='md:w-full w-1/2' />
+                    <Image src="/Educationbanner.svg" alt="Education Banner" width={800} height={200} className="md:w-full w-1/2 h-auto" />
                 </motion.div>
             </div>
             <div className='flex flex-col w-full md:px-[126px] px-[30px] mt-8 gap-4'>

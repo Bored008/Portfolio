@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Hero from "@/sections/Hero";
 import About from "@/sections/About";
 import Skills from "@/sections/Skills";
@@ -11,21 +12,23 @@ export default function Home() {
     <div className="bg-black min-h-screen w-full relative">
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
         <div className="absolute top-90 left-1/2 -translate-x-1/2 w-full z-0 select-none opacity-80 hidden md:flex">
-          <img
+          <Image
             src="/curveline.svg"
             alt="Background curve"
-            loading="lazy"
-            decoding="async"
-            className="absolute left-1/2 -translate-x-1/2 max-w-none min-w-[1440px] w-[80%] object-top"
+            width={1440}
+            height={900}
+            priority
+            className="absolute left-1/2 -translate-x-1/2 max-w-none min-w-[1440px] w-[80%] h-auto object-top"
           />
         </div>
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full z-0 select-none opacity-80 flex md:hidden">
-          <img
+          <Image
             src="/curvelinemobile.svg"
             alt="Background curve"
-            loading="lazy"
-            decoding="async"
-            className="absolute max-w-none min-w-[420px] w-[840px] object-top inset-0 translate-x-[-25%]"
+            width={840}
+            height={900}
+            priority
+            className="absolute max-w-none min-w-[420px] w-[840px] h-auto object-top inset-0 translate-x-[-25%]"
           />
         </div>
       </div>

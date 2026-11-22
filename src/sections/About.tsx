@@ -1,26 +1,23 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import localFont from "next/font/local";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { motion } from "motion/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AnimatedButton from "@/components/effects/AnimatedButton";
 import ResumeModal from "@/components/ResumeModal";
+import { rockyBilly } from "@/fonts";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const RockyBilly = localFont({
-  src: "../fonts/Rockybilly.ttf",
-});
-
 const About: React.FC = () => {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
+  const aboutRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: ".about",
+          trigger: aboutRef.current,
           start: "top+=150 bottom",
           end: "top+=600 bottom",
           scrub: 2,
@@ -33,13 +30,14 @@ const About: React.FC = () => {
         duration: 2,
         stagger: 0.5,
       });
-    });
+    }, aboutRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
     <motion.div
+      ref={aboutRef}
       className="about flex flex-col items-center gap-4 mt-9 md:mt-0 pt-6"
       id="about"
       style={{ perspective: "1000px" }}
@@ -60,12 +58,12 @@ const About: React.FC = () => {
             <motion.div
               animate={{ opacity: [1, 0, 1] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className={`${RockyBilly.className} text-transparent text-stroke absolute top-0 left-0 text-3xl md:text-7xl leading-[3.4]`}
+              className={`${rockyBilly.className} text-transparent text-stroke absolute top-0 left-0 text-3xl md:text-7xl leading-[3.4]`}
             >
               Web Designer
             </motion.div>
             <div
-              className={`${RockyBilly.className} overflow-visible z-10 bg-linear-to-b from-[#EA8E4B] to-[#FAED44] bg-clip-text text-transparent text-3xl md:text-7xl leading-[3.7]`}
+              className={`${rockyBilly.className} overflow-visible z-10 bg-linear-to-b from-[#EA8E4B] to-[#FAED44] bg-clip-text text-transparent text-3xl md:text-7xl leading-[3.7]`}
             >
               Web Designer
             </div>
@@ -74,12 +72,12 @@ const About: React.FC = () => {
             <motion.div
               animate={{ opacity: [1, 0, 1] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className={`${RockyBilly.className} text-transparent text-stroke absolute top-0 left-0 text-3xl md:text-7xl leading-[3.4]`}
+              className={`${rockyBilly.className} text-transparent text-stroke absolute top-0 left-0 text-3xl md:text-7xl leading-[3.4]`}
             >
               & Developer
             </motion.div>
             <div
-              className={`${RockyBilly.className} bg-gradient-to-b from-[#EA8E4B] to-[#FAED44] bg-clip-text text-transparent text-3xl md:text-7xl leading-[3.7]`}
+              className={`${rockyBilly.className} bg-gradient-to-b from-[#EA8E4B] to-[#FAED44] bg-clip-text text-transparent text-3xl md:text-7xl leading-[3.7]`}
             >
               & Developer
             </div>

@@ -1,15 +1,12 @@
 "use client";
 import React, { useEffect, useRef, useState } from 'react';
-import localFont from 'next/font/local';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
+import { gilroy } from "@/fonts";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const Gilroy = localFont({
-  src: "../fonts/Gilroy-Black.ttf"
-});
 
 interface FAQItemData {
   question: string;
@@ -92,7 +89,7 @@ const FAQ: React.FC = () => {
     <div ref={faqRef} className='page text-white md:flex md:gap-[120px] md:px-[126px] z-1' id='faq'>
       <div className='flex flex-col md:w-1/2 justify-start'>
         <div className='sticky top-0 faq-heading flex flex-col items-center md:items-start'>
-          <div className={`${Gilroy.className} md:text-[64px] text-4xl md:mb-4 md:w-2/3`}>Questions for me?</div>
+          <div className={`${gilroy.className} md:text-[64px] text-4xl md:mb-4 md:w-2/3`}>Questions for me?</div>
           <div className='md:text-[16px] mx-3 mb-5 text-center md:text-start md:mx-0 md:w-2/3'>Common questions and answers about design and engineering projects.</div>
         </div>
       </div>
@@ -107,7 +104,7 @@ const FAQ: React.FC = () => {
           >
             <motion.div layout className='flex justify-between w-full'>
               <div className='md:text-[20px] font-bold '>{faq.question}</div>
-              <img src="/Arrow.svg" alt="arrow" loading="lazy" decoding="async" className={`md:w-[30px] w-[25px] transition-transform duration-300 ${openIndex === index ? 'rotate-0' : 'rotate-180 invert'}`} />
+              <Image src="/Arrow.svg" alt="arrow" width={30} height={30} className={`md:w-[30px] w-[25px] h-auto transition-transform duration-300 ${openIndex === index ? 'rotate-0' : 'rotate-180 invert'}`} />
             </motion.div>
             {openIndex === index && (
               <motion.div className='animate-fade-in mt-1 md:mt-2 text-gray-500'>{faq.answer}</motion.div>

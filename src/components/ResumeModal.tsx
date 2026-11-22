@@ -2,13 +2,10 @@
 
 import React, { useEffect, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
-import localFont from "next/font/local";
 import { motion, AnimatePresence } from "motion/react";
+import { useLenis } from "lenis/react";
 import { X, Download, CodeXml, Palette } from "lucide-react";
-
-const Gilroy = localFont({
-  src: "../fonts/Gilroy-Black.ttf",
-});
+import { gilroy } from "@/fonts";
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -42,18 +39,19 @@ const emptySubscribe = () => () => {};
 
 const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
   const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);
+  const lenis = useLenis();
 
-  // Lock body scroll when modal is active
+  // Stop Lenis virtual scrolling when modal is open
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = "hidden";
+      lenis?.stop();
     } else {
-      document.body.style.overflow = "";
+      lenis?.start();
     }
     return () => {
-      document.body.style.overflow = "";
+      lenis?.start();
     };
-  }, [isOpen]);
+  }, [isOpen, lenis]);
 
   // Close on Escape key press
   useEffect(() => {
@@ -114,7 +112,7 @@ const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
             <div className="text-center mb-4 sm:mb-6 md:mb-8 pr-7 sm:pr-0">
               <h2
                 id="resume-modal-title"
-                className={`${Gilroy.className} text-xl sm:text-2xl md:text-4xl text-white tracking-wide`}
+                className={`${gilroy.className} text-xl sm:text-2xl md:text-4xl text-white tracking-wide`}
               >
                 Download CV
               </h2>
@@ -169,7 +167,7 @@ const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
 
                       {/* Title & Role */}
                       <h3
-                        className={`${Gilroy.className} text-base sm:text-lg md:text-2xl text-white group-hover:text-black transition-colors duration-200`}
+                        className={`${gilroy.className} text-base sm:text-lg md:text-2xl text-white group-hover:text-black transition-colors duration-200`}
                       >
                         {option.title}
                       </h3>

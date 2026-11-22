@@ -11,6 +11,11 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-poppins: var(--font-poppins);
+  --font-gilroy: var(--font-gilroy);
+  --font-mortend: var(--font-mortend);
+  --font-rockybilly: var(--font-rockybilly);
+  --font-script: var(--font-feeling-passionate);
 }
 
 @media (prefers-color-scheme: dark) {

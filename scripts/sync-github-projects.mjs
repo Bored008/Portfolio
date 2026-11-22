@@ -44,7 +44,7 @@ if (userFlagIdx !== -1 && args[userFlagIdx + 1]) {
   config.githubUsername = args[userFlagIdx + 1];
 }
 
-const projectsFilePath = path.join(ROOT_DIR, 'src', 'data', 'projects.ts');
+const projectsFilePath = path.join(ROOT_DIR, 'src', 'data', 'projects.json');
 const publicProjectsDir = path.join(ROOT_DIR, config.imageOutputDir || 'public/projects');
 
 if (!fs.existsSync(publicProjectsDir)) {
@@ -219,47 +219,29 @@ function readExistingProjects(filePath) {
   if (!fs.existsSync(filePath)) {
     throw new Error(`Projects file not found at ${filePath}`);
   }
-  const content = fs.readFileSync(filePath, 'utf8');
+  const raw = fs.readFileSync(filePath, 'utf8');
+  const projectsList = JSON.parse(raw);
 
-  // Extract known GitHub links and repo names
   const existingRepos = new Set();
-  const githubLinkRegex = /github\.com\/([a-zA-Z0-9_-]+)\/([a-zA-Z0-9_.-]+)/gi;
-  let match;
-  while ((match = githubLinkRegex.exec(content)) !== null) {
-    existingRepos.add(match[2].toLowerCase().replace(/\.git$/, ''));
+  for (const item of projectsList) {
+    if (item.title) {
+      existingRepos.add(item.title.toLowerCase().replace(/\s+/g, ''));
+    }
+    const links = [item.link, item.githubLink, item.liveLink].filter(Boolean);
+    for (const l of links) {
+      const match = /github\.com\/([a-zA-Z0-9_-]+)\/([a-zA-Z0-9_.-]+)/i.exec(l);
+      if (match) {
+        existingRepos.add(match[2].toLowerCase().replace(/\.git$/, ''));
+      }
+    }
   }
 
-  // Extract titles
-  const titleRegex = /title:\s*["'`](.*?)["'`]/g;
-  while ((match = titleRegex.exec(content)) !== null) {
-    existingRepos.add(match[1].toLowerCase().replace(/\s+/g, ''));
-  }
-
-  return { content, existingRepos };
-}
-
-function escapeString(str) {
-  return str.replace(/"/g, '\\"').replace(/\n/g, ' ');
-}
-
-function formatProjectItemCode(project) {
-  const tagsStr = JSON.stringify(project.tags);
-  const liveLine = project.liveLink ? `\n    liveLink: "${escapeString(project.liveLink)}",` : '';
-  const githubLine = project.githubLink ? `\n    githubLink: "${escapeString(project.githubLink)}",` : '';
-
-  return `  {
-    title: "${escapeString(project.title)}",
-    img: "${escapeString(project.img)}",
-    link: "${escapeString(project.link)}",${githubLine}${liveLine}
-    imgClass: "rounded-[12px] border-2 border-t-1 border-white",
-    desc: "${escapeString(project.desc)}",
-    tags: ${tagsStr}
-  }`;
+  return { projectsList, existingRepos };
 }
 
 async function runSync() {
   console.log(`[INFO] Checking GitHub account: https://github.com/${config.githubUsername}...`);
-  const { content: currentContent, existingRepos } = readExistingProjects(projectsFilePath);
+  const { projectsList, existingRepos } = readExistingProjects(projectsFilePath);
 
   const repos = await fetchGitHubRepos(config.githubUsername);
   console.log(`[INFO] Found ${repos.length} total public repositories on GitHub.`);
@@ -329,48 +311,18 @@ async function runSync() {
     return { added: itemsToAdd.length, projects: itemsToAdd };
   }
 
-  // Insert into projects.ts
-  const marker = 'export const projectsData: ProjectItem[] = [';
-  const markerIdx = currentContent.indexOf(marker);
-  if (markerIdx === -1) {
-    throw new Error(`Could not find marker "${marker}" in ${projectsFilePath}`);
-  }
+  // Update projects.json
+  const updatedProjects = config.prependNewProjects
+    ? [...itemsToAdd, ...projectsList]
+    : [...projectsList, ...itemsToAdd];
 
-  let updatedContent;
-  const formattedItems = itemsToAdd.map(formatProjectItemCode).join(',\n');
-
-  if (config.prependNewProjects) {
-    // Insert immediately after array open
-    const insertPos = markerIdx + marker.length;
-    updatedContent =
-      currentContent.slice(0, insertPos) +
-      '\n' +
-      formattedItems +
-      ',' +
-      currentContent.slice(insertPos);
-  } else {
-    // Append at end before ];
-    const endBracketIdx = currentContent.lastIndexOf('];');
-    if (endBracketIdx === -1) {
-      throw new Error(`Could not find closing bracket "];" in ${projectsFilePath}`);
-    }
-    const endsWithComma = currentContent.slice(0, endBracketIdx).trim().endsWith(',');
-    const prefix = endsWithComma ? '\n' : ',\n';
-    updatedContent =
-      currentContent.slice(0, endBracketIdx) +
-      prefix +
-      formattedItems +
-      '\n' +
-      currentContent.slice(endBracketIdx);
-  }
-
-  fs.writeFileSync(projectsFilePath, updatedContent, 'utf8');
+  fs.writeFileSync(projectsFilePath, JSON.stringify(updatedProjects, null, 2) + '\n', 'utf8');
   console.log(`\n[SUCCESS] Successfully added ${itemsToAdd.length} new project(s) to ${projectsFilePath}`);
 
   if (shouldPush && itemsToAdd.length > 0) {
     console.log(`\n[GIT] Staging and pushing changes to GitHub...`);
     try {
-      execSync('git add src/data/projects.ts public/projects scripts/sync-config.json', { cwd: ROOT_DIR, stdio: 'inherit' });
+      execSync('git add src/data/projects.json src/data/projects.ts public/projects scripts/sync-config.json', { cwd: ROOT_DIR, stdio: 'inherit' });
       const status = execSync('git status --porcelain', { cwd: ROOT_DIR }).toString().trim();
       if (status) {
         execSync('git commit -m "chore(automation): sync new projects from GitHub [skip ci]"', { cwd: ROOT_DIR, stdio: 'inherit' });
