@@ -42,8 +42,7 @@ const Footer: React.FC = () => {
         </div>
         <div className="flex justify-between text-black my-[12px]">
           <div className="w-[281px] text-[16px]">
-            I bring innovative ideas to life through my designs and
-            collaborations.
+            Design and full-stack web development based in India.
           </div>
           <div>
             <div className="font-semibold">Stay Connected</div>
@@ -101,8 +100,7 @@ const Footer: React.FC = () => {
           className="h-full rounded-t-[24px] rounded-b-[8px] p-[12px]"
         />
         <div className="text-[16px] text-black text-center mx-5">
-          I bring innovative ideas to life through my designs and
-          collaborations.
+          Design and full-stack web development based in India.
         </div>
         <div className="flex justify-center mt-[8px] gap-[6px]">
           <div className="bg-black text-white text-[12px] rounded-full px-[12px] py-[8px] cursor-pointer">

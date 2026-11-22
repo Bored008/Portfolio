@@ -56,27 +56,27 @@ const FAQ: React.FC = () => {
   const faqs: FAQItemData[] = [
     {
       question: "What design services do you offer?",
-      answer: "I specialize in UI/UX design, creating intuitive user interfaces, engaging user experiences, and responsive wireframes using tools like Figma."
+      answer: "I provide UI/UX design, design systems, interactive prototypes, and wireframes in Figma."
     },
     {
-      question: "What overall services do you offer?",
-      answer: "As a Full Stack Developer and Designer, I offer end-to-end solutions: from UI/UX design and prototyping to building the frontend and setting up the backend database."
+      question: "What development services do you offer?",
+      answer: "I build responsive frontends with Next.js and TypeScript, integrate APIs, and set up backend databases with Node.js and PostgreSQL."
     },
     {
       question: "How does your process typically work?",
-      answer: "We start with a discovery chat, followed by wireframing and design. Once approved, I move into full-stack development, testing, and final deployment."
+      answer: "We review requirements, create Figma wireframes, iterate on feedback, and implement the application with tests and deployment."
     },
     {
-      question: "How long does it typically take to complete a project?",
-      answer: "A landing page might take 1-2 weeks, while a full-stack web application can take 3-6 weeks depending on the complexity and feature requirements."
+      question: "How long does it take to complete a project?",
+      answer: "A landing page takes one to two weeks. A full-stack web application takes three to six weeks depending on features."
     },
     {
       question: "How do I start a project with you?",
-      answer: "Just send me a message through the contact section! We'll set up a quick call to discuss your goals, timeline, and project requirements."
+      answer: "Reach out via LinkedIn or email to schedule an initial call about your scope, timeline, and goals."
     },
     {
       question: "Are you open to collaboration?",
-      answer: "Absolutely! I love teaming up with other developers, designers, or agencies on exciting UI/UX or full-stack projects."
+      answer: "Yes. I collaborate with engineering teams, design studios, and open-source contributors on product development."
     }
   ];
 
@@ -92,8 +92,8 @@ const FAQ: React.FC = () => {
     <div ref={faqRef} className='page text-white md:flex md:gap-[120px] md:px-[126px] z-1' id='faq'>
       <div className='flex flex-col md:w-1/2 justify-start'>
         <div className='sticky top-0 faq-heading flex flex-col items-center md:items-start'>
-          <div className={`${Gilroy.className} md:text-[64px] text-4xl md:mb-4 md:w-2/3`}>Questions for me ?</div>
-          <div className='md:text-[16px] mx-3 mb-5 text-center md:text-start md:mx-0 md:w-2/3'>Here are some common questions along with their answers to help clear up any confusion.</div>
+          <div className={`${Gilroy.className} md:text-[64px] text-4xl md:mb-4 md:w-2/3`}>Questions for me?</div>
+          <div className='md:text-[16px] mx-3 mb-5 text-center md:text-start md:mx-0 md:w-2/3'>Common questions and answers about design and engineering projects.</div>
         </div>
       </div>
       <div className='faq-card-container flex flex-col md:w-1/2 gap-y-3'>

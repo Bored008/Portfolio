@@ -92,8 +92,7 @@ const About: React.FC = () => {
             className="flex flex-wrap md:w-150 md:text-xl font-normal text-neutral-300 text-center"
             style={{ fontFamily: "var(--font-geist-sans)" }}
           >
-            Premium web design, development, and services to help your business
-            stand out.
+            Full-stack web applications and UI/UX design systems built with Next.js, TypeScript, and Figma.
           </div>
           <div className="flex mt-3 justify-center gap-[12px]">
             <AnimatedButton

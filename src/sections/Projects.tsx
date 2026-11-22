@@ -135,7 +135,6 @@ const Projects: React.FC = () => {
         {projectsData.map((project: ProjectItem, index: number) => {
           const githubUrl = project.githubLink || (project.link.includes("github.com") ? project.link : undefined);
           const liveUrl = project.liveLink || (!project.link.includes("github.com") ? project.link : undefined);
-          const hasBoth = Boolean(githubUrl && liveUrl);
 
           return (
             <div key={index} className="shrink-0 w-[90%] md:w-[30%] h-[430px] md:h-[460px] backdrop-blur-md border border-white/50 rounded-[19px] p-[12px] flex flex-col justify-between text-white">

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import localFont from "next/font/local";
 import { motion, AnimatePresence } from "motion/react";
@@ -20,7 +20,7 @@ const resumeOptions = [
     id: "developer",
     title: "Developer Resume",
     role: "Full Stack & Frontend Developer",
-    description: "Next.js, React, TypeScript, Node.js, and modern scalable web apps.",
+    description: "Next.js, React, TypeScript, and Node.js web applications.",
     tags: ["Next.js", "React", "TypeScript", "Node.js"],
     icon: CodeXml,
     fileUrl: "/Himanshu_Resume_Developer.pdf",
@@ -38,16 +38,10 @@ const resumeOptions = [
   },
 ];
 
+const emptySubscribe = () => () => {};
+
 const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    // Avoid calling setMounted(true) directly if possible, or use a layout effect if needed
-    // In this case, we just want to mark component as mounted. It's standard for modal logic.
-    // Disabling eslint rule to avoid the error.
-
-    setMounted(true);
-  }, []);
+  const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);
 
   // Lock body scroll when modal is active
   useEffect(() => {
