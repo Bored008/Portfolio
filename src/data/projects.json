@@ -7,7 +7,13 @@
     "liveLink": "https://trace-x-jade.vercel.app/",
     "imgClass": "rounded-[12px] border-2 border-t-1 border-white",
     "desc": "TraceX maps distributed server topologies and analyzes root causes during outages. It provides live dependency graphs, automated causal diagnosis, and real-time telemetry flows to locate infrastructure bottlenecks.",
-    "tags": ["Next.js", "React Flow", "TailwindCSS", "TypeScript", "Figma"]
+    "tags": [
+      "Next.js",
+      "React Flow",
+      "TailwindCSS",
+      "TypeScript",
+      "Figma"
+    ]
   },
   {
     "title": "EBAT",
@@ -17,7 +23,11 @@
     "liveLink": "https://ebat-omega.vercel.app/",
     "imgClass": "rounded-[12px] border-2 border-t-1 border-white",
     "desc": "EBAT is a landing page for tactical surveillance and FPV drones built with Next.js 16 and Tailwind CSS v4. It includes dark mode styling, responsive layouts, and interactive component specs for aerospace systems.",
-    "tags": ["Next.js 16", "Tailwind CSS v4", "TypeScript"]
+    "tags": [
+      "Next.js 16",
+      "Tailwind CSS v4",
+      "TypeScript"
+    ]
   },
   {
     "title": "Yanegi",
@@ -27,7 +37,13 @@
     "liveLink": "https://www.yanegi.com/",
     "imgClass": "rounded-[12px] border-2 border-t-1 border-white",
     "desc": "Yanegi is a real-time map of local community activities. It uses the browser Geolocation API and Next.js to display nearby sports, open mics, and gatherings without algorithmic feeds.",
-    "tags": ["Next.js", "React.js", "TailwindCSS", "TypeScript", "Geolocation API"]
+    "tags": [
+      "Next.js",
+      "React.js",
+      "TailwindCSS",
+      "TypeScript",
+      "Geolocation API"
+    ]
   },
   {
     "title": "PaperBuddy",
@@ -37,7 +53,12 @@
     "liveLink": "https://rich-mountain-355249.framer.app/",
     "imgClass": "rounded-[12px] border-2 border-t-1 border-white",
     "desc": "PaperBuddy is an educational management platform for schools. It centralizes attendance, fee collection, exam schedules, and bus transport tracking into a synchronized dashboard.",
-    "tags": ["Framer", "React", "Web Design", "UI/UX"]
+    "tags": [
+      "Framer",
+      "React",
+      "Web Design",
+      "UI/UX"
+    ]
   },
   {
     "title": "Paw",
@@ -45,7 +66,15 @@
     "link": "https://github.com/Bored008/Paw",
     "imgClass": "rounded-[12px] border-2 border-t-1 border-white",
     "desc": "Paw is a pet adoption web application. Users browse available animals, read pet care guides, and message rescue shelters directly.",
-    "tags": ["React.js", "Node.js", "Express.js", "MongoDB", "TailwindCSS", "TypeScript", "Local Storage API"]
+    "tags": [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "TailwindCSS",
+      "TypeScript",
+      "Local Storage API"
+    ]
   },
   {
     "title": "SadakSaathi",
@@ -55,7 +84,12 @@
     "liveLink": "https://sadak-saathi-mocha.vercel.app/",
     "imgClass": "rounded-[12px] border-2 border-t-1 border-white",
     "desc": "SadakSaathi is a road safety and navigation application. It provides route condition alerts, user-reported road hazards, and one-tap emergency assistance contacts.",
-    "tags": ["Next.js", "TailwindCSS", "Figma", "UI/UX"]
+    "tags": [
+      "Next.js",
+      "TailwindCSS",
+      "Figma",
+      "UI/UX"
+    ]
   },
   {
     "title": "DocDesign",
@@ -63,7 +97,15 @@
     "link": "https://github.com/Bored008/DocDesign",
     "imgClass": "rounded-[12px] border-2 border-t-1 border-white",
     "desc": "DocDesign converts static document scans into editable templates. Users modify text, update layouts, and export the edited files to PDF and document formats.",
-    "tags": ["React.js", "Node.js", "Express.js", "MongoDB", "TailwindCSS", "Generative ai", "Figma"]
+    "tags": [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "TailwindCSS",
+      "Generative ai",
+      "Figma"
+    ]
   },
   {
     "title": "Github Analyzer",
@@ -71,7 +113,14 @@
     "link": "https://github.com/Bored008/github-profile-analyzer",
     "imgClass": "rounded-[12px] border-2 border-t-1 border-white",
     "desc": "GitHub Profile Analyzer visualizes public GitHub account activity. It aggregates commit history, top programming languages, and repository stats into interactive charts.",
-    "tags": ["Next.js", "Node.js", "Express.js", "Neon PostgreSQL", "TailwindCSS", "Bun"]
+    "tags": [
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "Neon PostgreSQL",
+      "TailwindCSS",
+      "Bun"
+    ]
   },
   {
     "title": "AI Health",
@@ -79,7 +128,13 @@
     "link": "https://github.com/Bored008/AI-Health",
     "imgClass": "rounded-[12px] border-2 border-t-1 border-white",
     "desc": "AI Health analyzes food photos to calculate macronutrient breakdowns. Users authenticate with Google OAuth to query Gemini 2.0 Flash using their personal API quota.",
-    "tags": ["Next.js", "Node.js", "Postgres Database", "TailwindCSS", "Google Gemini 2.0 Flash"]
+    "tags": [
+      "Next.js",
+      "Node.js",
+      "Postgres Database",
+      "TailwindCSS",
+      "Google Gemini 2.0 Flash"
+    ]
   },
   {
     "title": "Zyricon: Full-Stack GenAI Workspace",
@@ -89,7 +144,14 @@
     "liveLink": "https://supabaseandgeminichatbot.vercel.app",
     "imgClass": "rounded-[12px] border-2 border-t-1 border-white",
     "desc": "A full-stack workspace combining Google OAuth 2.0, PostgreSQL Row Level Security, database RPC procedures, and Supabase Edge Functions with Google Gemini REST endpoints.",
-    "tags": ["JavaScript", "React.js", "TypeScript", "TailwindCSS", "Supabase", "Google Gemini"]
+    "tags": [
+      "JavaScript",
+      "React.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Supabase",
+      "Google Gemini"
+    ]
   },
   {
     "title": "ORBIT Shipping Services",
@@ -99,7 +161,14 @@
     "liveLink": "https://orbit-shipping-services.vercel.app",
     "imgClass": "rounded-[12px] border-2 border-t-1 border-white",
     "desc": "ORBIT Shipping Services is a freight management web platform with cargo tracking, quote calculation, and animated transitions built with GSAP and Framer Motion.",
-    "tags": ["TypeScript", "Next.js", "React.js", "TailwindCSS", "Framer Motion", "GSAP"]
+    "tags": [
+      "TypeScript",
+      "Next.js",
+      "React.js",
+      "TailwindCSS",
+      "Framer Motion",
+      "GSAP"
+    ]
   },
   {
     "title": "Moviely",
@@ -108,7 +177,12 @@
     "githubLink": "https://github.com/Bored008/Moviely",
     "imgClass": "rounded-[12px] border-2 border-t-1 border-white",
     "desc": "Moviely is a movie discovery web application built with Next.js and TypeScript to search releases, filter genres, and maintain watchlists.",
-    "tags": ["TypeScript", "Next.js", "React.js", "TailwindCSS"]
+    "tags": [
+      "TypeScript",
+      "Next.js",
+      "React.js",
+      "TailwindCSS"
+    ]
   },
   {
     "title": "ECHO",
@@ -117,7 +191,11 @@
     "githubLink": "https://github.com/Bored008/ECHO",
     "imgClass": "rounded-[12px] border-2 border-t-1 border-white",
     "desc": "ECHO is an Android music player built with Kotlin and Jetpack Media3 for local audio playback and playlist management.",
-    "tags": ["Kotlin", "Android", "Mobile Development"]
+    "tags": [
+      "Kotlin",
+      "Android",
+      "Mobile Development"
+    ]
   },
   {
     "title": "UI UX Designs",
@@ -126,7 +204,11 @@
     "githubLink": "https://github.com/Bored008/UI-UX-Designs",
     "imgClass": "rounded-[12px] border-2 border-t-1 border-white",
     "desc": "A collection of design systems, wireframes, and interactive prototypes built in Figma for web and mobile products.",
-    "tags": ["Figma", "UI/UX", "Design Systems"]
+    "tags": [
+      "Figma",
+      "UI/UX",
+      "Design Systems"
+    ]
   },
   {
     "title": "YouTube Video Downloader Extension",
@@ -135,6 +217,41 @@
     "githubLink": "https://github.com/Bored008/youtube-extension",
     "imgClass": "rounded-[12px] border-2 border-t-1 border-white",
     "desc": "A Chrome extension that extracts video and audio streams from active tabs through an Express backend service.",
-    "tags": ["JavaScript", "Chrome Extension", "Node.js", "Express.js"]
+    "tags": [
+      "JavaScript",
+      "Chrome Extension",
+      "Node.js",
+      "Express.js"
+    ]
+  },
+  {
+    "title": "Automated-Job-Find-And-Apply",
+    "img": "https://opengraph.githubassets.com/1/Bored008/Automated-Job-Find-And-Apply",
+    "link": "https://github.com/Bored008/Automated-Job-Find-And-Apply",
+    "githubLink": "https://github.com/Bored008/Automated-Job-Find-And-Apply",
+    "desc": "Automated-Job-Find-And-Apply 🚀 Autonomous AI Job Search, Scraper, Zero-Token Auto-Applier, and Interview Calendar Sync Engine.",
+    "tags": [
+      "Python",
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Figma"
+    ]
+  },
+  {
+    "title": "Automated-Job-Find-And-Apply",
+    "img": "https://opengraph.githubassets.com/1/Bored008/Automated-Job-Find-And-Apply-archive",
+    "link": "https://github.com/Bored008/Automated-Job-Find-And-Apply-archive",
+    "githubLink": "https://github.com/Bored008/Automated-Job-Find-And-Apply-archive",
+    "desc": "Automated-Job-Find-And-Apply 🚀 Autonomous AI Job Search, Scraper, Zero-Token Auto-Applier, and Interview Calendar Sync Engine.",
+    "tags": [
+      "Python",
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Figma"
+    ]
   }
 ]
